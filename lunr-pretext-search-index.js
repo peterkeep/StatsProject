@@ -25,7 +25,25 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "AirBnB Data Set",
-  "body": " AirBnB Data Set    "
+  "body": " AirBnB Data Set   This is a reference page to quickly find the data set we'll be using for the labs this semester. As you work through the different labs, you should be saving your jamovi file to reflect the changes we'll make to this data set as we work through it, but you can always download the original data here. Similarly, you can find the data dictionary to get a basic review of what the data set is and what the variables measure.    Download      AirBnB.csv     Alternatively, you can download a jamovi-specific file: AirBnB.omv        Data Dictionary   General Information    Rows:  38199    Columns:  18    Source:  InsideAirBnB.com    Year:  2024      Variable Descriptions    id  AirBnB's unique identifier for the listing. Often, this corresponds with the URL of the listing: https:\/\/www.airbnb\/rooms\/[ID Goes Here]    name  Name of the listing, as set by the host.    host_id  AirBnB's unique identifier for the host. Often, this corresponds with the URL of the host's profile: https:\/\/www.airbnb\/user\/show\/[ID Goes Here]    host_name  Name of the host (typically their first name)    neighbourhood_group  Name of the borough where the listing is located, based on the longitude and latitude.    neighbourhood  Name of the neighbourhood where the listing is located.    latitude  The latitude of the listing, a part of the coordinates to give a precise location.    longitude  The longitude of the listing, a part of the coordinates to give a precise location.    room_type  The type of listing: Entire home\/apt, Hotel room, Private room, or Shared room.    price  The daily price (in USD).    minimum_night  The minimum number of nights required to book the listing, as set by the host.    number_of_reviews  The total number of reviews that the listing has received.    last_review  The date of the latest review, where date is in the format YYYY-MM-DD.    reviewers_per_month  The total number of reviews that the listing has received divided by the total number of months the listing has been posted.    calculated_host_listings_count  The total number of listings the host has in New York City.    availability_365  The number of days that the listing is available in the next year.    number_of_reviews_ltm  The number of reviews that the listing has received in the last 12 months.    license  The license, permit, or registration number.      "
+},
+{
+  "id": "subsec-DictionaryAirBnB-2",
+  "level": "2",
+  "url": "data-AirBnB.html#subsec-DictionaryAirBnB-2",
+  "type": "Table",
+  "number": "2.1.1",
+  "title": "General Information",
+  "body": " General Information    Rows:  38199    Columns:  18    Source:  InsideAirBnB.com    Year:  2024    "
+},
+{
+  "id": "subsec-DictionaryAirBnB-3",
+  "level": "2",
+  "url": "data-AirBnB.html#subsec-DictionaryAirBnB-3",
+  "type": "Table",
+  "number": "2.1.2",
+  "title": "Variable Descriptions",
+  "body": " Variable Descriptions    id  AirBnB's unique identifier for the listing. Often, this corresponds with the URL of the listing: https:\/\/www.airbnb\/rooms\/[ID Goes Here]    name  Name of the listing, as set by the host.    host_id  AirBnB's unique identifier for the host. Often, this corresponds with the URL of the host's profile: https:\/\/www.airbnb\/user\/show\/[ID Goes Here]    host_name  Name of the host (typically their first name)    neighbourhood_group  Name of the borough where the listing is located, based on the longitude and latitude.    neighbourhood  Name of the neighbourhood where the listing is located.    latitude  The latitude of the listing, a part of the coordinates to give a precise location.    longitude  The longitude of the listing, a part of the coordinates to give a precise location.    room_type  The type of listing: Entire home\/apt, Hotel room, Private room, or Shared room.    price  The daily price (in USD).    minimum_night  The minimum number of nights required to book the listing, as set by the host.    number_of_reviews  The total number of reviews that the listing has received.    last_review  The date of the latest review, where date is in the format YYYY-MM-DD.    reviewers_per_month  The total number of reviews that the listing has received divided by the total number of months the listing has been posted.    calculated_host_listings_count  The total number of listings the host has in New York City.    availability_365  The number of days that the listing is available in the next year.    number_of_reviews_ltm  The number of reviews that the listing has received in the last 12 months.    license  The license, permit, or registration number.    "
 },
 {
   "id": "lab1-introduction",
