@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-jamovi" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Software: Jamovi</title>
+
+  <introduction>
+    <p>
+        Welcome to the class! This initial chapter will serve as a guide to getting started with the software that we'll be using for these labs, and eventually for your project.
+    </p>
+    
+  </introduction>
+
+  <!-- include sections -->
+  <!-- <xi:include href="sec-section-name.ptx" /> -->
+
+</chapter>

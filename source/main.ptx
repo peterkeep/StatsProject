@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+  <book xml:id="my-great-book">
+    <title>Statistics Lab Book and Project</title>
+    <subtitle>Lab assignments and project details for a project-based Statistics for Business class</subtitle>
+
+    <!-- Include frontmatter -->
+    <xi:include href="./frontmatter.ptx" />
+
+    <!-- Include chapters -->
+     <xi:include href="./jamovi/ch-jamovi.ptx" />
+    <xi:include href="./data/ch-datasets.ptx" />
+    <xi:include href="./labs/ch-labassignments.ptx" />
+    <xi:include href="./project/ch-projectdetails.ptx" />
+
+    <!-- Include backmatter -->
+    <xi:include href="./backmatter.ptx" />
+
+  </book>
+</pretext>

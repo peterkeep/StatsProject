@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-projectdetails" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Project Parts and Details</title>
+
+  <introduction>
+    <p>
+        Each of the project part submissions are described here.
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <!-- <xi:include href="sec-section-name.ptx" /> -->
+
+</chapter>

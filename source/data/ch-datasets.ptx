@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-datasets" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Data Sets</title>
+
+  <introduction>
+    <p>
+        We start with the data documentation. This will serve as a helpful reference as you work with different data sets, but also as a way of deciding which data set you would like to use for your project.
+    </p>
+    <p>
+        Each section will include:
+        <ul>
+            <li>
+                <p>
+                    A link to download the data set in multiple formats.
+                </p>
+            </li>
+            <li>
+                <p>
+                    A brief description of what the data set is about and where it came from.
+                </p>
+            </li>
+            <li>
+                <p>
+                    A data dictionary, with details about each variable (or column) in the data set.
+                </p>
+            </li>
+        </ul>
+    </p>
+  </introduction>
+
+  <!-- include sections -->
+  <!-- <xi:include href="sec-section-name.ptx" /> -->
+
+</chapter>

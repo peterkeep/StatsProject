@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-labassignments" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Lab Assignments</title>
+
+  <introduction>
+    <p>
+        Each of the lab assignments for this course are listed below.
+    </p>
+    
+  </introduction>
+
+  <!-- include sections -->
+  <!-- <xi:include href="sec-section-name.ptx" /> -->
+
+</chapter>
