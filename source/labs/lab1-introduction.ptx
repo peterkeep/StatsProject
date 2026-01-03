@@ -1,0 +1,210 @@
+<section xml:id="lab1-introduction">
+    <title>Lab 1: Introduction to jamovi</title>
+    <introduction>
+        <p>
+            Our first jamovi lab! In this lab, we'll prioritize just getting a handle on what jamovi is, how to navigate it, and do a small amount of data exploration: nothing too much for now, but enough to start getting used to the software.
+        </p>
+        <assemblage>
+            <title>What You'll Need</title>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <em>jamovi</em>: This is the software we'll be using for the whole semester. It's free and open source and available on (almost) any setup you've got. Visit <url href="https://www.jamovi.org/download.html">https://www.jamovi.org/download.html</url> to get started on downloading and installing this. You'll need to do this on a computer (laptop, desktop, or chromebook is fine), and please make sure this is something you'll be able to use for the semester.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Data</em>: We're going to mostly work through the same data set all semester in these labs (we might mix it up once or twice). The dataset that we'll use for the labs is a collection of AirBnB data from AirBnB listings in New York City. More information on the data and a link to download can be found in the data dictionary: <xref ref="data-AirBnB" text="title"/>.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </assemblage>
+    </introduction>
+    <subsection xml:id="subsec-Tasks">
+        <title>Tasks</title>
+        <subsubsection xml:id="subsubsec-StartingJamovi">
+            <title>Starting jamovi</title>
+            <p>
+                Once you've downloaded and installed it on whatever computer you are using, go ahead and launch jamovi. You should see a screen similar to the screenshot below.
+            </p>
+            <figure xml:id="fig-jamovi">
+                <caption>Screenshot of jamovi, after it opens.</caption>
+                <image source="./labs/lab1/jamovi.png" width="90%">
+                    <shortdescription>
+                        A two pane window display. On the left pane is a blank spreadsheet. On the right pane is a blank document view, with the jamovi logo. Above are various buttons and menus.
+                    </shortdescription>
+                </image>
+            </figure>
+            <p>
+                Jamovi is a mix of spreadsheet (to hold, organize, and view our data) and analysis (which will appear on the right-most panel as we perform it). For us to use it, we'll need to load up the data set we are working with.
+            </p>
+            <p>
+                Save the <c>AirBnB.csv</c> file from the <xref ref="data-AirBnB" text="title"/> page somewhere that is easy to find. In jamovi, open the menu in the top left (the three horizontal bars) and select <kbd>Open</kbd>, and then <kbd>Browse</kbd>. Locate the <c>.csv</c> file that you downloaded and open it.
+            </p>
+            <note>
+                <p>
+                    Alternatively, you can download the data in the jamovi <c>.omv</c> format, and use that. Whenever we reference the <c>.csv</c> file, you can simply use the <c>.omv</c> file that you downloaded.
+                </p>
+            </note>
+            <p>
+                Once this is opened, you should see the data in  jamovi.
+            </p>
+            <figure xml:id="fig-data">
+                <caption>Screenshot of jamovi, with the <c>AirBnB</c> data set opened.</caption>
+                <image source="./labs/lab1/data.png" width="90%">
+                    <shortdescription>
+                        A two pane window display. On the left pane is a spreadhseet with data. On the right pane is a blank document view, with the jamovi logo. Above are various buttons and menus.
+                    </shortdescription>
+                </image>
+            </figure>
+            <p>
+                You can see that the spreadsheet portion has been filled in with different columns, each representing a variable in the dataset. Each row represents a single observational unit. Each cell (the intersection of a row and column) is the measurement recorded from that unit for that variable.
+            </p>
+        </subsubsection>
+        <subsubsection xml:id="subsubsec-ExploringVariables">
+            <title>Exploring Variables</title>
+            <p>
+                Something to notice is the icon on each variable name in the columns of the spreadsheet. These icons correspond with the types of variables. Sometimes jamovi misinterprets what the variables are, so it's always good to check these. Click on the <kbd>Variables</kbd> tab on the top of the screen. You should see a list of all 18 variables. You can add a description to each, which can be helpful for long-term projects, so you don't have to keep looking up what each variable represents. If you double-click on any variable, a menu will pop up on the top with some options. The main thing we'll be concerned with, for now, is <q>Measure type.</q>
+            </p>
+            <p>
+                For instance, the variable <c>id</c> is labeled as a <q>Continuous,</q> with the <q>Data type</q> listed as <q>Integer.</q> This is clearly a mistake, due to the fact that every observational unit was assigned an ID number. Jamovi has a specific measure type for IDs, so change it from <q>Continuous</q> to <q>ID.</q> As you look through the rest of the variables, you'll see a mix of ID variables, nominal variables, and continuous variables. For categorical variables (nominal or ordinal), you can also see the levels. For an ordinal variable, you can arrange the order of the levels.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Do any other variable types need to be fixed? You'll need to know what these variables actually represent, so now is a great time to read through the data documentation below as well as view the data itself in the spreadsheet view, by clicking on the <kbd>Data</kbd> tab.
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Pick a variable that jamovi identifies (or that you fix, so that jamovi identifies) as continuous. Explain why this is a continuous variable. 
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Pick a variable that jamovi identifies (or that you fix, so that jamovi identifies) as nominal. Explain why this is a nominal variable. 
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                You should have a decent idea of what these variables look like and what they are measuring. Let's investigate them a bit more carefully.
+            </p>
+            <p>
+                Click on the <kbd>Analyses</kbd> tab on the top of the screen, and then click on <kbd>Exploration</kbd> and then <kbd>Descriptives</kbd>. You now have a list of the variables on the left: You can add one or more to the Variables pane to display some summaries and descriptions of the variables. You can change what statistics are displayed in the <kbd>Statistics</kbd> menu underneath the list of variables, and you can change the orientation of the table that is displayed by switching the dropdown menu back and forth between <q>Variables across rows</q> and <q>Variables across columns.</q>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                         How many observations are recorded for the variable <c>number_of_reviews</c>? How many are missing? What about the number of observations for <c>reviews_per_month</c>? How many are missing? Explain.
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                You will also notice that in the bottom <kbd>Plots</kbd> menu, you can summarize variables visually with some different options. Feel free to try some of these, although you are not required to create any specific plots yet.
+            </p>
+        </subsubsection>
+        <subsubsection xml:id="subsubsec-NewVariable">
+            <title>New Variable</title>
+            <p>
+                Something that you might have noticed is that there's not a comfortable way to handle the last_review variable. This variable is a date, but jamovi labels it as an <q>ID</q> measurement, and there's not really a nice alternative...it's not a continuous measurement: it's ordinal! But we can't just drag and drop every single date to be put in order. Different statistical software will include a <q>date</q> variable type, but jamovi doesn't have this. This isn't a problem for us, and we'll extract some of the information about the date of the most recent review by creating a new variable.
+            </p>
+            <p>
+                In the <kbd>Variables</kbd> tab (at the top of your screen), you'll notice that we have the option to add a new variable. You can either click the <kbd>Add</kbd> button on the top, or use the <kbd>+</kbd> button near the bottom. Select <q>Computed Variable,</q> and you can either insert it in the list of variables where you've selected or append it to the end (it doesn't really make a difference).
+            </p>
+            <p>
+                Name your computed variable <c>last_review_year</c>, and in the formula box we'll use the following code. 
+                <cd>INT(SPLIT(last_review, "-", 1))</cd>
+                Here's what it does:
+                <ul>
+                    <li>
+                        <p>
+                            The <c>SPLIT()</c> function does exactly what it says: it splits up some text.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The first input to this function is the name of the variable that we will split. So <c>SPLIT(last_review,</c> is saying that we will divide up the responses to the <c>last_review</c> variable.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The second input to this function is the symbol that we will use to split up these dates. We're going to direct jamovi to split up the dates based on the hyphens, since the dates are in the format YYYY-MM-DD.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The third input tells jamovi which <q>piece</q> to report. We have split these dates into three sections: YYYY, MM, and DD. We are directing jamovi to report the first piece, the year.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Lastly, we wrap this up in the <c>INT()</c> function, which tells jamovi to treat this as if it were an integer. Otherwise, jamovi would treat this as a nominal variable.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        What is the median year for the last review? What is the minimum year for the last review?
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                If, later on, we would like to have information about the month of the most recent review, we can tinker with the code to create a new variable that pulls the 2nd piece from the split up date.
+            </p>
+        </subsubsection>
+        <subsubsection xml:id="subsec-AnotherNewVariable">
+            <title>Another New Variable</title>
+            <p>
+                Let's add one more variable. This one won't be as useful immediately, but will hopefully model some useful ideas for your own project.
+            </p>
+            <p>
+                We have two variables that we'll look at: <c>price</c> and <c>minimum_nights</c>. Wouldn't it be nice to look at a minimum price? Since the price variable is a measurement of price/night, we might just multiply <c>price</c> and <c>minimum_nights</c> together.
+            </p>
+            <p>
+                Create a new calculated variable called <c>minimum_price</c> where the variable is defined by the following formula.
+                <cd>
+                    price * minimum_nights
+                </cd>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        What is the average (mean) value of <c>minimum_price</c>? What is the maximum value?
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                Hopefully you're feeling pretty confident and familiar with this data set. We'll work with it some more throughout the rest of the lab assignments. As we go, we'll learn a lot about this data set, but we'll also learn some tricks and tools to use on your own data sets as you construct the pieces of your project for the semester.
+            </p>
+        </subsubsection>
+    </subsection>
+    <conclusion>
+            <title>Save Your Progress</title>
+            <p>
+                You have made some small changes to this data set (fixing variable types and creating new variables), and it will be helpful to use this in future labs. In the main menu in the top left (the three horizontal bars), you can either <kbd>Save As</kbd> a <c>.omv</c> file, or you can <kbd>Export</kbd> a <c>.csv</c> file. If you export the <c>.csv</c> file, you will be able to use this data with many other applications (this is a common file storage type for datasets), but you will lose the changes you made to the variable types and descriptions to the variables. The <c>.omv</c> file will retain this information, but is not as common (since it's specific to jamovi). It will definitely be useful, though, as you work on your project.
+            </p>
+            <p>
+                Choose to <kbd>Save As</kbd> a <c>.omv</c> file, and remember where you save it: we'll access this to work on the rest of the labs.
+            </p>
+            <note>
+                <p>
+                    It will likely be useful to set up a folder to organize these labs and your project. Something like:
+                    <cd>
+                        <cline>StatsClass</cline>
+                        <cline> └── Project</cline>
+                        <cline> └── Labs</cline>
+                        <cline>      └── AirBnB.csv</cline> 
+                        <cline>      └── Lab1.omv</cline>
+                    </cd>
+                </p>
+            </note>
+        </conclusion>
+</section>

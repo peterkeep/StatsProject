@@ -4,7 +4,7 @@
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
 
-  <book xml:id="my-great-book">
+  <book xml:id="StatsProject">
     <title>Statistics Lab Book and Project</title>
     <subtitle>Lab assignments and project details for a project-based Statistics for Business class</subtitle>
 
