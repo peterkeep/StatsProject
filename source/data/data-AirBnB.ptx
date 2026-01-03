@@ -1,6 +1,122 @@
 <section xml:id="data-AirBnB">
     <title>AirBnB Data Set</title>
-    <p>
-        
-    </p>
+    <introduction>
+        <p>
+            This is a reference page to quickly find the data set we'll be using for the labs this semester. As you work through the different labs, you should be saving your jamovi file to reflect the changes we'll make to this data set as we work through it, but you can always download the original data here. Similarly, you can find the data dictionary to get a basic review of what the data set is and what the variables measure.
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-DownloadAirBnB">
+        <title>Download</title>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <dataurl source="./data/AirBnB.csv">AirBnB.csv</dataurl>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Alternatively, you can download a jamovi-specific file: <dataurl source="./data/AirBnB.omv">AirBnB.omv</dataurl>
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection xml:id="subsec-DictionaryAirBnB">
+        <title>Data Dictionary</title>
+        <table>
+            <title>General Information</title>
+            <tabular>
+                <row>
+                    <cell><em>Rows:</em></cell> <cell>38199</cell>
+                </row>
+                <row>
+                    <cell><em>Columns:</em></cell> <cell>18</cell>
+                </row>
+                <row>
+                    <cell><em>Source:</em></cell> <cell><url href="https://insideairbnb.com/get-the-data/">InsideAirBnB.com</url></cell>
+                </row>
+                <row>
+                    <cell><em>Year:</em></cell> <cell>2024</cell>
+                </row>
+            </tabular>
+        </table>
+        <table>
+            <title>Variable Descriptions</title>
+            <tabular valign="top">
+                <row>
+                    <cell><c>id</c></cell>
+                    <cell>AirBnB's unique identifier for the listing. Often, this corresponds with the URL of the listing: <c>https://www.airbnb/rooms/[ID Goes Here]</c></cell>
+                </row>
+                <row>
+                    <cell><c>name</c></cell> 
+                    <cell>Name of the listing, as set by the host.</cell>
+                </row>
+                <row>
+                    <cell><c>host_id</c></cell>
+                    <cell>AirBnB's unique identifier for the host. Often, this corresponds with the URL of the host's profile: <c>https://www.airbnb/user/show/[ID Goes Here]</c></cell>
+                </row>
+                <row>
+                    <cell><c>host_name</c></cell>
+                    <cell>Name of the host (typically their first name)</cell>
+                </row>
+                <row>
+                    <cell><c>neighbourhood_group</c></cell>
+                    <cell>Name of the borough where the listing is located, based on the longitude and latitude.</cell>
+                </row>
+                <row>
+                    <cell><c>neighbourhood</c></cell>
+                    <cell>Name of the neighbourhood where the listing is located.</cell>
+                </row>
+                <row>
+                    <cell><c>latitude</c></cell>
+                    <cell>The latitude of the listing, a part of the coordinates to give a precise location.</cell>
+                </row>
+                <row>
+                    <cell><c>longitude</c></cell>
+                    <cell>The longitude of the listing, a part of the coordinates to give a precise location.</cell>
+                </row>
+                <row>
+                    <cell><c>room_type</c></cell>
+                    <cell>The type of listing: Entire home/apt, Hotel room, Private room, or Shared room.</cell>
+                </row>
+                <row>
+                    <cell><c>price</c></cell>
+                    <cell>The daily price (in USD).</cell>
+                </row>
+                <row>
+                    <cell><c>minimum_night</c></cell>
+                    <cell>The minimum number of nights required to book the listing, as set by the host.</cell>
+                </row>
+                <row>
+                    <cell><c>number_of_reviews</c></cell>
+                    <cell>The total number of reviews that the listing has received.</cell>
+                </row>
+                <row>
+                    <cell><c>last_review</c></cell>
+                    <cell>The date of the latest review, where date is in the format YYYY-MM-DD.</cell>
+                </row>
+                <row>
+                    <cell><c>reviewers_per_month</c></cell>
+                    <cell>The total number of reviews that the listing has received divided by the total number of months the listing has been posted.</cell>
+                </row>
+                <row>
+                    <cell><c>calculated_host_listings_count</c></cell>
+                    <cell>The total number of listings the host has in New York City.</cell>
+                </row>
+                <row>
+                    <cell><c>availability_365</c></cell>
+                    <cell>The number of days that the listing is available in the next year.</cell>
+                </row>
+                <row>
+                    <cell><c>number_of_reviews_ltm</c></cell>
+                    <cell>The number of reviews that the listing has received in the last 12 months.</cell>
+                </row>
+                <row>
+                    <cell><c>license</c></cell>
+                    <cell>The license, permit, or registration number.</cell>
+                </row>
+            </tabular>
+        </table>
+    </subsection>
 </section>
