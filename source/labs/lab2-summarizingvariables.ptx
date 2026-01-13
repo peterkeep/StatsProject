@@ -1,0 +1,87 @@
+<section xml:id="sec-summarizingvariables">
+    <title>Summarizing Variables</title>
+    <introduction>
+        <p>
+            In this second jamovi lab, we'll work on building some basic summaries (plots and calculations) of variables (both numerical and categorical). This is really one of the first things we should do with a new data set after learning what the variables represent. We'll explore the data by getting to know not only what each variable represents, but also what the different observations look like and how they act as a group. 
+        </p>
+        <assemblage>
+            <title>What You'll Need</title>
+            <p>
+                <em>Data:</em>: we're going to use the same AirBnB data set from Lab 1, and it might be nice to use the version you saved afterwards. Load that data up by either opening the .csv file or the .omv file that you saved from <xref ref="lab1-introduction" text="custom">Lab 1</xref>.
+            </p>
+        </assemblage>
+    </introduction>
+    <subsection>
+        <title>Tasks</title>
+        <introduction>
+            <p>
+                We're going to start off small with just getting an idea of how to visualize histograms, boxplots, and different bar graphs, and how to calculate the different summary statistics we might use to talk about the center and variability of a variable. Afterwards, we'll do a bit more data manipulation to get some more interesting plots.
+            </p>
+        </introduction>
+        <subsubsection xml:id="subsubsec-SummarizingNumericalVariables">
+            <title>Summarizing Numerical Variables</title>
+            <p>
+                You've actually already seen how to get some summary statistics, but let's remind you: head over to the <kbd>Analyses</kbd> tab and select <kbd>Exploration</kbd> and then <kbd>Descriptives</kbd>. First, move the <c>price<c> variable into the <q>Variables</q> box, and then under <q>Plots</q>, select <q>Histogram.</q>
+            </p>
+            <p>
+                Histograms are a great way to visualize and understand the distribution of a numerical variable, but we've seen how the shape can be impacted by the number of bins used to group our data: jamovi tries to choose a reasonable number of bins, but this isn't customizable (unfortunately). That said, these plots are great for exploration, even if we might want to be able to customize them before putting them into an official report.
+            </p>
+            <p>
+                Anyways, you now have a table of different summary stats (and you can toggle different ones off or on in the <q>Statistics</q> menu) as well as a histogram for the <c>price</c> variable.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Describe the distribution of prices by describing the shape, interpreting a reasonable measure of center as well as a reasonable measure of variability. Notice that the choice of measure of center and variability should depend on the shape.
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                Note that there are a bunch of missing prices: these represent listings that aren't actually available to book currently, for some reason.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Add the variables <c>latitude</c> and <c>longitude</c> to the <q>Variables</q> box. Why do these histograms look different from the one describing prices? Explain the differences.
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                In the table of summary statistics, we can see that the mean and median are reported with values rounded. This is an option we can change! In the menu in the top-right, with three dots, you can change the general number format of results. The default is to use 3 significant figures. Change this to 3 decimal places.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        You can search coordinates on google maps by writing them in the form latitude, longitude: a search of "41.692, -87.840" on google maps will find Moraine Valley Community College's campus. Use the mean latitude and longitude to find the average location of an AirBnB on google maps. Now use the median latitude and longitude. What are the differences in the types of locations you find? Which one do you think would better represent the average location of an AirBnB in New York City? Is there a meaningful difference?
+                    </p>
+                </statement>
+            </exercise>
+        </subsubsection>
+        <subsubsection xml:id="subsubsec-SummarizingCategoricalVariables">
+            <title>Summarizing Categorical Variables</title>
+            <p>
+                Let's swap out these numerical variables for some categorical ones. Change the variables we're looking at to <c>room_type</c>. Notice that in the table of descriptive/summary statistics, there's nothing calculated: of course not, since the responses aren't numbers! Feel free to deselect all of the different calculations in the <q>Statistics</q> menu, although it's still sometimes nice to have the sample size and the number of missing observations in there, just for reference.
+            </p>
+            <p>
+                Now, select the <q>Frequency tables</q> option (right under the <q>Variables</q> and <q>Split by</q> windows). This option is only available to nominal and ordinal variables (you can see the little icons for them), and should give you a quick display of the frequency (counts) and proportion (% of Total) for each level of the <c>room_type</c> variable. In the <q>Plots</q> menu, you can select <q>Bar plot</q> to visualize this distribution.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Which room types are most common? Describe the distribution of different room types in words.
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                Add <c>neighborhood_group</c> to the <q>Variables</q> window.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Which neighborhoods are most popular for hosting an AirBnB? Describe the proportions for each borough.
+                    </p>
+                </statement>
+            </exercise>
+        </subsubsection>
+    </subsection>
+</section>

@@ -22,7 +22,7 @@
             </p>
         </assemblage>
     </introduction>
-    <subsection xml:id="subsec-Tasks">
+    <subsection>
         <title>Tasks</title>
         <subsubsection xml:id="subsubsec-StartingJamovi">
             <title>Starting jamovi</title>
