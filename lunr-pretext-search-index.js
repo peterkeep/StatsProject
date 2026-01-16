@@ -145,6 +145,105 @@ var ptx_lunr_docs = [
   "body": " It will likely be useful to set up a folder to organize these labs and your project. Something like:  StatsClass  └── Project  └── Labs  └── AirBnB.csv  └── Lab1.omv    "
 },
 {
+  "id": "sec-summarizingvariables",
+  "level": "1",
+  "url": "sec-summarizingvariables.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Lab 2: Summarizing Variables",
+  "body": " Lab 2: Summarizing Variables   In this second jamovi lab, we'll work on building some basic summaries (plots and calculations) of variables (both numerical and categorical). This is really one of the first things we should do with a new data set after learning what the variables represent. We'll explore the data by getting to know not only what each variable represents, but also what the different observations look like and how they act as a group.   What You'll Need   Data: : we're going to use the same AirBnB data set from Lab 1, and it might be nice to use the version you saved afterwards. Load that data up by either opening the .csv file or the .omv file that you saved from Lab 1 .     Tasks   We're going to start off small with just getting an idea of how to visualize histograms, boxplots, and different bar graphs, and how to calculate the different summary statistics we might use to talk about the center and variability of a variable. Afterwards, we'll do a bit more data manipulation to get some more interesting plots.    Summarizing Numerical Variables  You've actually already seen how to get some summary statistics, but let's remind you: head over to the Analyses tab and select Exploration and then Descriptives . First, move the price variable into the Variables box, and then under Plots , select Histogram.   Histograms are a great way to visualize and understand the distribution of a numerical variable, but we've seen how the shape can be impacted by the number of bins used to group our data: jamovi tries to choose a reasonable number of bins, but this isn't customizable (unfortunately). That said, these plots are great for exploration, even if we might want to be able to customize them before putting them into an official report.  Anyways, you now have a table of different summary stats (and you can toggle different ones off or on in the Statistics menu) as well as a histogram for the price variable.    Describe the distribution of prices by describing the shape, interpreting a reasonable measure of center as well as a reasonable measure of variability. Notice that the choice of measure of center and variability should depend on the shape.    Note that there are a bunch of missing prices: these represent listings that aren't actually available to book currently, for some reason.    Add the variables latitude and longitude to the Variables box. Why do these histograms look different from the one describing prices? Explain the differences.    In the table of summary statistics, we can see that the mean and median are reported with values rounded. This is an option we can change! In the menu in the top-right, with three dots, you can change the general number format of results. The default is to use 3 significant figures. Change this to 3 decimal places.    You can search coordinates on google maps by writing them in the form latitude, longitude: a search of \"41.692, -87.840\" on google maps will find Moraine Valley Community College's campus. Use the mean latitude and longitude to find the average location of an AirBnB on google maps. Now use the median latitude and longitude. What are the differences in the types of locations you find? Which one do you think would better represent the average location of an AirBnB in New York City? Is there a meaningful difference?      Summarizing Categorical Variables  Let's swap out these numerical variables for some categorical ones. Change the variables we're looking at to room_type . Notice that in the table of descriptive\/summary statistics, there's nothing calculated: of course not, since the responses aren't numbers! Feel free to deselect all of the different calculations in the Statistics menu, although it's still sometimes nice to have the sample size and the number of missing observations in there, just for reference.  Now, select the Frequency tables option (right under the Variables and Split by windows). This option is only available to nominal and ordinal variables (you can see the little icons for them), and should give you a quick display of the frequency (counts) and proportion (% of Total) for each level of the room_type variable. In the Plots menu, you can select Bar plot to visualize this distribution.    Which room types are most common? Describe the distribution of different room types in words.    Add neighborhood_group to the Variables window.    Which neighborhoods are most popular for hosting an AirBnB? Describe the proportions for each borough.    The default bar plots are very basic, but there are more options available in jamovi by installing a Module. Click on the Modules button in the top right of your screen, and select jamovi library. You should see the following popup.   The jamovi Modules menu.   A menu showing different jamovi modules, including scatr, Rj, and jpower. Each has a description and a button to Install. There is a scrollbar, indicating that there are more. There is a search bar on the top.    This is where we can manage different add-ons for jamovi to accomplish specific tasks. In the search bar, search for surveymv , a module that \"Generates summary plots for your survey data.\" Click Install , and then cluck the up arrow in the top right to close the menu. You'll now have a new option to select in the Exploration menu called Survey Plots . Select it now.  This should look familiar: you can drag your variables into a Variables window, and there are two menus with different plot options (one menu for categorical variables and one for continuous variables). Using the different options, replicate this plot (without the Example watermark, of course).   Example plot to replicate.   A plot labeled neighbourhood_group. The plot is a bar with 4 different sections: a small red one labeled 3%, a larger green one labeled 37%, a similarly sized yellow one labeled 44%, a smaller grey one labeled 15%, and a tiny blue one labeled 1%. These are, in order, representative of Bronx, Brooklyn, Manhattan, Queens, and Staten Island.    You can save your plots in a couple of different ways: if you right click on the picture of it, there is an option to copy the image. In my experience, this is a bit buggy, and the image doesn't always paste (I think it depends on what program you're pasting it into, but I don't know). You can also export the image, where you get different options to save it as a .pdf file or a .png image file. Save your graph as a .png file.    Upload your plot in the Lab Submission assignment!      Adding a Filter  Let's say that we only want to look at active AirBnB listings: ones that have been reviewed in 2023 or 2024 (the most recent year in this dataset). Luckily you have already created a last_review_year variable! (If you need to re-create it, go back to the instructions from Lab 1 ).  Click on the Data tab on the top of your screen, and you'll notice that one of the buttons near the top is for Filters . We'll create a filter, where the rule is last_review_year >= 2023 . This will only keep the rows in our data set where the value for the last_review_year variable is greater than, or equal to, 2023. So really this is just selecting the listings that were reviewed in 2023 or 2024.   Active filter, showing only the listings with recent reviews.   The jamovi spreadsheet view, with a small window above it showing the filter for last_review_year from 2023 larger. The spreadsheet has some rows that are grey and faded, with a red X on a column labeled for the filter. The visible rows have a green check on the column for the filter.    You can see a couple of things to note: the rows that have their most current review prior to 2023 are greyed out, you can see how many rows were filtered in the bottom of the screen, and there's a toggle on the filter itself to turn it off and on.  Let's investigate one more numerical variable in this new context (with only the filtered data). Find the five number summary (minimum, 25th percentile, median, 75th percentile, and maximum) for the availability_365 variable. Then, display a boxplot to see this summary visually.    Calculate the IQR for the filtered availability_365 variable (either by hand, or by selecting it as a descriptive statistic to show). Interpret this value, noting that it might be helpful to also report Q1 and Q3 in this interpretation.       Save Your Progress  It will still be helpful to save your progress, here! We'll likely return to this, whether to use the actual Filter that we set up or to use as a reference for some other data set for a project. If you don't want to keep all of the plots and tables up, you can right-click and select Remove from the All menu.   "
+},
+{
+  "id": "subsubsec-SummarizingNumericalVariables-5",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#subsubsec-SummarizingNumericalVariables-5",
+  "type": "Checkpoint",
+  "number": "3.2.1",
+  "title": "",
+  "body": "  Describe the distribution of prices by describing the shape, interpreting a reasonable measure of center as well as a reasonable measure of variability. Notice that the choice of measure of center and variability should depend on the shape.   "
+},
+{
+  "id": "subsubsec-SummarizingNumericalVariables-7",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#subsubsec-SummarizingNumericalVariables-7",
+  "type": "Checkpoint",
+  "number": "3.2.2",
+  "title": "",
+  "body": "  Add the variables latitude and longitude to the Variables box. Why do these histograms look different from the one describing prices? Explain the differences.   "
+},
+{
+  "id": "subsubsec-SummarizingNumericalVariables-9",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#subsubsec-SummarizingNumericalVariables-9",
+  "type": "Checkpoint",
+  "number": "3.2.3",
+  "title": "",
+  "body": "  You can search coordinates on google maps by writing them in the form latitude, longitude: a search of \"41.692, -87.840\" on google maps will find Moraine Valley Community College's campus. Use the mean latitude and longitude to find the average location of an AirBnB on google maps. Now use the median latitude and longitude. What are the differences in the types of locations you find? Which one do you think would better represent the average location of an AirBnB in New York City? Is there a meaningful difference?   "
+},
+{
+  "id": "subsubsec-SummarizingCategoricalVariables-4",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-4",
+  "type": "Checkpoint",
+  "number": "3.2.4",
+  "title": "",
+  "body": "  Which room types are most common? Describe the distribution of different room types in words.   "
+},
+{
+  "id": "subsubsec-SummarizingCategoricalVariables-6",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-6",
+  "type": "Checkpoint",
+  "number": "3.2.5",
+  "title": "",
+  "body": "  Which neighborhoods are most popular for hosting an AirBnB? Describe the proportions for each borough.   "
+},
+{
+  "id": "fig-modules",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#fig-modules",
+  "type": "Figure",
+  "number": "3.2.6",
+  "title": "",
+  "body": " The jamovi Modules menu.   A menu showing different jamovi modules, including scatr, Rj, and jpower. Each has a description and a button to Install. There is a scrollbar, indicating that there are more. There is a search bar on the top.   "
+},
+{
+  "id": "fig-exampleplot",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#fig-exampleplot",
+  "type": "Figure",
+  "number": "3.2.7",
+  "title": "",
+  "body": " Example plot to replicate.   A plot labeled neighbourhood_group. The plot is a bar with 4 different sections: a small red one labeled 3%, a larger green one labeled 37%, a similarly sized yellow one labeled 44%, a smaller grey one labeled 15%, and a tiny blue one labeled 1%. These are, in order, representative of Bronx, Brooklyn, Manhattan, Queens, and Staten Island.   "
+},
+{
+  "id": "subsubsec-SummarizingCategoricalVariables-13",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-13",
+  "type": "Example",
+  "number": "3.2.8",
+  "title": "",
+  "body": "  Upload your plot in the Lab Submission assignment!   "
+},
+{
+  "id": "fig-filter",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#fig-filter",
+  "type": "Figure",
+  "number": "3.2.9",
+  "title": "",
+  "body": " Active filter, showing only the listings with recent reviews.   The jamovi spreadsheet view, with a small window above it showing the filter for last_review_year from 2023 larger. The spreadsheet has some rows that are grey and faded, with a red X on a column labeled for the filter. The visible rows have a green check on the column for the filter.   "
+},
+{
+  "id": "subsec-AddingAFilter-7",
+  "level": "2",
+  "url": "sec-summarizingvariables.html#subsec-AddingAFilter-7",
+  "type": "Checkpoint",
+  "number": "3.2.10",
+  "title": "",
+  "body": "  Calculate the IQR for the filtered availability_365 variable (either by hand, or by selecting it as a descriptive statistic to show). Interpret this value, noting that it might be helpful to also report Q1 and Q3 in this interpretation.   "
+},
+{
   "id": "ch-projectdetails",
   "level": "1",
   "url": "ch-projectdetails.html",
