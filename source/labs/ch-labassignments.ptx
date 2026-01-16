@@ -13,4 +13,5 @@
   <!-- include sections -->
   <xi:include href="lab1-introduction.ptx" />
   <xi:include href="lab2-summarizingvariables.ptx" />
+  <xi:include href="lab3-moredataviz.ptx" />
 </chapter>

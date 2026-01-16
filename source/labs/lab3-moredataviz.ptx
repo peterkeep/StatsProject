@@ -1,0 +1,201 @@
+<section xml:id="lab3-moredataviz">
+    <title>Lab 3: More Data Visualization</title>
+    <introduction>
+        <p>
+            In this lab assignment, we're going to build a couple of more data visualizations, where the focus is less on summarizing a single variable and more on exploring connections between variables. We aren't doing any formal tests, but we are doing some preliminary work towards answering a research question.
+        </p>
+        <assemblage>
+            <title>What You'll Need</title>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <em>Data:</em> we're going to continue to use the AirBnB data set. Hopefully you have an up-to-date version of this, with the changes we've made in the previous labs.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Questions:</em> before getting into this lab, see if you can come up with some questions to consider, specifically about relationships between variables. I'll add a couple of mine, and we'll look at those, but this is an important process to get comfortable with, since you'll be doing this on your own for your project. We'll come up with questions about: 
+                            <ul>
+                                <li>
+                                    <p>
+                                        a pair of two categorical variables.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        a pair of two numerical variables.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        a categorical variable and a numerical variable.
+                                    </p>
+                                </li>
+                            </ul>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </assemblage>
+    </introduction>
+    <subsection>
+        <title>Tasks</title>
+        <p>
+            We're going to begin investigating three questions in this lab.
+            <ol>
+                <li>
+                    <p>
+                        Is the distribution of AirBnB listings different across different boroughs?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Is there a connection between the price of a listing and the minimum number of nights required to book it?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Are the different types of listings available in the same way for the next year?
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <subsubsection xml:id="subsubsec-ListingTypeByBorough">
+            <title>Listing Type by Borough</title>
+            <p>
+                We'll start by opening the <kbd>Analyses</kbd> tab and selecting <kbd>Descriptives</kbd> from the <kbd>Exploration</kbd> menu, as normal. Since we want to explore the distribution of the listing types, we'll add <c>room_type</c> to the <q>Variables</q> box. But now we can add a variable to the <q>Split by</q> window as well: let's put <c>neighbourhood_group</c> into that. Since these are both categorical variables, we'll care about seeing a frequency table: select that. You might want to remove the selections from the <q>Statistics</q> menu, although I think seeing the overall sample size of the different boroughs is useful.
+            </p>
+            <p>
+                Notice that this does not produce a two-way table (a contingency table): instead, we have a table that is a bit hard to read, although the same information is there. Rows are grouped into the types of listing, and then each room type is broken up into the 5 boroughs. We'll see later on this semester how to build a contingency table easily in jamovi, but let's move on for now and start visualizing.
+            </p>
+            <p>
+                The default (and only) option in the <q>Plots</q> menu is the Bar plot: check it and look at the bar plot. Now go back to the setup with the variables selected and swap them: put <c>room_type</c> in the <q>Split by</q> window and <c>neighbourhood_group</c> in the <q>Variables</q> pane. You can compare the bar plots, and see which one helps you get a handle on the distributions of listing types across different boroughs. Does it look like there are some differences in the distribution of listing types across boroughs? What about this plot makes things easy to see, or difficult to see?
+            </p>
+            <p>
+                Let's try to create a better bar plot. First, we might want to not visualize the raw counts: with Brooklyn and Manhattan being so much more popular of a listing location than the other 3 boroughs, it can be hard to compare the distributions of listing types. Second, we want to try to condense this plot a bit: making it smaller will hopefully make it easier to compare the different boroughs.
+            </p>
+            <p>
+                Find the <kbd>Survey Plots</kbd> option in the <kbd>Exploration</kbd> menu, add <c>room_type</c> to the <q>Variables</q> window and then add <c>neighbourhood_group</c> to the <q>Grouping Variable</q> option.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Create a useful and readable plot that shows the different (proportional) distributions of room types grouped by boroughs. Save your plot as either a <c>.pdf</c> or a <c>.png</c>, and upload to the Lab Submission assignment.
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Summarize your plot: are there some notable differences in the distribution of listing types across the different boroughs?
+                    </p>
+                </statement>
+            </exercise>
+        </subsubsection>
+        <subsubsection xml:id="subsubsec-PriceComparedToNights">
+            <title>Price Compared to Minimum Number of Nights</title>
+            <p>
+                In order for us to look at the relationship between two numerical variables, we'll think about a scatterplot. Scatterplots aren't included as a default plot type in the <kbd>Descriptives</kbd> menu. Instead, you'll find it under <kbd>Exploration</kbd>, where you can click <q>Scatterplot</q>.
+            </p>
+            <note>
+                <p>
+                    If you don't have the <q>Scatterplot</q> option by default, that's fine! You can just install and add the <c>scatr</c> module. This is normally included as a default, but if that wasn't in your installation of jamovi, it's no problem! You can just add it yourself.
+                </p>
+            </note>
+            <p>
+                Now that we have our scatterplot menu open, we can add <c>minimum_nights</c> to the <q>X-Axis</q> box, and we can add <c>price</c> to the <q>Y-Axis</q>. You should notice that there are two observations with an <em>enormous</em> price. You can investigate them a bit!
+            </p>
+            <aside>
+                <p>
+                    Ok, I did, because I was curious! Here's the first one: <url>https://www.airbnb.com/rooms/605115521796576121</url>. And here's the second one: <url>https://www.airbnb.com/rooms/17160286</url>. You can see that they're both listed by the same person and both are listed with a minimum stay of 30 days for $100,000.00 per night. I'm assuming that these are artificially high prices so that the person listing these doesn't have to book it out for now! This (clearly) doesn't reflect the actual pricing of AirBnB listings.
+                </p>
+            </aside>
+            <p>
+                Let's filter these ones out, so that we don't get these artificially high prices! Add a filter for <c>price &lt; 100000</c>.
+            </p>
+            <p>
+                You'll also notice that there are some absurdly high values for the minimum number of nights. I did a quick check of everything where the minimum number of nights was larger than a year: all of them were listings that hadn't been reviewed in a while, and had been booked for short periods of time in the past. In short, these listings aren't currently available: instead of jacking the price way up, they just have priced themselves out by forcing prospective visitors to stay for over a year!
+            </p>
+            <p>
+                Change your filter to <c>price &lt; 100000 and minimum_nights &lt;= 365</c>.
+            </p>
+            <p>
+                Now we can look at the scatterplot! How would you explain the association (if any) between these two variables? Do we expect the prices of the listings to behave or be distributed differently for different numbers of minimum nights?
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Save your plot as either a <c>.pdf</c> or a <c>.png</c>, and upload to the Lab Submission assignment.
+                    </p>
+                </statement>
+            </exercise>
+        </subsubsection>
+        <subsubsection xml:id="subsubsec-ListingTypeAvailability">
+            <title>Listing Type Availability</title>
+            <p>
+                We'll keep the filter that we just created on: this will continue to show us only the listings that are presumably available to reserve. But now we'll look at how available these listings are in the next year. You have some good options for this plot, but, regardless of how you plot this, you'll be looking at <c>availability_365</c> grouped or split by <c>room_type</c>. You can build histograms, boxplots, or density plots (a kind of "smooth" histogram) to compare these. Let's start!
+            </p>
+            <p>
+                In <kbd>Descriptives</kbd> (in the <kbd>Exploration</kbd> menu), display the following statistics:
+                <ul>
+                    <li>
+                        <p>
+                            N
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Mean
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Standard Deviation
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Q1, Q2, Q3 (these are the 25th, 50th, and 75th percentiles, and note that the 50th percentile can also be found using the Median)
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            IQR
+                        </p>
+                    </li>
+                </ul>
+                Before you visualize any plots, think about whether or not there are some differences in the way this variable is distributed across the different groups.
+            </p>
+            <p>
+                Now plot a histogram and box plot. Do these visuals match what you had thought when you looked at the summary statistics? You can also swap out the histogram for a density plot to get a <q>smoother</q> depiction of this histogram.
+            </p>
+            <p>
+                For a different version of these same plots, open up the <kbd>Survey Plots</kbd> menu under <kbd>Exploration</kbd>. Set up your variables, and look at the different plots. You have options for what to display under <q>Continuous Plots</q>. For instance, I think it might be useful to get rid of the Data plot, which is just a dot plot where the dots aren't stacked. Since there are so many observations here, it's pretty messy and not very enlightening. Notice also that the <q>Violin</q> plot is just the density plot from earlier. Normally violin plots are reflected, to kind of act like a combination of bloxplot and density plot, but these ones aren't.
+            </p>
+            <p>
+                Play with the different plots and options until you are happy with what they're showing you.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Pick one of the plots you made that you think best demonstrates the differences or similarities of the availability in the next year for different types of listings available. Save it as a <c>.pdf</c> or <c>.png</c> file and upload it to the Lab Submission assignment.
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Describe the distribution of the number of days available for booking in the next year for the different room types. In your explanation, reference both the summary statistics you have displayed as well as the plot you uploaded.
+                    </p>
+                </statement>
+            </exercise>
+        </subsubsection>
+    </subsection>
+    <conclusion>
+        <title>Save Your Progresss</title>
+        <p>
+            We added another filter which will certainly be useful, so save your progress. As a reminder, you can right-click on the different plots you've created and select <q>Remove</q> from either the Analysis or <q>All</q> menus in order to clean up your output.
+        </p>
+    </conclusion>
+</section>
