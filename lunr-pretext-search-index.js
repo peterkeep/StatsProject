@@ -220,7 +220,7 @@ var ptx_lunr_docs = [
   "id": "subsubsec-SummarizingCategoricalVariables-13",
   "level": "2",
   "url": "sec-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-13",
-  "type": "Example",
+  "type": "Checkpoint",
   "number": "3.2.8",
   "title": "",
   "body": "  Upload your plot in the Lab Submission assignment!   "
