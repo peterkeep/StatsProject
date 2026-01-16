@@ -1,5 +1,5 @@
 <section xml:id="sec-summarizingvariables">
-    <title>Summarizing Variables</title>
+    <title>Lab 2: Summarizing Variables</title>
     <introduction>
         <p>
             In this second jamovi lab, we'll work on building some basic summaries (plots and calculations) of variables (both numerical and categorical). This is really one of the first things we should do with a new data set after learning what the variables represent. We'll explore the data by getting to know not only what each variable represents, but also what the different observations look like and how they act as a group. 
@@ -21,7 +21,7 @@
         <subsubsection xml:id="subsubsec-SummarizingNumericalVariables">
             <title>Summarizing Numerical Variables</title>
             <p>
-                You've actually already seen how to get some summary statistics, but let's remind you: head over to the <kbd>Analyses</kbd> tab and select <kbd>Exploration</kbd> and then <kbd>Descriptives</kbd>. First, move the <c>price<c> variable into the <q>Variables</q> box, and then under <q>Plots</q>, select <q>Histogram.</q>
+                You've actually already seen how to get some summary statistics, but let's remind you: head over to the <kbd>Analyses</kbd> tab and select <kbd>Exploration</kbd> and then <kbd>Descriptives</kbd>. First, move the <c>price</c> variable into the <q>Variables</q> box, and then under <q>Plots</q>, select <q>Histogram.</q>
             </p>
             <p>
                 Histograms are a great way to visualize and understand the distribution of a numerical variable, but we've seen how the shape can be impacted by the number of bins used to group our data: jamovi tries to choose a reasonable number of bins, but this isn't customizable (unfortunately). That said, these plots are great for exploration, even if we might want to be able to customize them before putting them into an official report.
@@ -82,6 +82,71 @@
                     </p>
                 </statement>
             </exercise>
+            <p>
+                The default bar plots are very basic, but there are more options available in jamovi by installing a Module. Click on the Modules button in the top right of your screen, and select jamovi library. You should see the following popup.
+            </p>
+            <figure xml:id="fig-modules">
+                <caption>The jamovi Modules menu.</caption>
+                <image source="labs/lab2/modules.png" width="90%">
+                    <shortdescription>A menu showing different jamovi modules, including scatr, Rj, and jpower. Each has a description and a button to Install. There is a scrollbar, indicating that there are more. There is a search bar on the top.</shortdescription>
+                </image>
+            </figure>
+            <p>
+                This is where we can manage different add-ons for jamovi to accomplish specific tasks. In the search bar, search for <q>surveymv</q>, a module that "Generates summary plots for your survey data." Click <kbd>Install</kbd>, and then cluck the up arrow in the top right to close the menu. You'll now have a new option to select in the <kbd>Exploration</kbd> menu called <q>Survey Plots</q>. Select it now.
+            </p>
+            <p>
+                This should look familiar: you can drag your variables into a <q>Variables</q> window, and there are two menus with different plot options (one menu for categorical variables and one for continuous variables). Using the different options, replicate this plot (without the <q>Example</q> watermark, of course).
+            </p>
+            <figure xml:id="fig-exampleplot">
+                <caption>Example plot to replicate.</caption>
+                <image source="labs/lab2/example-plot.png" width="90%">
+                    <shortdescription>A plot labeled neighbourhood_group. The plot is a bar with 4 different sections: a small red one labeled 3%, a larger green one labeled 37%, a similarly sized yellow one labeled 44%, a smaller grey one labeled 15%, and a tiny blue one labeled 1%. These are, in order, representative of Bronx, Brooklyn, Manhattan, Queens, and Staten Island.</shortdescription>
+                </image>
+            </figure>
+            <p>
+                You can save your plots in a couple of different ways: if you right click on the picture of it, there is an option to copy the image. In my experience, this is a bit buggy, and the image doesn't always paste (I think it depends on what program you're pasting it into, but I don't know). You can also export the image, where you get different options to save it as a <c>.pdf</c> file or a <c>.png</c> image file. Save your graph as a <c>.png</c> file.
+            </p>
+            <example>
+                <statement>
+                    <p>
+                        Upload your plot in the Lab Submission assignment!
+                    </p>
+                </statement>
+            </example>
+        </subsubsection>
+        <subsubsection xml:id="subsec-AddingAFilter">
+            <title>Adding a Filter</title>
+            <p>
+                Let's say that we only want to look at <q>active</q> AirBnB listings: ones that have been reviewed in 2023 or 2024 (the most recent year in this dataset). Luckily you have already created a <c>last_review_year</c> variable! (If you need to re-create it, go back to the instructions from <xref ref="lab1-introduction" text="custom">Lab 1</xref>).
+            </p>
+            <p>
+                Click on the <kbd>Data</kbd> tab on the top of your screen, and you'll notice that one of the buttons near the top is for <kbd>Filters</kbd>. We'll create a filter, where the rule is <c>last_review_year &gt;= 2023</c>. This will only keep the rows in our data set where the value for the <c>last_review_year</c> variable is greater than, or equal to, 2023. So really this is just selecting the listings that were reviewed in 2023 or 2024.
+            </p>
+            <figure xml:id="fig-filter">
+                <caption>Active filter, showing only the listings with recent reviews.</caption>
+                <image source="labs/lab2/filter.png">
+                    <shortdescription>The jamovi spreadsheet view, with a small window above it showing the filter for last_review_year from 2023 larger. The spreadsheet has some rows that are grey and faded, with a red X on a column labeled for the filter. The visible rows have a green check on the column for the filter.</shortdescription>
+                </image>
+            </figure>
+            <p>
+                You can see a couple of things to note: the rows that have their most current review prior to 2023 are greyed out, you can see how many rows were filtered in the bottom of the screen, and there's a toggle on the filter itself to turn it off and on.
+            </p>
+            <p>
+                Let's investigate one more numerical variable in this new context (with only the filtered data). Find the five number summary (minimum, 25th percentile, median, 75th percentile, and maximum) for the <c>availability_365</c> variable. Then, display a boxplot to see this summary visually.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Calculate the IQR for the filtered <c>availability_365</c> variable (either by hand, or by selecting it as a descriptive statistic to show). Interpret this value, noting that it might be helpful to also report Q1 and Q3 in this interpretation.
+                    </p>
+                </statement>
+            </exercise>
         </subsubsection>
     </subsection>
+    <conclusion>
+        <title>Save Your Progress</title>
+        <p>
+            It will still be helpful to save your progress, here! We'll likely return to this, whether to use the actual Filter that we set up or to use as a reference for some other data set for a project. If you don't want to keep all of the plots and tables up, you can right-click and select <q>Remove</q> from the <q>All</q> menu.
+        </p>
+    </conclusion>
 </section>
