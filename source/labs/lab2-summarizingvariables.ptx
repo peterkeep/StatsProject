@@ -106,13 +106,13 @@
             <p>
                 You can save your plots in a couple of different ways: if you right click on the picture of it, there is an option to copy the image. In my experience, this is a bit buggy, and the image doesn't always paste (I think it depends on what program you're pasting it into, but I don't know). You can also export the image, where you get different options to save it as a <c>.pdf</c> file or a <c>.png</c> image file. Save your graph as a <c>.png</c> file.
             </p>
-            <example>
+            <exercise>
                 <statement>
                     <p>
                         Upload your plot in the Lab Submission assignment!
                     </p>
                 </statement>
-            </example>
+            </exercise>
         </subsubsection>
         <subsubsection xml:id="subsec-AddingAFilter">
             <title>Adding a Filter</title>
