@@ -145,9 +145,9 @@ var ptx_lunr_docs = [
   "body": " It will likely be useful to set up a folder to organize these labs and your project. Something like:  StatsClass  └── Project  └── Labs  └── AirBnB.csv  └── Lab1.omv    "
 },
 {
-  "id": "sec-summarizingvariables",
+  "id": "lab2-summarizingvariables",
   "level": "1",
-  "url": "sec-summarizingvariables.html",
+  "url": "lab2-summarizingvariables.html",
   "type": "Section",
   "number": "3.2",
   "title": "Lab 2: Summarizing Variables",
@@ -156,7 +156,7 @@ var ptx_lunr_docs = [
 {
   "id": "subsubsec-SummarizingNumericalVariables-5",
   "level": "2",
-  "url": "sec-summarizingvariables.html#subsubsec-SummarizingNumericalVariables-5",
+  "url": "lab2-summarizingvariables.html#subsubsec-SummarizingNumericalVariables-5",
   "type": "Checkpoint",
   "number": "3.2.1",
   "title": "",
@@ -165,7 +165,7 @@ var ptx_lunr_docs = [
 {
   "id": "subsubsec-SummarizingNumericalVariables-7",
   "level": "2",
-  "url": "sec-summarizingvariables.html#subsubsec-SummarizingNumericalVariables-7",
+  "url": "lab2-summarizingvariables.html#subsubsec-SummarizingNumericalVariables-7",
   "type": "Checkpoint",
   "number": "3.2.2",
   "title": "",
@@ -174,7 +174,7 @@ var ptx_lunr_docs = [
 {
   "id": "subsubsec-SummarizingNumericalVariables-9",
   "level": "2",
-  "url": "sec-summarizingvariables.html#subsubsec-SummarizingNumericalVariables-9",
+  "url": "lab2-summarizingvariables.html#subsubsec-SummarizingNumericalVariables-9",
   "type": "Checkpoint",
   "number": "3.2.3",
   "title": "",
@@ -183,7 +183,7 @@ var ptx_lunr_docs = [
 {
   "id": "subsubsec-SummarizingCategoricalVariables-4",
   "level": "2",
-  "url": "sec-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-4",
+  "url": "lab2-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-4",
   "type": "Checkpoint",
   "number": "3.2.4",
   "title": "",
@@ -192,7 +192,7 @@ var ptx_lunr_docs = [
 {
   "id": "subsubsec-SummarizingCategoricalVariables-6",
   "level": "2",
-  "url": "sec-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-6",
+  "url": "lab2-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-6",
   "type": "Checkpoint",
   "number": "3.2.5",
   "title": "",
@@ -201,7 +201,7 @@ var ptx_lunr_docs = [
 {
   "id": "fig-modules",
   "level": "2",
-  "url": "sec-summarizingvariables.html#fig-modules",
+  "url": "lab2-summarizingvariables.html#fig-modules",
   "type": "Figure",
   "number": "3.2.6",
   "title": "",
@@ -210,7 +210,7 @@ var ptx_lunr_docs = [
 {
   "id": "fig-exampleplot",
   "level": "2",
-  "url": "sec-summarizingvariables.html#fig-exampleplot",
+  "url": "lab2-summarizingvariables.html#fig-exampleplot",
   "type": "Figure",
   "number": "3.2.7",
   "title": "",
@@ -219,7 +219,7 @@ var ptx_lunr_docs = [
 {
   "id": "subsubsec-SummarizingCategoricalVariables-13",
   "level": "2",
-  "url": "sec-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-13",
+  "url": "lab2-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables-13",
   "type": "Checkpoint",
   "number": "3.2.8",
   "title": "",
@@ -228,7 +228,7 @@ var ptx_lunr_docs = [
 {
   "id": "fig-filter",
   "level": "2",
-  "url": "sec-summarizingvariables.html#fig-filter",
+  "url": "lab2-summarizingvariables.html#fig-filter",
   "type": "Figure",
   "number": "3.2.9",
   "title": "",
@@ -237,11 +237,74 @@ var ptx_lunr_docs = [
 {
   "id": "subsec-AddingAFilter-7",
   "level": "2",
-  "url": "sec-summarizingvariables.html#subsec-AddingAFilter-7",
+  "url": "lab2-summarizingvariables.html#subsec-AddingAFilter-7",
   "type": "Checkpoint",
   "number": "3.2.10",
   "title": "",
   "body": "  Calculate the IQR for the filtered availability_365 variable (either by hand, or by selecting it as a descriptive statistic to show). Interpret this value, noting that it might be helpful to also report Q1 and Q3 in this interpretation.   "
+},
+{
+  "id": "lab3-moredataviz",
+  "level": "1",
+  "url": "lab3-moredataviz.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "Lab 3: More Data Visualization",
+  "body": " Lab 3: More Data Visualization   In this lab assignment, we're going to build a couple of more data visualizations, where the focus is less on summarizing a single variable and more on exploring connections between variables. We aren't doing any formal tests, but we are doing some preliminary work towards answering a research question.   What You'll Need      Data: we're going to continue to use the AirBnB data set. Hopefully you have an up-to-date version of this, with the changes we've made in the previous labs.     Questions: before getting into this lab, see if you can come up with some questions to consider, specifically about relationships between variables. I'll add a couple of mine, and we'll look at those, but this is an important process to get comfortable with, since you'll be doing this on your own for your project. We'll come up with questions about:   a pair of two categorical variables.    a pair of two numerical variables.    a categorical variable and a numerical variable.           Tasks  We're going to begin investigating three questions in this lab.   Is the distribution of AirBnB listings different across different boroughs?    Is there a connection between the price of a listing and the minimum number of nights required to book it?    Are the different types of listings available in the same way for the next year?      Listing Type by Borough  We'll start by opening the Analyses tab and selecting Descriptives from the Exploration menu, as normal. Since we want to explore the distribution of the listing types, we'll add room_type to the Variables box. But now we can add a variable to the Split by window as well: let's put neighbourhood_group into that. Since these are both categorical variables, we'll care about seeing a frequency table: select that. You might want to remove the selections from the Statistics menu, although I think seeing the overall sample size of the different boroughs is useful.  Notice that this does not produce a two-way table (a contingency table): instead, we have a table that is a bit hard to read, although the same information is there. Rows are grouped into the types of listing, and then each room type is broken up into the 5 boroughs. We'll see later on this semester how to build a contingency table easily in jamovi, but let's move on for now and start visualizing.  The default (and only) option in the Plots menu is the Bar plot: check it and look at the bar plot. Now go back to the setup with the variables selected and swap them: put room_type in the Split by window and neighbourhood_group in the Variables pane. You can compare the bar plots, and see which one helps you get a handle on the distributions of listing types across different boroughs. Does it look like there are some differences in the distribution of listing types across boroughs? What about this plot makes things easy to see, or difficult to see?  Let's try to create a better bar plot. First, we might want to not visualize the raw counts: with Brooklyn and Manhattan being so much more popular of a listing location than the other 3 boroughs, it can be hard to compare the distributions of listing types. Second, we want to try to condense this plot a bit: making it smaller will hopefully make it easier to compare the different boroughs.  Find the Survey Plots option in the Exploration menu, add room_type to the Variables window and then add neighbourhood_group to the Grouping Variable option.    Create a useful and readable plot that shows the different (proportional) distributions of room types grouped by boroughs. Save your plot as either a .pdf or a .png , and upload to the Lab Submission assignment.      Summarize your plot: are there some notable differences in the distribution of listing types across the different boroughs?      Price Compared to Minimum Number of Nights  In order for us to look at the relationship between two numerical variables, we'll think about a scatterplot. Scatterplots aren't included as a default plot type in the Descriptives menu. Instead, you'll find it under Exploration , where you can click Scatterplot .   If you don't have the Scatterplot option by default, that's fine! You can just install and add the scatr module. This is normally included as a default, but if that wasn't in your installation of jamovi, it's no problem! You can just add it yourself.   Now that we have our scatterplot menu open, we can add minimum_nights to the X-Axis box, and we can add price to the Y-Axis . You should notice that there are two observations with an enormous price. You can investigate them a bit!   Ok, I did, because I was curious! Here's the first one: https:\/\/www.airbnb.com\/rooms\/605115521796576121 . And here's the second one: https:\/\/www.airbnb.com\/rooms\/17160286 . You can see that they're both listed by the same person and both are listed with a minimum stay of 30 days for $100,000.00 per night. I'm assuming that these are artificially high prices so that the person listing these doesn't have to book it out for now! This (clearly) doesn't reflect the actual pricing of AirBnB listings.   Let's filter these ones out, so that we don't get these artificially high prices! Add a filter for price < 100000 .  You'll also notice that there are some absurdly high values for the minimum number of nights. I did a quick check of everything where the minimum number of nights was larger than a year: all of them were listings that hadn't been reviewed in a while, and had been booked for short periods of time in the past. In short, these listings aren't currently available: instead of jacking the price way up, they just have priced themselves out by forcing prospective visitors to stay for over a year!  Change your filter to price < 100000 and minimum_nights <= 365 .  Now we can look at the scatterplot! How would you explain the association (if any) between these two variables? Do we expect the prices of the listings to behave or be distributed differently for different numbers of minimum nights?    Save your plot as either a .pdf or a .png , and upload to the Lab Submission assignment.      Listing Type Availability  We'll keep the filter that we just created on: this will continue to show us only the listings that are presumably available to reserve. But now we'll look at how available these listings are in the next year. You have some good options for this plot, but, regardless of how you plot this, you'll be looking at availability_365 grouped or split by room_type . You can build histograms, boxplots, or density plots (a kind of \"smooth\" histogram) to compare these. Let's start!  In Descriptives (in the Exploration menu), display the following statistics:   N    Mean    Standard Deviation    Q1, Q2, Q3 (these are the 25th, 50th, and 75th percentiles, and note that the 50th percentile can also be found using the Median)    IQR   Before you visualize any plots, think about whether or not there are some differences in the way this variable is distributed across the different groups.  Now plot a histogram and box plot. Do these visuals match what you had thought when you looked at the summary statistics? You can also swap out the histogram for a density plot to get a smoother depiction of this histogram.  For a different version of these same plots, open up the Survey Plots menu under Exploration . Set up your variables, and look at the different plots. You have options for what to display under Continuous Plots . For instance, I think it might be useful to get rid of the Data plot, which is just a dot plot where the dots aren't stacked. Since there are so many observations here, it's pretty messy and not very enlightening. Notice also that the Violin plot is just the density plot from earlier. Normally violin plots are reflected, to kind of act like a combination of bloxplot and density plot, but these ones aren't.  Play with the different plots and options until you are happy with what they're showing you.    Pick one of the plots you made that you think best demonstrates the differences or similarities of the availability in the next year for different types of listings available. Save it as a .pdf or .png file and upload it to the Lab Submission assignment.      Describe the distribution of the number of days available for booking in the next year for the different room types. In your explanation, reference both the summary statistics you have displayed as well as the plot you uploaded.       Save Your Progresss  We added another filter which will certainly be useful, so save your progress. As a reminder, you can right-click on the different plots you've created and select Remove from either the Analysis or All menus in order to clean up your output.   "
+},
+{
+  "id": "subsubsec-ListingTypeByBorough-7",
+  "level": "2",
+  "url": "lab3-moredataviz.html#subsubsec-ListingTypeByBorough-7",
+  "type": "Checkpoint",
+  "number": "3.3.1",
+  "title": "",
+  "body": "  Create a useful and readable plot that shows the different (proportional) distributions of room types grouped by boroughs. Save your plot as either a .pdf or a .png , and upload to the Lab Submission assignment.   "
+},
+{
+  "id": "subsubsec-ListingTypeByBorough-8",
+  "level": "2",
+  "url": "lab3-moredataviz.html#subsubsec-ListingTypeByBorough-8",
+  "type": "Checkpoint",
+  "number": "3.3.2",
+  "title": "",
+  "body": "  Summarize your plot: are there some notable differences in the distribution of listing types across the different boroughs?   "
+},
+{
+  "id": "subsubsec-PriceComparedToNights-3",
+  "level": "2",
+  "url": "lab3-moredataviz.html#subsubsec-PriceComparedToNights-3",
+  "type": "Note",
+  "number": "3.3.3",
+  "title": "",
+  "body": " If you don't have the Scatterplot option by default, that's fine! You can just install and add the scatr module. This is normally included as a default, but if that wasn't in your installation of jamovi, it's no problem! You can just add it yourself.  "
+},
+{
+  "id": "subsubsec-PriceComparedToNights-10",
+  "level": "2",
+  "url": "lab3-moredataviz.html#subsubsec-PriceComparedToNights-10",
+  "type": "Checkpoint",
+  "number": "3.3.4",
+  "title": "",
+  "body": "  Save your plot as either a .pdf or a .png , and upload to the Lab Submission assignment.   "
+},
+{
+  "id": "subsubsec-ListingTypeAvailability-7",
+  "level": "2",
+  "url": "lab3-moredataviz.html#subsubsec-ListingTypeAvailability-7",
+  "type": "Checkpoint",
+  "number": "3.3.5",
+  "title": "",
+  "body": "  Pick one of the plots you made that you think best demonstrates the differences or similarities of the availability in the next year for different types of listings available. Save it as a .pdf or .png file and upload it to the Lab Submission assignment.   "
+},
+{
+  "id": "subsubsec-ListingTypeAvailability-8",
+  "level": "2",
+  "url": "lab3-moredataviz.html#subsubsec-ListingTypeAvailability-8",
+  "type": "Checkpoint",
+  "number": "3.3.6",
+  "title": "",
+  "body": "  Describe the distribution of the number of days available for booking in the next year for the different room types. In your explanation, reference both the summary statistics you have displayed as well as the plot you uploaded.   "
 },
 {
   "id": "ch-projectdetails",
