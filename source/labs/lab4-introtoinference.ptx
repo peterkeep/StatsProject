@@ -182,7 +182,7 @@
                             You'll notice that the Z-score is so big that this application rounds the p-value down to 0. We know the probability corresponding with this Z-score isn't actually 0, it's just extremely small: that's why jamovi gives the output &lt; .001.
                         </p>
                         <p>
-                            Let's do this one more time. In the little applet above, there are two tabs at the top: one for <q>Distribution</q> and one for <q>Statistics</q>. Click the <q>Statistics</q> one. From the drop down menu at the top, change <q>Z Test of a Mean</q> to <q>Z Test of a Proportion</q>. Now we have a spot to enter the claim from the null hypothesis, select our alternative hypothesis, and then put in 14302 for <q>Successes</q> and 23627 for <m>n</m>. This should report results for a Z-score (which should match what you calculated) and a p-value (which should be 0, just like what you looked up).
+                            Let's do this one more time. In the little applet above, there are two tabs at the top: one for <q>Distribution</q> and one for <q>Statistics</q>. Click the <q>Statistics</q> one. From the drop down menu at the top, change <q>T Test of a Mean</q> to <q>Z Test of a Proportion</q>. Now we have a spot to enter the claim from the null hypothesis, select our alternative hypothesis, and then put in 14302 for <q>Successes</q> and 23627 for <m>n</m>. This should report results for a Z-score (which should match what you calculated) and a p-value (which should be 0, just like what you looked up).
                         </p>
                     </li>
                     <li>
