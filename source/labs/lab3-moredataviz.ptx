@@ -195,9 +195,9 @@
         </subsubsection>
     </subsection>
     <conclusion>
-        <title>Save Your Progresss</title>
+        <title>Save Your Progress</title>
         <p>
-            We added another filter which will certainly be useful, so save your progress. As a reminder, you can right-click on the different plots you've created and select <q>Remove</q> from either the Analysis or <q>All</q> menus in order to clean up your output.
+            We added another filter which will certainly be useful, so save your progress. As a reminder, you can right-click on the different plots you've created and select <q>Remove</q> from either the <q>Analysis</q> or <q>All</q> menus in order to clean up your output.
         </p>
     </conclusion>
 </section>
