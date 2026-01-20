@@ -1,0 +1,168 @@
+<section xml:id="lab6-inferencemeans">
+    <title>Lab 6: Inference for Means</title>
+    <introduction>
+        <p>
+            This lab will be a bit longer than the previous one: we'll work on doing some of the inference on means, and, unlike the lab on proportions, we have to start with single means tests and confidence intervals. (We did single proportion stuff on <xref ref="lab4-introtoinference" text="title"/>, remember.) We also want to be a bit more careful with some of these, since there are some conditions to check outside of just big enough sample size.
+        </p>
+        <assemblage>
+            <title>What You'll Need</title>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <em>Data:</em> make sure you're working with a copy of the AirBnB data set that has the most recent filters in it!
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Notes:</em> it will be helpful to have any notes or resources about hypothesis tests or confidence intervals for categorical data. You'll likely want to be able to look up conditions for things like ANOVA or the t-tests easily.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </assemblage>
+    </introduction>
+    <subsection>
+        <title>Tasks</title>
+        <introduction>
+            <p>
+                We'll work on building a t-test for one mean, two means, and then think about how to apply ANOVA here.
+            </p>
+        </introduction>
+        <subsubsection xml:id="subsubsec-SingleMean">
+            <title>Single Mean</title>
+            <p>
+                The website AllTheRooms claims that the average price for an AirBnB in New York City in 2021 was $143/night<fn><url href="https://www.alltherooms.com/resources/articles/average-airbnb-prices-by-city/">Average Airbnb Prices By City: How Much Should You Charge For Your Airbnb? [2022]</url></fn>. Let's test this claim!
+            </p>
+            <p>
+                We're going to set up a t-test with the following hypotheses:
+                <md>
+                    <mrow>H_0: \;\amp \mu_{\texttt{price}}=143 </mrow>
+                    <mrow>H_A: \;\amp \mu_{\texttt{price}} \neq 143 </mrow>
+                </md>
+            </p>
+            <p>
+                In the <kbd>Analysis</kbd> tab, you'll find a <kbd>T-Tests</kbd> menu with a <q>One Sample T-Test</q> option. Select that. Add <c>price</c> as a Dependent Variable, and set up your hypothesis: You'll need to make sure that we're selecting the <q>Student's t-Test</q> (there are other options here!) and include the tested value in the hypothesis. You'll select the appropriate alternative hypothesis, and even get some options on what gets displayed.
+            </p>
+            <p>
+                For now, you should see a test statistic of 26.4185, which is extremely large! Picture that: we're over 26 standard errors into the tail of a nearly-normal t-distribution. You can see the correspondingly low p-value. The evidence that we have about AirBnB prices does not fit the claim from this website, and we reject the hypothesis that the average nightly price is $143.
+            </p>
+            <p>
+                How much is it? Well, for this, we need a confidence interval. There are two quick ways of doing this. One of them is in the t-Test itself: we can select <q>Mean difference</q> under <q>Additional Statistics</q> and choose a 95% confidence interval. This will actually display a confidence interval estimating the difference of the true mean to the one in the null hypothesis. So the bounds of our interval need to be added to the claim from the null hypothesis to get the actual confidence interval on the mean.
+            </p>
+            <note>
+                <p>
+                    Again, this doesn't show us the confidence interval to estimate the mean price: just the confidence interval estimating the <em>difference</em> in the mean price from the one we tested against: $143/night.
+                </p>
+            </note>
+            <p>
+                Another way of doing this is to find it in the <kbd>Descriptives</kbd> option under the <kbd>Exploration</kbd> menu. If we add the <c>price</c> variable, we can choose to display the mean under the statistics, but we also have some options for the confidence interval of the mean below. A 95% confidence interval will match what we found in the t-Test itself.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Report the actual confidence interval estimating the average price per night. Which way of finding it do you prefer? Why? (They should be the same results, just a different way of getting jamovi to display it.)
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        In the same source that we used, they say that the average per night price of an AirBnB in USA and also in New York <em>state</em> is $216/night. Without doing a hypothesis test, use your confidence interval to explain whether we would reject this null hypothesis or not.
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                While we're doing this, we should be concerned with our assumptions: we have seen that price is very clearly not normally distributed: this is fine, since our sample size is so big! The Central Limit Theorem says that if the sample size isn't too small, the actual distribution of the values we're sampling does not matter. We have also done our best to think about the outliers on this variable, and were able to filter our variable to remove some of them that clearly did not belong to the population. Good work, us!
+            </p>
+            <note>
+                <p>
+                    Again, notice that we removed data points that we found that <em>did not belong in the population we were examining.</em> We're not removing outliers because they were outliers. We examined them and found that they were not real AirBnB listings. This is, in general, a pretty hard thing to do without a lot of background knowledge for the type of data we're working with. We should, in general, be very reluctant to remove outlying data, since we don't want to remove some of the extreme values that actually are representative the variability in our population.
+                </p>
+            </note>
+        </subsubsection>
+        <subsubsection xml:id="subsubsec-PriceRecently">
+            <title>Price More Recently</title>
+            <p>
+                We have already explored how the prices in this data set might not be representative of the most "current" AirBnB listings: we tried to filter out the listings that were artificially high in price or were seemingly not actually on the market already. We also have the new variable from <xref ref="lab4-introtoinference" text="title"/>, <c>recent</c>. Let's see if the average price is different based on whether or not the listing has been reviewed recently. Really, we're testing these hypotheses:
+                <md>
+                    <mrow>H_0: \;\amp \mu_{\texttt{recent}} = \mu_{\texttt{non-recent}}</mrow>
+                    <mrow>H_A: \;\amp \mu_{\texttt{recent}} \neq \mu_{\texttt{non-recent}}</mrow>
+                </md>
+                In the same <kbd>T-Tests</kbd> menu, select <q>Independent Samples T-Test</q>. Now we can add <c>price</c> to the <q>Dependent Variables</q> pane, and add the new variable <c>recent</c> as a <q>Grouping Variable.</q> We again have a ton of options for how we get results. A thing that you might notice is a little footnote under the results of your test: <q>Levene's test is significant (p &lt; 0.05), suggesting a violation of the assumption of equal variances.</q> One of the assumptions that we briefly talked about how sometimes we assume equal variances for the groups, but in our case we don't want to. A couple of points:
+                <ul>
+                    <li>
+                        <p>
+                            The version where we <em>don't</em> assume equal variances is called Welch's t-Test and is an option here. You can select it instead of Student's t-Test.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Levene's Test is another hypothesis test that looks at whether or not two variances are different: a low p-value rejects the null hypothesis that the variances are the same. With large samples, this sometimes happens even if the sample variances are <em>very</em> close.
+                        </p>
+                    </li>
+                </ul>
+                Let's look at the variances: it might be easiest to just think about standard deviations. Check the <q>Descriptives</q> box under <q>Additional Statistics.</q> This pulls up a table with sample size, mean, median, standard deviation, and standard error of the mean. We can compare standard deviations, which will also compare variances then, to see if they look like they might be close.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        What are the standard deviations for the price of recently reviewed and non-recently reviewed listings? Do they seem close to each other? Is there evidence that we actually could have equal variances here, or not?
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                Let's go back to our t-Test and use Welch's t-Test, not trying to assume equal variances. We can, again, get a confidence interval for the mean difference under <q>Additional Statistics</q>. I sometimes think it's hard to keep track of this, since it relies on knowing which way we did the subtraction to find the difference. I like to use the <q>Descriptives</q> table to see which one has the higher mean. The confidence interval for the mean difference estimates how much bigger the mean is in the group with the higher mean.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Explain the difference in prices for the two groups based on the results of the hypothesis test and the confidence interval.
+                    </p>
+                </statement>
+            </exercise>
+        </subsubsection>
+        <subsubsection xml:id="subsubsec-MoreGroups">
+            <title>More Groups</title>
+            <p>
+                Now we'll think about a question that we've been hinting at in these labs: is there a difference in the prices of these listings based on what borough they're located in?
+            </p>
+            <p>
+                This is a classic ANOVA question: we are looking to see if our means are all consistent across the different groupings or if there is some difference in some of those means somewhere. There are a lot of cool options to use in ANOVA in general, but since we're looking at a very introductory level here, we're going to stick to the <q>One-Way ANOVA</q> found in the <kbd>ANOVA</kbd> menu. Add <c>price</c> to the <q>Dependent Variables</q> pane, and include <c>neighbourhood_group</c> as the <q>Grouping Variable.</q> You'll get to select that we won't assume equal variances. The ANOVA table here is a bit different than what we might normally see, since it doesn't report the Mean Squares: it just gives us the F-Statistic, the degrees of freedom, and the p-value.
+            </p>
+            <p>
+                Here we can see that there is definitely a difference in between the average prices depending on which borough you're in!
+            </p>
+            <p>
+                The obvious follow-up question is "what are these differences?" One nice option is to add the <q>Descriptives plots</q> under the <q>Additional Statistics.</q> This will display the confidence intervals of the means of each group for us to compare. You can also get these confidence intervals by using the Mean and Standard Error for each group in the Descriptives table, and then building it by hand (by just using the almost 2 standard errors for margin of error, like normal).
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Build and submit the picture of the confidence intervals for the mean price for each borough.
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                We can also do a post-hoc test, where we look pair-wise comparisons: we'll use the Games-Howell test, and see which boroughs are significantly different in price. It looks like, as a summary:
+                <ul>
+                    <li>
+                        <p>
+                            Manhattan's prices are REALLY high comparatively to every other borough.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Brooklyn's pricing model is different from every other borough as well.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Staten Island, Queens, and the Bronx may not have any significant differences in the mean price.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+        </subsubsection>
+    </subsection>
+</section>
