@@ -1,0 +1,220 @@
+<section xml:id="lab4-introtoinference">
+    <title>Lab 4: Introduction to Inference</title>
+    <introduction>
+        <p>
+            In this lab assignment, we'll introduce some of the basics of statistical inference. Some of the specifics will be a bit different than what we're learning, but overall we're just going to focus on the concept of a confidence interval and hypothesis test.
+        </p>
+        <assemblage>
+            <title>What You'll Need</title>
+            <p>
+                Just the <em>Data:</em> we're still working with the AirBnB data. Make sure you're working with the most up-to-date version of the data set as possible (with the new variables and filters we've created). If you need a new version of the data set or a reminder of what the variables mean, visit the <xref ref="data-AirBnB" text="title"/> page.
+            </p>
+        </assemblage>
+    </introduction>
+    <subsection>
+        <title>Tasks</title>
+        <subsubsection xml:id="subsubsec-NewVariable2">
+            <title>New Variable</title>
+            <p>
+                We've had a filter set up (it hasn't been on, just there) to look only at the AirBnBs that have been reviewed <q>recently.</q> Let's turn this into a categorical variable. In the <kbd>Variables</kbd> tab, add a new computed variable named <c>recent</c>. We want this to flag our recently reviewed listings (where <q>recent</q> means anything in 2023 or 2024). The first thing we need is for the listing to actually be reviewed, so we need <c>number_of_reviews &gt; 0</c>. We want to combine this with the listings reviewed in 2023 and 2024, where <c>last_review_year &gt;= 2023</c>. So the actual formula to compute the recent variable will be:
+                <cd>
+                    number_of_reviews &gt; 0 and last_review_year &gt;= 2023
+                </cd>
+                This will output a 1 for listings that have been reviewed and have been reviewed since 2023 and a 0 for the other listings.
+            </p>
+            <p>
+                Before we move on, we should make sure we're all on the same page. We have two filters right now.
+            </p>
+            <figure xml:id="fig-Filters">
+                <caption>Tw two filters.</caption>
+                <image source="lab4/filters.png" width="90%">
+                    <shortdescription>Screenshot of jamovi data set with two filters. One is last_review_year &gt;= 2023. This one is turned off. The other is price &lt; 100000 and minimum_nights &lt;= 365. This one is turned on.</shortdescription>
+                </image>
+            </figure>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            The first is the one we just used to set up a new variable. You can now delete the filter for <c>last_review_year &gt;= 2023</c>, since we have a variable measuring it.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The second one is the one filtering out the artificially inflated prices, where <c>price &lt; 100000 and minimum_nights &lt;= 365</c>. Let's keep that one here, since we have reason to believe that these listings are ones that aren't really there for booking purposes: the price has been artificially inflated to make them unavailable to book.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </subsubsection>
+        <subsubsection xml:id="subsubsec-ConfidenceIntervalProportion">
+            <title>Confidence Interval to Estimate a Proportion</title>
+            <p>
+                We're going to calculate the confidence interval to estimate the proportion of listings that have recently been reviewed in two ways:
+                <ul>
+                    <li>
+                        <p>
+                            We'll calculate the confidence interval by hand, using the formula:
+                            <me>
+                                \hat{p} \pm z^* SE_{\hat{p}}
+                            </me>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            We'll let jamovi calculate the confidence interval using the <em>Binomial Test</em>.
+                        </p>
+                    </li>
+                </ul>
+            </p>
+            <note>
+                <p>
+                    These are different from each other! In the one we do by hand, we'll use a normal approximation of the binomial sampling distribution, while jamovi will calculate based on the actual binomial sampling distribution. We'll see how close they are, and how well the normal approximation of the binomial sampling distribution works!
+                </p>
+            </note>
+            <p>
+                To construct a 95% confidence interval estimation of <m>p</m>, we only need a value for <m>\hat{p}</m> (the sample proportion) and <m>n</m> (the sample size). We can use <m>z^*=1.96</m>, which is the critical value that corresponds to a 95% confidence level, and the standard error of the sampling distribution:
+                <me>
+                    SE_{\hat{p}} = \sqrt{\frac{\hat{p}}(1-\hat{p}){n}}
+                </me>.
+                Pull up the <kbd>Descriptives</kbd> menu and add <c>recent</c> to the <q>Variables</q> window. From there, we can de-select all of the statistics other than sample size, and tell jamovi to display a Frequency Table. This gives us two bits of information that are valuable, and one of them isn't necessarily the % of Total column in the Frequency Table!
+            </p>
+            <p>
+                This value is rounded, but we can see how it was calculated: it's the number of times the value of recent was 1 divided by the total sample size. Sure, we can change the number of decimal points to get a more accurate percentage displayed, but I think we can just use
+                <me>
+                    \hat{p} = \frac{14302}{23627}
+                </me>.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Calculate the 95% confidence interval for the sample proportion, using <m> \hat{p} = \frac{14302}{23627}</m> and <m>z^*=1.96</m>.
+                    </p>
+                </statement>
+            </exercise>
+            <p>
+                We'll compare this with the exact binomial confidence interval to see how well our calculated confidence interval matches.
+            </p>
+            <p>
+                We're actually going to construct the confidence interval at the same time as doing a hypothesis test, but we'll see that part specifically later.
+            </p>
+            <p>
+                Find the <kbd>Frequencies</kbd> menu in the <kbd>Analyses</kbd> tab and select <q>2 Outcomes (Binomial Test)</q> from the menu. It should be listed under One Sample Proportion Tests. This menu should look familiar, and you can add the <c>recent</c> variable to the window on the right. Then check the box to display a confidence interval with 95% confidence level. You'll get a table on the right with the counts for the two values of <c>recent</c> as well as the sample proportions, and, most important for us right now, the lower and upper bounds of a 95% confidence interval.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Report the lower and upper values of the 95% confidence interval. How much does this confidence interval differ from the one you calculated by hand (using the normal approximation)? Explain what this means.
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Pick one of the confidence intervals and interpret it. What does this tell you about the actual amount of listings on AirBnB that have recent reviews?
+                    </p>
+                </statement>
+            </exercise>
+        </subsubsection>
+        <subsubsection xml:id="subsubsec-HypothesisTestProportion">
+            <title>Hypothesis Test for a Proportion</title>
+            <p>
+                Now take some time to look at some of the other options in the Proportion Test. We can add a Test value, which is just the claim about the population proportion that the null hypothesis makes. We can also change the alternative hypothesis. For now, we'll leave things as the default options:
+                <md>
+                    <mrow>H_0: \amp p = 0.5</mrow>
+                    <mrow>H_A: \amp p\neq 0.5</mrow>
+                </md>
+                So nothing now has changed in our output: we're displaying a table with a p-value and a confidence interval. Notice, now, that the p-value is small enough that jamovi just displays it as being less than 0.001. This is typical in statistical software: with very small p-values, we might just get a display of a kind of <q>order of magnitude</q> or a general benchmark of how small it is.
+            </p>
+            <p>
+                Let's compare that to a p-value we might calculate using our normal approximation hypothesis test.
+            </p>
+            <p>
+                <ol>
+                    <li>
+                        <p>
+                            <em>Prepare</em>
+                        </p>
+                        <p>
+                            Our parameter of interest is the population proportion of AirBnB listings that have been reviewed <q>recently</q> (where we define that to be reviewed in 2023 or 2024). We have our hypotheses, with the null hypothesis 
+                            <me>H_0: p=0.5</me>
+                            and the alternative hypothesis
+                            <me>H_A: p\neq 0.5</me>. 
+                            We'll test this at the typical significance level, with <m>\alpha = 0.05</m>. From our sample, we have that <m>n=23627</m> and the sample proportion is 
+                            <me>
+                                \hat{p} = \frac{14302}{23627}
+                            </me>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Check</em>
+                        </p>
+                        <p>
+                            Our sample size is very large here, so we more than meet our conditions to assume that the sampling distribution of <m>\hat{p}</m> is normal. Since our null hypothesis claims that the population proportion is 0.5, we expect to see 11813.5 listings that have been reviewed recently and 11813.5 listings that haven't. These are both well over 10. We can also assume that each listing being reviewed recently or not is independent of each other, but a deeper examination of this might lead us to think that it is possible that there could be some small amount of dependence: maybe some specific location or host is more or less likely to be reviewed after being visited, or more or less likely to be visited at all. For now, let's not worry too much about this.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Calculate</em>
+                        </p>
+                        <p>
+                            We need a calculation for standard error, a Z-score, and then a p-value.
+                        </p>
+                        <p>
+                            For the standard error, we can use the following:
+                            <me>
+                                SE = \sqrt{\frac{p_0(1-p_0)}{n}}
+                            </me>
+                            where <m>p_0 = 0.5</m>, the claim from the null hypothesis.
+                        </p>
+                        <p>
+                            Then we can calculate the Z-score for our sample statistic under the null hypothesis' sampling distribution:
+                            <me>
+                                Z=\frac{\hat{p}-p_0}{SE}
+                            </me>.
+                            Now look up a probability for the p-value using a normal distribution tool, like the one below.
+                        </p>
+                        <figure xml:id="fig-NormalDist">
+                            <caption>Normal Distribution Calculator</caption>
+                            <interactive geogebra="kxknhwpk" reset-icon="yes"/>
+                        </figure>
+                        <p>
+                            You'll notice that the Z-score is so big that this application rounds the p-value down to 0. We know the probability corresponding with this Z-score isn't actually 0, it's just extremely small: that's why jamovi gives the output &lt; .001.
+                        </p>
+                        <p>
+                            Let's do this one more time. In the little applet above, there are two tabs at the top: one for <q>Distribution</q> and one for <q>Statistics</q>. Click the <q>Statistics</q> one. From the drop down menu at the top, change <q>Z Test of a Mean</q> to <q>Z Test of a Proportion</q>. Now we have a spot to enter the claim from the null hypothesis, select our alternative hypothesis, and then put in 14302 for <q>Successes</q> and 23627 for <m>n</m>. This should report results for a Z-score (which should match what you calculated) and a p-value (which should be 0, just like what you looked up).
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <em>Conclude</em>
+                        </p>
+                        <p>
+                            Compare the p-value to our significance level. What does this mean?
+                        </p>
+                    </li>
+                </ol>
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Interpret the results of the hypothesis test. What does this tell us about the population proportion of recently reviewed AirBnB listings?
+                    </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>
+                        Connect this result or conclusion to the conclusion you got from the confidence interval. Are they related to each other? How? Why might it be useful to pair these kinds of results together when we analyze and test data?
+                    </p>
+                </statement>
+            </exercise>
+        </subsubsection>
+    </subsection>
+    <conclusion>
+        <title>Save Your Progresss</title>
+        <p>
+            We added another variable, so it could be useful to save this. As a reminder, you can right-click on the different test results you've created and select <q>Remove</q> from either the <q>Analysis</q> or <q>All</q> menus in order to clean up your output.
+        </p>
+    </conclusion>
+</section>
