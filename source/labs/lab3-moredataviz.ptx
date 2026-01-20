@@ -41,26 +41,28 @@
     </introduction>
     <subsection>
         <title>Tasks</title>
-        <p>
-            We're going to begin investigating three questions in this lab.
-            <ol>
-                <li>
-                    <p>
-                        Is the distribution of AirBnB listings different across different boroughs?
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Is there a connection between the price of a listing and the minimum number of nights required to book it?
-                    </p>
-                </li>
-                <li>
-                    <p>
-                        Are the different types of listings available in the same way for the next year?
-                    </p>
-                </li>
-            </ol>
-        </p>
+        <introduction>
+            <p>
+                We're going to begin investigating three questions in this lab.
+                <ol>
+                    <li>
+                        <p>
+                            Is the distribution of AirBnB listings different across different boroughs?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Is there a connection between the price of a listing and the minimum number of nights required to book it?
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Are the different types of listings available in the same way for the next year?
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </introduction>
         <subsubsection xml:id="subsubsec-ListingTypeByBorough">
             <title>Listing Type by Borough</title>
             <p>
