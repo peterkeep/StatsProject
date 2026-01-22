@@ -7,7 +7,7 @@
         <assemblage>
             <title>What You'll Need</title>
             <p>
-                <em>Data:</em>: we're going to use the same AirBnB data set from Lab 1, and it might be nice to use the version you saved afterwards. Load that data up by either opening the .csv file or the .omv file that you saved from the <xref ref="lab-introduction" text="title"/> lab.
+                <em>Data:</em> we're going to use the same AirBnB data set from Lab 1, and it might be nice to use the version you saved afterwards. Load that data up by either opening the .csv file or the .omv file that you saved from the <xref ref="lab-introduction" text="title"/> lab.
             </p>
         </assemblage>
     </introduction>

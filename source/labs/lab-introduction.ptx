@@ -10,12 +10,12 @@
                 <ol>
                     <li>
                         <p>
-                            <em>jamovi</em>: This is the software we'll be using for the whole semester. It's free and open source and available on (almost) any setup you've got. Visit <url href="https://www.jamovi.org/download.html">https://www.jamovi.org/download.html</url> to get started on downloading and installing this. You'll need to do this on a computer (laptop, desktop, or chromebook is fine), and please make sure this is something you'll be able to use for the semester.
+                            <em>jamovi:</em> This is the software we'll be using for the whole semester. It's free and open source and available on (almost) any setup you've got. Visit <url href="https://www.jamovi.org/download.html">https://www.jamovi.org/download.html</url> to get started on downloading and installing this. You'll need to do this on a computer (laptop, desktop, or chromebook is fine), and please make sure this is something you'll be able to use for the semester.
                         </p>
                     </li>
                     <li>
                         <p>
-                            <em>Data</em>: We're going to mostly work through the same data set all semester in these labs (we might mix it up once or twice). The dataset that we'll use for the labs is a collection of AirBnB data from AirBnB listings in New York City. More information on the data and a link to download can be found in the data dictionary: <xref ref="data-AirBnB" text="title"/>.
+                            <em>Data:</em> We're going to mostly work through the same data set all semester in these labs (we might mix it up once or twice). The dataset that we'll use for the labs is a collection of AirBnB data from AirBnB listings in New York City. More information on the data and a link to download can be found in the data dictionary: <xref ref="data-AirBnB" text="title"/>.
                         </p>
                     </li>
                 </ol>
