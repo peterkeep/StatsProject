@@ -27,6 +27,11 @@
             </li>
         </ul>
     </p>
+    <note>
+        <p>
+            The AirBnB data set will be used for the labs, while the remaining data sets are options to select for your project.
+        </p>
+    </note>
   </introduction>
   <!-- include sections -->
   <xi:include href="data-AirBnB.ptx" />
