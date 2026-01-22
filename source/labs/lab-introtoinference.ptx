@@ -176,7 +176,7 @@
                         </p>
                         <figure xml:id="fig-NormalDist">
                             <caption>Normal Distribution Calculator</caption>
-                            <interactive geogebra="kxknhwpk" reset-icon="yes"/>
+                            <interactive geogebra="kxknhwpk" width="90%" aspect="1:1" reset-icon="yes"/>
                         </figure>
                         <p>
                             You'll notice that the Z-score is so big that this application rounds the p-value down to 0. We know the probability corresponding with this Z-score isn't actually 0, it's just extremely small: that's why jamovi gives the output &lt; .001.
