@@ -1,0 +1,135 @@
+<section xml:id="proj-analysis">
+    <title>Analysis</title>
+    <introduction>
+        <p>
+            This is the part of our project where we'll transition into doing some inference! You've had a whole semester so far to get familiar with your data set, build some good research questions, and even explore them preliminarily. Now what we'll do is try to match these questions with a relevant test or statistical technique, apply it, and explain what we are doing.
+        </p>
+        <p>
+            You're going to have to be familiar with the types of tests and techniques, the assumptions or conditions behind them, and how to interpret the outcomes of those tests and techniques in the context of your data set.
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-ResearchQuestions">
+        <title>Research Questions</title>
+        <p>
+            You have two research questions from the <xref ref="proj-associationquestions" text="title"/> submission, but you can come up with others if you'd like. Some other ideas for questions:
+            <ul>
+                <li>
+                    <p>
+                        Are two variables measuring the same thing, or are they from different populations? (This is useful when you have historical values of something and new values measuring the same thing, or other instances like this.)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Is a categorical variable distributed in the way that we have thought it was? (For this, you'll need some reasonable claim on how it was "meant" to be distributed, which might require outside research.)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Is the average value of some numerical measurement the same as what it was claimed to be? (Again, you'll need strong research to get a realistic claim for this average.)
+                    </p>
+                </li>
+            </ul>
+            If you choose to think about new questions, you should give a short explanation of your change, including a description of why you think your new question is important.
+        </p>
+        <p>
+            For each of your questions, include the following.
+            <ol>
+                <li>
+                    <p>
+                        <em>Statistical Test</em>
+                    </p>
+                    <p>
+                        Match your question with some test or technique we've learned this semester, including (but not limited to):
+                        <ul>
+                            <li>
+                                <p>
+                                    Z Test (and Estimate) for a Single Proportion
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Z Test (and Estimate) for Two Proportions
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>\chi^2</m> Test for Goodness of Fit
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>\chi^2</m> Test for Independence/Association
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    T Test (and Estimate) for a Single Mean
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    T Test for Paired Means
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    T Test (and Estimate) for Two Means
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    ANOVA
+                                </p>
+                            </li>
+                        </ul>
+                        Explain why this test is a match for your question. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <em>Prepare</em>
+                    </p>
+                    <p>
+                        Identify and describe the parameter(s) of interest in your test. List the hypotheses of the test, and explain in words what these hypotheses represent in your data. Decide on a significance level: if you use something other than <m>\alpha=0.05</m>, you should explain your reasoning. Finally, report the relevant sample statistics from that you will be using from your data to perform the test (for example, a sample mean and a sample size).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <em>Check</em>
+                    </p>
+                    <p>
+                        List the conditions for the test you've picked, and explain why your data meets these conditions. If there are any issues where they might not, explain why not.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <em>Calculate</em>
+                    </p>
+                    <p>
+                        Apply your test. Include the results in your writeup. You might choose to include a table, similar to the ones that jamovi outputs, with test statistics and p-values. Explain what the test statistic is measuring, and what the p-value means.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <em>Conclude</em>
+                    </p>
+                    <p>
+                        Report your conclusions from the hypothesis test, making sure to interpret them in the context of your data. This is a good time for you to discuss the implications of what you've found and think about how this result might be used. It is absolutely fine if you do not reject your null hypothesis: explain what this means for any possible stakeholders!
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <p>
+            Be sure to include any relevant and descriptive plots.
+        </p>
+        <p>
+            Similarly, include any relevant confidence intervals. You can include these as plots or report them in a table or something similar. Make sure to explain and interpret what these confidence intervals mean.
+        </p>
+    </subsection>
+    <conclusion>
+        <title>Write-Up</title>
+        <p>
+            Again, I think you should structure this in two sections, one for each research question. Then, in each of these sections/questions, you can include each step of our inferential process. Feel free to use some headings to break these up, but you do not need to. Include all of the relevant tables and plots in the report itself, and, as always, write this up coherently. You should write most of this up using complete sentences and paragraphs, since this is meant to mimic an actual report.
+        </p>
+    </conclusion>
+</section>

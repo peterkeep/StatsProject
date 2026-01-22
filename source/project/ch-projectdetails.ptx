@@ -11,4 +11,7 @@
 
   <xi:include href="./proj-datadescription.ptx" />
   <xi:include href="./proj-exploringdata.ptx" />
+  <xi:include href="./proj-associationquestions.ptx" />
+  <xi:include href="./proj-analysis.ptx" />
+  <xi:include href="./proj-finalreport.ptx" />
 </chapter>

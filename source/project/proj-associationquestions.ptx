@@ -1,0 +1,98 @@
+<section xml:id="proj-associationquestions">
+    <title>Association and Questions</title>
+    <introduction>
+        <p>
+            Hopefully by now you are all very familiar with the different variables in your data set as well as some of the overall context and applicability of your data. You have hopefully been asking good questions about the connections between variables. In this part of the project, we want to formally state our research questions, hypothesize (give a reasonable guess) about the answers to those questions, and then begin exploring them.
+        </p>
+        <p>
+            The order here is very important: we really should have formed these questions <em>before</em> we even collected the data. Of course, data collection takes so much time that it's not reasonable to start a semester by asking some questions and then collecting the relevant data from there. We are starting with data already collected, but we still want to form our questions before analyzing too much. If we let our sample direct our research questions, we are more likely to find and focus on aspects of our sample that aren't necessarily reflective of our population.
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-ResearchQuestionsHypotheses">
+        <title>Research Questions/Hypotheses</title>
+        <p>
+            Think back to some of the questions you've been forming this whole time. Pick two questions.
+            <ol>
+                <li>
+                    <p>
+                        A question about whether or not two categorical variables are associated.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        A question about whether a numerical variable and a categorical variable are associated.
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <note>
+            <p>
+                If you want some help thinking about questions, you can re-visit the <xref ref="lab-moredataviz" text="title"/> lab for some examples.
+            </p>
+        </note>
+        <p>
+            For each of these questions, you should say what you think the answer is: this might refer back to things you've already submitted in parts 1 and 2 of this project, but does not need to. You should explain your thinking, but these are just meant to be thoughtful guesses at an answer. You'll be graded on your thoughtfulness, not on how well you predicted a correct answer.
+        </p>
+        <p>
+            You should also explain which of your questions you think are most important or most interesting, especially in terms of some business application or decision.
+        </p>
+    </subsection>
+    <subsection xml:id="subsec-Exploration">
+        <title>Exploration</title>
+        <p>
+            You're going to start exploring your questions more deeply. Before we begin, it might be helpful to <q>translate</q> your questions into ones that describe statistics. For instance, here are two of the three questions we asked in the <xref ref="lab-moredataviz" text="title"/> lab:
+            <ol>
+                <li>
+                    <p>
+                        Is the distribution of AirBnB listings different across different boroughs?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Are the different types of listings available in the same way for the next year?
+                    </p>
+                </li>
+            </ol>
+            Here is a way that we could translate those:
+            <ol>
+                <li>
+                    <p>
+                        Is <c>room_type</c> independent of <c>neighbourhood_group</c>? Does the proportion of different values of <c>room_type</c> change for different values of <c>neighbourhood_group</c>?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Does the mean of <c>availability_365</c> differ across different values of <c>room_type</c>?
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <p>
+            For each of the two questions you ask about your data set, you should:
+            <ul>
+                <li>
+                    <p>
+                        Calculate any relevant summary statistics. For example, if you're looking at proportions or means across different groups, report those. These statistics should be directly relevant to your question.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Construct relevant plots and/or tables. You might want to try some different options and then select what you think best represents the relationship you are exploring in your question.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection xml:id="subsec-Summary">
+        <title>Summary</title>
+        <p>
+            For each of your questions, give an explanation of what your different statistics tell you in the context of the variables you're looking at. Describe your plots and tables tell you about your question. In general, discuss your question, your initial thoughts on what you thought might be true, and what this initial exploration has shown you.
+        </p>
+    </subsection>
+    <conclusion>
+        <title>Write-Up</title>
+        <p>
+            In this write-up, the structure will change. Instead of using the headings above, I want you to break up the report into sections dedicated to each individual research question. In each section (for each question), you can then use the headings above (Hypothesis, Exploration, and Summary) in your document. Include all of the relevant tables and plots in the report itself, and, as always, write this up coherently. You should write most of this up using complete sentences and paragraphs, since this is meant to mimic an actual report.
+        </p>
+    </conclusion>
+</section>
