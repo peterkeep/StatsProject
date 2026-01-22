@@ -117,7 +117,7 @@
         <subsubsection xml:id="subsec-AddingAFilter">
             <title>Adding a Filter</title>
             <p>
-                Let's say that we only want to look at <q>active</q> AirBnB listings: ones that have been reviewed in 2023 or 2024 (the most recent year in this dataset). Luckily you have already created a <c>last_review_year</c> variable! (If you need to re-create it, go back to the instructions from <xref ref="lab1-introduction" text="custom">Lab 1</xref>).
+                Let's say that we only want to look at <q>active</q> AirBnB listings: ones that have been reviewed in 2023 or 2024 (the most recent year in this dataset). Luckily you have already created a <c>last_review_year</c> variable! (If you need to re-create it, go back to the instructions from the <xref ref="lab-introduction" text="title"/> lab).
             </p>
             <p>
                 Click on the <kbd>Data</kbd> tab on the top of your screen, and you'll notice that one of the buttons near the top is for <kbd>Filters</kbd>. We'll create a filter, where the rule is <c>last_review_year &gt;= 2023</c>. This will only keep the rows in our data set where the value for the <c>last_review_year</c> variable is greater than, or equal to, 2023. So really this is just selecting the listings that were reviewed in 2023 or 2024.

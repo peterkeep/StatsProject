@@ -84,7 +84,7 @@
         <subsubsection xml:id="subsubsec-PriceRecently">
             <title>Price More Recently</title>
             <p>
-                We have already explored how the prices in this data set might not be representative of the most "current" AirBnB listings: we tried to filter out the listings that were artificially high in price or were seemingly not actually on the market already. We also have the new variable from <xref ref="lab4-introtoinference" text="title"/>, <c>recent</c>. Let's see if the average price is different based on whether or not the listing has been reviewed recently. Really, we're testing these hypotheses:
+                We have already explored how the prices in this data set might not be representative of the most "current" AirBnB listings: we tried to filter out the listings that were artificially high in price or were seemingly not actually on the market already. We also have the new variable from the <xref ref="lab-introtoinference" text="title"/> lab, <c>recent</c>. Let's see if the average price is different based on whether or not the listing has been reviewed recently. Really, we're testing these hypotheses:
                 <md>
                     <mrow>H_0: \;\amp \mu_{\texttt{recent}} = \mu_{\texttt{non-recent}}</mrow>
                     <mrow>H_A: \;\amp \mu_{\texttt{recent}} \neq \mu_{\texttt{non-recent}}</mrow>
