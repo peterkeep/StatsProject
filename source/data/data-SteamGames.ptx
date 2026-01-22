@@ -1,0 +1,136 @@
+<section xml:id="data-SteamGames">
+    <title>Steam Games Data Set</title>
+    <introduction>
+        <p>
+            This data set includes information about video games on the Steam Store, a popular online store and platform for computer games. The data was collected in May, 2024.  It has 21 variables collected from over 27,000 games. There is a lot of identification and classification information in here, but we get some other metrics like age ratings, estimated number of owners, average play time, price, etc. There are a decent number of true/false categories that could be fun to look through (like whether or not mac is a supported operating system), and there is some information about reviews in here as well.
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-DownloadSteamGames">
+        <title>Download</title>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <dataurl source="./data/SteamGames.csv">SteamGames.csv</dataurl>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Alternatively, you can download a jamovi-specific file: <dataurl source="./data/SteamGames.omv">SteamGames.omv</dataurl>
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection xml:id="subsec-DictionarySteamGames">
+        <title>Data Dictionary</title>
+        <title>Data Dictionary</title>
+        <table>
+            <title>General Information</title>
+            <tabular>
+                <row>
+                    <cell><em>Rows:</em></cell> <cell>27075</cell>
+                </row>
+                <row>
+                    <cell><em>Columns:</em></cell> <cell>21</cell>
+                </row>
+                <row>
+                    <cell><em>Source:</em></cell> <cell>Steam API</cell>
+                </row>
+                <row>
+                    <cell><em>Year:</em></cell> <cell>2024</cell>
+                </row>
+            </tabular>
+        </table>
+         <table>
+            <title>Variable Descriptions</title>
+            <tabular valign="top">
+                <col/><col width="60%"/>
+                <row>
+                    <cell><c>appid</c></cell>
+                    <cell><p>A unique app ID for the game listing.</p></cell>
+                </row>
+                <row>
+                    <cell><c>name</c></cell>
+                    <cell><p>Name of the game in the Steam Store.</p></cell>
+                </row>
+                <row>
+                    <cell><c>release_date</c></cell>
+                    <cell><p>Release date, formatted as <c>YYYY-MM-DD</c></p></cell>
+                </row>
+                <row>
+                    <cell><c>english</c></cell>
+                    <cell><p>Binary variable describing whether English is one of the supported language.</p></cell>
+                </row>
+                <row>
+                    <cell><c>developer</c></cell>
+                    <cell><p>Name, or names, of the game developer(s).</p></cell>
+                </row>
+                <row>
+                    <cell><c>publisher</c></cell>
+                    <cell><p>Name, or names, of the game publisher(s).</p></cell>
+                </row>
+                <row>
+                    <cell><c>windows</c></cell>
+                    <cell><p>Binary variable describing if the game has a version developed for Windows.</p></cell>
+                </row>
+                <row>
+                    <cell><c>mac</c></cell>
+                    <cell><p>Binary variable describing if the game has a version developed for MacOS.</p></cell>
+                </row>
+                <row>
+                    <cell><c>linux</c></cell>
+                    <cell><p>Binary variable describing if the game has a version developed for Linux and SteamOS.</p></cell>
+                </row>
+                <row>
+                    <cell><c>platform_num</c></cell>
+                    <cell><p>Total number of supported operating systems (between Windows, Mac, and Linux).</p></cell>
+                </row>
+                <row>
+                    <cell><c>required_age</c></cell>
+                    <cell><p>Minimum required age according to PGEI UK standards. Some of the 0 age ratings could represent games that are unrated or that are missing this age requirement.</p></cell>
+                </row>
+                <row>
+                    <cell><c>categories</c></cell>
+                    <cell><p>Game categories.</p></cell>
+                </row>
+                <row>
+                    <cell><c>genre</c></cell>
+                    <cell><p>Game genres.</p></cell>
+                </row>
+                <row>
+                    <cell><c>steamspy_tags</c></cell>
+                    <cell><p>Community-voted tags that are listed for each game.</p></cell>
+                </row>
+                <row>
+                    <cell><c>achievements</c></cell>
+                    <cell><p>The total number of in-game achievements that are available.</p></cell>
+                </row>
+                <row>
+                    <cell><c>positive_ratings</c></cell>
+                    <cell><p>Total number of positive ratings.</p></cell>
+                </row>
+                <row>
+                    <cell><c>negative_ratings</c></cell>
+                    <cell><p>Total number of negative ratings.</p></cell>
+                </row>
+                <row>
+                    <cell><c>average_playtime</c></cell>
+                    <cell><p>Average user playtime, measured in hours.</p></cell>
+                </row>
+                <row>
+                    <cell><c>median_playtime</c></cell>
+                    <cell><p>Median user playtime, measured in hours.</p></cell>
+                </row>
+                <row>
+                    <cell><c>owners</c></cell>
+                    <cell><p>Estimated range of the number of Steam users that own the game.</p></cell>
+                </row>
+                <row>
+                    <cell><c>price</c></cell>
+                    <cell><p>Price of the game, measured in USD.</p></cell>
+                </row>
+            </tabular>
+            </table>
+    </subsection>
+</section>
