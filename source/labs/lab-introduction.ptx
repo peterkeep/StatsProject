@@ -198,11 +198,11 @@
                 <p>
                     It will likely be useful to set up a folder to organize these labs and your project. Something like:
                     <cd>
-                        <cline>StatsClass</cline>
-                        <cline> └── Project</cline>
-                        <cline> └── Labs</cline>
-                        <cline>      └── AirBnB.csv</cline> 
-                        <cline>      └── Lab1.omv</cline>
+                        <cline>/StatsClass</cline>
+                        <cline>  - /Project</cline>
+                        <cline>  - /Labs</cline>
+                        <cline>      - AirBnB.csv</cline> 
+                        <cline>      - LabAirBnB.omv</cline>
                     </cd>
                 </p>
             </note>

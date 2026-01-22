@@ -228,12 +228,12 @@
                 <ul>
                     <li>
                         <p>
-                            Download Zoom: you <em>may</em> be able to record in the web browser version of Zoom, but I'm not sure. You can download the zoom client at <url>https://zoom.us/download</url>.
+                            Download Zoom: you <em>may</em> be able to record in the web browser version of Zoom, but I'm not sure. You can download the zoom client at <url href="https://zoom.us/download">zoom.us/download</url>.
                         </p>
                     </li>
                     <li>
                         <p>
-                            Once you've downloaded and opened Zoom, start a new meeting. You might need to choose your audio/camera and allow Zoom to use it, and then eventually<q> Join with computer audio.</q>
+                            Once you've downloaded and opened Zoom, start a new meeting. You might need to choose your audio/camera and allow Zoom to use it, and then eventually <q> Join with computer audio.</q>
                         </p>
                     </li>
                     <li>
