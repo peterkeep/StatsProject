@@ -6,7 +6,9 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" />
-    <target name="print" format="pdf" />
+    <target name="print" format="pdf" 
+    deploy-dir="pdf"
+    output-filename="StatsLabsProject.pdf"/>
   </targets>
 </project>
 
