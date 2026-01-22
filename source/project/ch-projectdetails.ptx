@@ -5,11 +5,10 @@
 
   <introduction>
     <p>
-        Each of the project part submissions are described here.
+        
     </p>
   </introduction>
 
-  <!-- include sections -->
-  <!-- <xi:include href="sec-section-name.ptx" /> -->
-
+  <xi:include href="./proj-datadescription.ptx" />
+  <xi:include href="./proj-exploringdata.ptx" />
 </chapter>

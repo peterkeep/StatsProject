@@ -28,7 +28,6 @@
         </ul>
     </p>
   </introduction>
-
   <!-- include sections -->
   <xi:include href="data-AirBnB.ptx" />
   <xi:include href="data-SteamGames.ptx" />

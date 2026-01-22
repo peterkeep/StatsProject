@@ -1,0 +1,129 @@
+<section xml:id="proj-datadescription">
+    <title>Data Description</title>
+    <introduction>
+        <p>
+            For this first part of the project, you'll be deciding and specifying what, exactly, you want to study this semester. You're going to sift through data sets, select one, and then describe it in some specific ways. You'll get used to exploring the data in the software (jamovi) that we'll use and overall orient yourself to the process of working on and submitting parts of the project.
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-dataselection">
+        <title>Data Selection</title>
+        <p>
+            The first thing you'll need to do is look through the data sets and pick which one you would like to analyze. Take some time to read through the basic descriptions of each, check out the data dictionaries for different options, and ultimately select an option to work with. You can look through the data sets as much as you'd like while you select them, but I hope you go into this project with a pretty good understanding of what information is included in each data set.
+        </p>
+        <p>
+            Each of the data sets have different applications, so you can prioritize your selection based on the types of applications you can see for these data sets or the topics of the data themselves.
+        </p>
+        <p>
+            Find the data sets in <xref ref="ch-datasets"/>.
+        </p>
+        <p>
+            In your submission, explain which data set you selected, and give some explanation. Here are some ideas or examples of things to think about:
+            <ul>
+                <li>
+                    <p>
+                        Did you pick the data set because the data was describing something you are interested in? Tell me about it!
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Did you pick the data set because you had some questions about it that you wanted to answer? What are your questions?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Were you interested in something about the types of applications this data could have? Describe them!
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Is there something else about this data set that was intriguing to you?
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection xml:id="subsec-DataDetails">
+        <title>Data Details</title>
+        <p>
+            I want you to think about the data you've selected and familiarize yourself with it.
+            <ul>
+                <li>
+                    <p>
+                        What is the population that you're data set represents? Be specific, and explain why you think this. Do you think this data is a representative sample?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        We don't get much information about how this data was sampled or collected. Do you think this data was collected from an experiment or an observational study?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Pick 10 variables from your data set. For each one, describe: 
+                        <ul>
+                            <li>
+                                <p>
+                                    Whether it is categorical or numerical.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    If it is categorical: is it ordinal or nominal? Describe the different levels of the categorical variable briefly.
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    If it is numerical: is it continuous or discrete? Is there a natural maximum/minimum for the values (for example: does it only make sense to have values greater than or equal to 0, or something similar)?
+                                </p>
+                                <aside>
+                                    <p>
+                                        In your write-up, you can just include these 10 variables in a list, almost like in the data dictionary for your data set.
+                                    </p>
+                                </aside>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Pick a pair of variables that you think could be associated. Why do you think these variables are associated? What about their description makes you think they could be associated?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Pick a pair of variables that you think could be independent. Why do you think these variables are independent? What about their description makes you think they could be independent? If you don't think any pairs of variables are independent, explain why you think that.
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection xml:id="subsec-ApplicationDecisionMaking">
+        <title>Application and Decision Making</title>
+        <p>
+            We want to go into this with some idea of why the data we're selecting could be useful.
+            <ul>
+                <li>
+                    <p>
+                        Why is your data set useful? What kinds of business-specific applications might it have? Note that these don't have to be profit-generating applications for a company: there are tons of business applications that aren't centered around making money off of a product.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        What kinds of business decisions could this data set help with?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        What other information or data would be helpful to have alongside this data? If you could collect more information, especially more information about the observational or experimental units, what would you collect? Why would this be helpful?
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <conclusion>
+        <title>Write-Up</title>
+        <p>
+            You should collect all of your answers to these questions in a short report. It should look like a short essay or paper. You can write this in Word, Google Docs, or any normal word processor. Feel free to use the headings we have on this page in your report (Data Selection, Data Details, Application and Decision Making) to help organize your answers. Make sure you answer everything, and write clearly and coherently. I won't be grading you on grammar or spelling, but in any report like this, clarity is most important.
+        </p>
+    </conclusion>
+</section>
