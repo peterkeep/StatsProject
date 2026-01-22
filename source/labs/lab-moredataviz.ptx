@@ -1,5 +1,5 @@
-<section xml:id="lab3-moredataviz">
-    <title>Lab 3: More Data Visualization</title>
+<section xml:id="lab-moredataviz">
+    <title>More Data Visualization</title>
     <introduction>
         <p>
             In this lab assignment, we're going to build a couple of more data visualizations, where the focus is less on summarizing a single variable and more on exploring connections between variables. We aren't doing any formal tests, but we are doing some preliminary work towards answering a research question.

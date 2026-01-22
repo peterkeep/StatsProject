@@ -1,8 +1,8 @@
-<section xml:id="lab6-inferencemeans">
-    <title>Lab 6: Inference for Means</title>
+<section xml:id="lab-inferencemeans">
+    <title>Inference for Means</title>
     <introduction>
         <p>
-            This lab will be a bit longer than the previous one: we'll work on doing some of the inference on means, and, unlike the lab on proportions, we have to start with single means tests and confidence intervals. (We did single proportion stuff on <xref ref="lab4-introtoinference" text="title"/>, remember.) We also want to be a bit more careful with some of these, since there are some conditions to check outside of just big enough sample size.
+            This lab will be a bit longer than the previous one: we'll work on doing some of the inference on means, and, unlike the lab on proportions, we have to start with single means tests and confidence intervals. (We did single proportion stuff on the <xref ref="lab-introtoinference" text="title"/> lab, remember.) We also want to be a bit more careful with some of these, since there are some conditions to check outside of just big enough sample size.
         </p>
         <assemblage>
             <title>What You'll Need</title>

@@ -11,11 +11,11 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="lab1-introduction.ptx" />
-  <xi:include href="lab2-summarizingvariables.ptx" />
-  <xi:include href="lab3-moredataviz.ptx" />
-  <xi:include href="lab4-introtoinference.ptx" />
-  <xi:include href="lab5-inferencecategorical.ptx" />
-  <xi:include href="lab6-inferencemeans.ptx" />
-  <!-- <xi:include href="lab7-linearregression.ptx" /> -->
+  <xi:include href="lab-introduction.ptx" />
+  <xi:include href="lab-summarizingvariables.ptx" />
+  <xi:include href="lab-moredataviz.ptx" />
+  <xi:include href="lab-introtoinference.ptx" />
+  <xi:include href="lab-inferencecategorical.ptx" />
+  <xi:include href="lab-inferencemeans.ptx" />
+  <!-- <xi:include href="lab-linearregression.ptx" /> -->
 </chapter>

@@ -1,5 +1,5 @@
-<section xml:id="lab5-inferencecategorical-">
-    <title>Lab 5: Inference for Categorical Data</title>
+<section xml:id="lab-inferencecategorical-">
+    <title>Inference for Categorical Data</title>
     <introduction>
         <p>
             In this lab, we'll apply some different tests and build some different confidence intervals that are concerned with proportions.

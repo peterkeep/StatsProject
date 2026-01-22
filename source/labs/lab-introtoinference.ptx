@@ -1,5 +1,5 @@
-<section xml:id="lab4-introtoinference">
-    <title>Lab 4: Introduction to Inference</title>
+<section xml:id="lab-introtoinference">
+    <title>Introduction to Inference</title>
     <introduction>
         <p>
             In this lab assignment, we'll introduce some of the basics of statistical inference. Some of the specifics will be a bit different than what we're learning, but overall we're just going to focus on the concept of a confidence interval and hypothesis test.

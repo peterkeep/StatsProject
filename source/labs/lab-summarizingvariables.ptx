@@ -1,5 +1,5 @@
-<section xml:id="lab2-summarizingvariables">
-    <title>Lab 2: Summarizing Variables</title>
+<section xml:id="lab-summarizingvariables">
+    <title>Summarizing Variables</title>
     <introduction>
         <p>
             In this second jamovi lab, we'll work on building some basic summaries (plots and calculations) of variables (both numerical and categorical). This is really one of the first things we should do with a new data set after learning what the variables represent. We'll explore the data by getting to know not only what each variable represents, but also what the different observations look like and how they act as a group. 
@@ -7,7 +7,7 @@
         <assemblage>
             <title>What You'll Need</title>
             <p>
-                <em>Data:</em>: we're going to use the same AirBnB data set from Lab 1, and it might be nice to use the version you saved afterwards. Load that data up by either opening the .csv file or the .omv file that you saved from <xref ref="lab1-introduction" text="custom">Lab 1</xref>.
+                <em>Data:</em>: we're going to use the same AirBnB data set from Lab 1, and it might be nice to use the version you saved afterwards. Load that data up by either opening the .csv file or the .omv file that you saved from the <xref ref="lab-introduction" text="title"/> lab.
             </p>
         </assemblage>
     </introduction>
