@@ -1,0 +1,45 @@
+<section xml:id="data-NCAA">
+    <title>NCAA Academic Progress Rate Data Set</title>
+    <introduction>
+        <p>
+            This one is going to seem over-whelming at first (there are 101 variables), but I promise it's not! This is publicly available data tracking student-athlete academic performance. We aren't looking at individual students: there is a statistic called the <q>Academic Progress Rate</q> that is calculated for specific sports teams overall. So each row in this data set represents a specific sports team at a specific school (like maybe the women's cross country team at the University of Alabama at Birmingham). From there we get a ton of data (like what division or conference the team plays in as well as different categories for schools) and then we get variables like the number of student-athletes tracked and the APR scores for different years. There are over 6000 teams represented in this data set and around 100 variables. Many of those, though, you don't need to use. You can read through the background information and descriptions in the data dictionary to decide how you want to focus on things here.
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-DownloadNCAA">
+        <title>Download</title>
+        <p>
+            <ul>
+                <li>
+                    <p>
+                        <dataurl source="./data/NCAA-APR.csv">NCAA-APR.csv</dataurl>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Alternatively, you can download a jamovi-specific file: <dataurl source="./data/NCAA-APR.omv">NCAA-APR.omv</dataurl>
+                    </p>
+                </li>
+            </ul>
+        </p>
+    </subsection>
+    <subsection xml:id="subsec-DictionaryNCAA">
+        <title>Data Dictionary</title>
+        <table>
+            <title>General Information</title>
+            <tabular>
+                <row>
+                    <cell><em>Rows:</em></cell> <cell>6017</cell>
+                </row>
+                <row>
+                    <cell><em>Columns:</em></cell> <cell>101</cell>
+                </row>
+                <row>
+                    <cell><em>Source:</em></cell> <cell>Steam API</cell>
+                </row>
+                <row>
+                    <cell><em>Year:</em></cell> <cell>2024</cell>
+                </row>
+            </tabular>
+        </table>
+    </subsection>
+</section>
