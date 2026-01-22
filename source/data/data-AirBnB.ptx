@@ -4,6 +4,9 @@
         <p>
             This is a reference page to quickly find the data set we'll be using for the labs this semester. As you work through the different labs, you should be saving your jamovi file to reflect the changes we'll make to this data set as we work through it, but you can always download the original data here. Similarly, you can find the data dictionary to get a basic review of what the data set is and what the variables measure.
         </p>
+        <p>
+            This data set includes information about different AirBnB listings in New York City. It has 18 different variables collected from over 38,000 listings. Some variables are identifiers for things like the host or the specific listing, but we have information about pricing, location, type of listing, etc.
+        </p>
     </introduction>
     <subsection xml:id="subsec-DownloadAirBnB">
         <title>Download</title>
