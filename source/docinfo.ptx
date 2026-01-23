@@ -12,8 +12,8 @@
 
   <!-- The next three lines are likely for mature projects only: -->
 
-  <!-- <brandlogo url="" source="images/cover.png"/> -->
-  <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+  <brandlogo url="https://www.peter-keep.com/StatsProject/web/" source="cover.png"/>
+  <covers front="cover.png"/>
   <!-- <document-id>unique-book-id</document-id> -->
 
   <!-- macros for defining latex math shortcuts. It is good practice -->

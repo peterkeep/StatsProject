@@ -107,7 +107,7 @@
       <!--<asymptote links="no" />-->
 
     <!-- Covers: provide paths to pdfs for front and back covers: -->
-      <!--<cover front="cover-front.pdf" back="cover-back.pdf" />-->
+      <cover front="cover.png"/>
     <!-- Set @formatted to "no" to remove formatting on worksheets: -->
       <!--<worksheet formatted="yes" />-->
   </latex>
