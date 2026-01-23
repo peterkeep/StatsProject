@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: greeley                        *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Inference for Means</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Statistics Lab Book and Project">
+<meta property="book:author" content="Peter Keep">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.10';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="StatsProject" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="StatsProject.html"><span class="title">Statistics Lab Book and Project</span> <span class="subtitle">Lab assignments and project details for a project-based Statistics for Business class</span></a></h1>
+<p class="byline">Peter Keep</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="lab-inferencecategorical-.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-labassignments.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-projectdetails.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-jamovi.html" class="internal"><span class="codenumber">1</span> <span class="title">Software: Jamovi</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-datasets.html" class="internal"><span class="codenumber">2</span> <span class="title">Data Sets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="data-AirBnB.html" class="internal"><span class="codenumber">2.1</span> <span class="title">AirBnB Data Set (Lab Data Set)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-AirBnB.html#subsec-DownloadAirBnB" class="internal"><span class="title">Download</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-AirBnB.html#subsec-DictionaryAirBnB" class="internal"><span class="title">Data Dictionary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="data-SteamGames.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Steam Games Data Set</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-SteamGames.html#subsec-DownloadSteamGames" class="internal"><span class="title">Download</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-SteamGames.html#subsec-DictionarySteamGames" class="internal"><span class="title">Data Dictionary</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-labassignments.html" class="internal"><span class="codenumber">3</span> <span class="title">Lab Assignments</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-introduction.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to jamovi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-introduction.html#lab-introduction-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsubsec-StartingJamovi" class="internal"><span class="title">Starting jamovi</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsubsec-ExploringVariables" class="internal"><span class="title">Exploring Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsubsec-NewVariable" class="internal"><span class="title">New Variable</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsec-AnotherNewVariable" class="internal"><span class="title">Another New Variable</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-summarizingvariables.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Summarizing Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-summarizingvariables.html#lab-summarizingvariables-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-summarizingvariables.html#subsubsec-SummarizingNumericalVariables" class="internal"><span class="title">Summarizing Numerical Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables" class="internal"><span class="title">Summarizing Categorical Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-summarizingvariables.html#subsec-AddingAFilter" class="internal"><span class="title">Adding a Filter</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-moredataviz.html" class="internal"><span class="codenumber">3.3</span> <span class="title">More Data Visualization</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-moredataviz.html#lab-moredataviz-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-moredataviz.html#subsubsec-ListingTypeByBorough" class="internal"><span class="title">Listing Type by Borough</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-moredataviz.html#subsubsec-PriceComparedToNights" class="internal"><span class="title">Price Compared to Minimum Number of Nights</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-moredataviz.html#subsubsec-ListingTypeAvailability" class="internal"><span class="title">Listing Type Availability</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-introtoinference.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Introduction to Inference</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-introtoinference.html#lab-introtoinference-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introtoinference.html#subsubsec-NewVariable2" class="internal"><span class="title">New Variable</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introtoinference.html#subsubsec-ConfidenceIntervalProportion" class="internal"><span class="title">Confidence Interval to Estimate a Proportion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introtoinference.html#subsubsec-HypothesisTestProportion" class="internal"><span class="title">Hypothesis Test for a Proportion</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-inferencecategorical-.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Inference for Categorical Data</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-inferencecategorical-.html#lab-inferencecategorical--3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencecategorical-.html#subsubsec-DistributionRoomTypes" class="internal"><span class="title">Distribution of Room Types</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencecategorical-.html#subsubsec-ListingTypeByBorough2" class="internal"><span class="title">Listing Types by Borough</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="lab-inferencemeans.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Inference for Means</span></a></div>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-inferencemeans.html#lab-inferencemeans-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencemeans.html#subsubsec-SingleMean" class="internal"><span class="title">Single Mean</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencemeans.html#subsubsec-PriceRecently" class="internal"><span class="title">Price More Recently</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencemeans.html#subsubsec-MoreGroups" class="internal"><span class="title">More Groups</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-projectdetails.html" class="internal"><span class="codenumber">4</span> <span class="title">Project Parts and Details</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="proj-datadescription.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Data Description</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#subsec-dataselection" class="internal"><span class="title">Data Selection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#subsec-DataDetails" class="internal"><span class="title">Data Details</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#subsec-ApplicationDecisionMaking" class="internal"><span class="title">Application and Decision Making</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="proj-exploringdata.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Exploring Data</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#subsec-VariableSelection" class="internal"><span class="title">Variable Selection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#subsec-NumericalVariables" class="internal"><span class="title">Numerical Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#subsec-CategoricalVariables" class="internal"><span class="title">Categorical Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="proj-associationquestions.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Association and Questions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#subsec-ResearchQuestionsHypotheses" class="internal"><span class="title">Research Questions/Hypotheses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#subsec-Exploration" class="internal"><span class="title">Exploration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#subsec-Summary" class="internal"><span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="proj-analysis.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Analysis</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-analysis.html#subsec-ResearchQuestions" class="internal"><span class="title">Research Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="proj-finalreport.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Final Report</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-IntroductionBackground" class="internal"><span class="title">Introduction &amp; Background</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-Methods" class="internal"><span class="title">Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-Results" class="internal"><span class="title">Results</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-DiscussionConclusions" class="internal"><span class="title">Discussion &amp; Conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-WrittenSubmission" class="internal"><span class="title">Written Submission</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="proj-finalreport.html#subsec-Presentation" class="internal"><span class="title">Presentation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsubsec-PresentationDetails" class="internal"><span class="title">Presentation Details</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsubsec-HowToRecord" class="internal"><span class="title">How To Record a Presentation</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsubsec-PracticeIsImportant" class="internal"><span class="title">Practice Is Important</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="lab-inferencemeans"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Inference for Means</span>
+</h2>
+<section class="introduction" id="lab-inferencemeans-2"><div class="para" id="lab-inferencemeans-2-1">This lab will be a bit longer than the previous one: we’ll work on doing some of the inference on means, and, unlike the lab on proportions, we have to start with single means tests and confidence intervals. (We did single proportion stuff on the <a href="lab-introtoinference.html" class="internal" title="Section 3.4: Introduction to Inference">Introduction to Inference</a> lab, remember.) We also want to be a bit more careful with some of these, since there are some conditions to check outside of just big enough sample size.<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencemeans-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="lab-inferencemeans-2-2"><h3 class="heading"><span class="title">What You’ll Need.</span></h3>
+<div class="para logical" id="lab-inferencemeans-2-2-2">
+<ol class="decimal" id="lab-inferencemeans-2-2-2-1">
+<li id="lab-inferencemeans-2-2-2-1-1">
+<div class="para" id="lab-inferencemeans-2-2-2-1-1-1">
+<em class="emphasis">Data:</em> make sure you’re working with a copy of the AirBnB data set that has the most recent filters in it!<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencemeans-2-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#lab-inferencemeans-2-2-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="lab-inferencemeans-2-2-2-1-2">
+<div class="para" id="lab-inferencemeans-2-2-2-1-2-1">
+<em class="emphasis">Notes:</em> it will be helpful to have any notes or resources about hypothesis tests or confidence intervals for categorical data. You’ll likely want to be able to look up conditions for things like ANOVA or the t-tests easily.<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencemeans-2-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#lab-inferencemeans-2-2-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencemeans-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage: What You’ll Need"><a href="#lab-inferencemeans-2-2" title="Copy heading and permalink for Assemblage: What You’ll Need" aria-label="Copy heading and permalink for Assemblage: What You’ll Need">🔗</a></div></article></section><section class="subsection" id="lab-inferencemeans-3"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Tasks</span>
+</h3>
+<section class="introduction" id="lab-inferencemeans-3-2"><div class="para" id="lab-inferencemeans-3-2-1">We’ll work on building a t-test for one mean, two means, and then think about how to apply ANOVA here.<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencemeans-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsubsection" id="subsubsec-SingleMean"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Single Mean</span>
+</h4>
+<div class="para" id="subsubsec-SingleMean-2">The website AllTheRooms claims that the average price for an AirBnB in New York City in 2021 was $143/night<details class="ptx-footnote" aria-live="polite" id="subsubsec-SingleMean-2-1"><summary class="ptx-footnote__number" title="Footnote 3.6.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="subsubsec-SingleMean-2-1"><a class="external" href="https://www.alltherooms.com/resources/articles/average-airbnb-prices-by-city/" target="_blank">Average Airbnb Prices By City: How Much Should You Charge For Your Airbnb? [2022]</a></div></details>. Let’s test this claim!<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="subsubsec-SingleMean-3">
+<div class="para">We’re going to set up a t-test with the following hypotheses:</div>
+<div class="displaymath process-math" id="subsubsec-SingleMean-3-1">
+\begin{align*}
+H_0: \;\amp \mu_{\texttt{price}}=143 \\
+H_A: \;\amp \mu_{\texttt{price}} \neq 143 
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-SingleMean-4">In the <kbd class="kbdkey">Analysis</kbd> tab, you’ll find a <kbd class="kbdkey">T-Tests</kbd> menu with a “One Sample T-Test” option. Select that. Add <code class="code-inline tex2jax_ignore">price</code> as a Dependent Variable, and set up your hypothesis: You’ll need to make sure that we’re selecting the “Student’s t-Test” (there are other options here!) and include the tested value in the hypothesis. You’ll select the appropriate alternative hypothesis, and even get some options on what gets displayed.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-SingleMean-5">For now, you should see a test statistic of 26.4185, which is extremely large! Picture that: we’re over 26 standard errors into the tail of a nearly-normal t-distribution. You can see the correspondingly low p-value. The evidence that we have about AirBnB prices does not fit the claim from this website, and we reject the hypothesis that the average nightly price is $143.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-SingleMean-6">How much is it? Well, for this, we need a confidence interval. There are two quick ways of doing this. One of them is in the t-Test itself: we can select “Mean difference” under “Additional Statistics” and choose a 95% confidence interval. This will actually display a confidence interval estimating the difference of the true mean to the one in the null hypothesis. So the bounds of our interval need to be added to the claim from the null hypothesis to get the actual confidence interval on the mean.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="note remark-like" id="subsubsec-SingleMean-7"><h5 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="subsubsec-SingleMean-7-1">Again, this doesn’t show us the confidence interval to estimate the mean price: just the confidence interval estimating the <em class="emphasis">difference</em> in the mean price from the one we tested against: $143/night.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 3.6.1"><a href="#subsubsec-SingleMean-7" title="Copy heading and permalink for Note 3.6.1" aria-label="Copy heading and permalink for Note 3.6.1">🔗</a></div></article><div class="para" id="subsubsec-SingleMean-8">Another way of doing this is to find it in the <kbd class="kbdkey">Descriptives</kbd> option under the <kbd class="kbdkey">Exploration</kbd> menu. If we add the <code class="code-inline tex2jax_ignore">price</code> variable, we can choose to display the mean under the statistics, but we also have some options for the confidence interval of the mean below. A 95% confidence interval will match what we found in the t-Test itself.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsubsec-SingleMean-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsubsec-SingleMean-9-1-1">Report the actual confidence interval estimating the average price per night. Which way of finding it do you prefer? Why? (They should be the same results, just a different way of getting jamovi to display it.)<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.6.2"><a href="#subsubsec-SingleMean-9" title="Copy heading and permalink for Checkpoint 3.6.2" aria-label="Copy heading and permalink for Checkpoint 3.6.2">🔗</a></div></article></details><details id="subsubsec-SingleMean-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsubsec-SingleMean-10-1-1">In the same source that we used, they say that the average per night price of an AirBnB in USA and also in New York <em class="emphasis">state</em> is $216/night. Without doing a hypothesis test, use your confidence interval to explain whether we would reject this null hypothesis or not.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-10-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.6.3"><a href="#subsubsec-SingleMean-10" title="Copy heading and permalink for Checkpoint 3.6.3" aria-label="Copy heading and permalink for Checkpoint 3.6.3">🔗</a></div></article></details><div class="para" id="subsubsec-SingleMean-11">While we’re doing this, we should be concerned with our assumptions: we have seen that price is very clearly not normally distributed: this is fine, since our sample size is so big! The Central Limit Theorem says that if the sample size isn’t too small, the actual distribution of the values we’re sampling does not matter. We have also done our best to think about the outliers on this variable, and were able to filter our variable to remove some of them that clearly did not belong to the population. Good work, us!<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="note remark-like" id="subsubsec-SingleMean-12"><h5 class="heading">
+<span class="type">Note</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5>
+<div class="para" id="subsubsec-SingleMean-12-1">Again, notice that we removed data points that we found that <em class="emphasis">did not belong in the population we were examining.</em> We’re not removing outliers because they were outliers. We examined them and found that they were not real AirBnB listings. This is, in general, a pretty hard thing to do without a lot of background knowledge for the type of data we’re working with. We should, in general, be very reluctant to remove outlying data, since we don’t want to remove some of the extreme values that actually are representative the variability in our population.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-SingleMean-12-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Note 3.6.4"><a href="#subsubsec-SingleMean-12" title="Copy heading and permalink for Note 3.6.4" aria-label="Copy heading and permalink for Note 3.6.4">🔗</a></div></article><div class="autopermalink" data-description="Subsubsection: Single Mean"><a href="#subsubsec-SingleMean" title="Copy heading and permalink for Subsubsection: Single Mean" aria-label="Copy heading and permalink for Subsubsection: Single Mean">🔗</a></div></section><section class="subsubsection" id="subsubsec-PriceRecently"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Price More Recently</span>
+</h4>
+<div class="para logical" id="subsubsec-PriceRecently-2">
+<div class="para">We have already explored how the prices in this data set might not be representative of the most "current" AirBnB listings: we tried to filter out the listings that were artificially high in price or were seemingly not actually on the market already. We also have the new variable from the <a href="lab-introtoinference.html" class="internal" title="Section 3.4: Introduction to Inference">Introduction to Inference</a> lab, <code class="code-inline tex2jax_ignore">recent</code>. Let’s see if the average price is different based on whether or not the listing has been reviewed recently. Really, we’re testing these hypotheses:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/lab-introtoinference.html" id="subsubsec-PriceRecently-2-3">
+\begin{align*}
+H_0: \;\amp \mu_{\texttt{recent}} = \mu_{\texttt{non-recent}}\\
+H_A: \;\amp \mu_{\texttt{recent}} \neq \mu_{\texttt{non-recent}}
+\end{align*}
+</div>
+<div class="para">In the same <kbd class="kbdkey">T-Tests</kbd> menu, select “Independent Samples T-Test”. Now we can add <code class="code-inline tex2jax_ignore">price</code> to the “Dependent Variables” pane, and add the new variable <code class="code-inline tex2jax_ignore">recent</code> as a “Grouping Variable.” We again have a ton of options for how we get results. A thing that you might notice is a little footnote under the results of your test: “Levene’s test is significant (p &lt; 0.05), suggesting a violation of the assumption of equal variances.” One of the assumptions that we briefly talked about how sometimes we assume equal variances for the groups, but in our case we don’t want to. A couple of points:</div>
+<ul class="disc" id="subsubsec-PriceRecently-2-11">
+<li id="subsubsec-PriceRecently-2-11-1">
+<div class="para" id="subsubsec-PriceRecently-2-11-1-1">The version where we <em class="emphasis">don’t</em> assume equal variances is called Welch’s t-Test and is an option here. You can select it instead of Student’s t-Test.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-PriceRecently-2-11-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsubsec-PriceRecently-2-11-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsubsec-PriceRecently-2-11-2">
+<div class="para" id="subsubsec-PriceRecently-2-11-2-1">Levene’s Test is another hypothesis test that looks at whether or not two variances are different: a low p-value rejects the null hypothesis that the variances are the same. With large samples, this sometimes happens even if the sample variances are <em class="emphasis">very</em> close.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-PriceRecently-2-11-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsubsec-PriceRecently-2-11-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Let’s look at the variances: it might be easiest to just think about standard deviations. Check the “Descriptives” box under “Additional Statistics.” This pulls up a table with sample size, mean, median, standard deviation, and standard error of the mean. We can compare standard deviations, which will also compare variances then, to see if they look like they might be close.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-PriceRecently-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsubsec-PriceRecently-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsubsec-PriceRecently-3-1-1">What are the standard deviations for the price of recently reviewed and non-recently reviewed listings? Do they seem close to each other? Is there evidence that we actually could have equal variances here, or not?<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-PriceRecently-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.6.5"><a href="#subsubsec-PriceRecently-3" title="Copy heading and permalink for Checkpoint 3.6.5" aria-label="Copy heading and permalink for Checkpoint 3.6.5">🔗</a></div></article></details><div class="para" id="subsubsec-PriceRecently-4">Let’s go back to our t-Test and use Welch’s t-Test, not trying to assume equal variances. We can, again, get a confidence interval for the mean difference under “Additional Statistics”. I sometimes think it’s hard to keep track of this, since it relies on knowing which way we did the subtraction to find the difference. I like to use the “Descriptives” table to see which one has the higher mean. The confidence interval for the mean difference estimates how much bigger the mean is in the group with the higher mean.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-PriceRecently-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsubsec-PriceRecently-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsubsec-PriceRecently-5-1-1">Explain the difference in prices for the two groups based on the results of the hypothesis test and the confidence interval.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-PriceRecently-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.6.6"><a href="#subsubsec-PriceRecently-5" title="Copy heading and permalink for Checkpoint 3.6.6" aria-label="Copy heading and permalink for Checkpoint 3.6.6">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection: Price More Recently"><a href="#subsubsec-PriceRecently" title="Copy heading and permalink for Subsubsection: Price More Recently" aria-label="Copy heading and permalink for Subsubsection: Price More Recently">🔗</a></div></section><section class="subsubsection" id="subsubsec-MoreGroups"><h4 class="heading hide-type">
+<span class="type">Subsubsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">More Groups</span>
+</h4>
+<div class="para" id="subsubsec-MoreGroups-2">Now we’ll think about a question that we’ve been hinting at in these labs: is there a difference in the prices of these listings based on what borough they’re located in?<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-MoreGroups-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-MoreGroups-3">This is a classic ANOVA question: we are looking to see if our means are all consistent across the different groupings or if there is some difference in some of those means somewhere. There are a lot of cool options to use in ANOVA in general, but since we’re looking at a very introductory level here, we’re going to stick to the “One-Way ANOVA” found in the <kbd class="kbdkey">ANOVA</kbd> menu. Add <code class="code-inline tex2jax_ignore">price</code> to the “Dependent Variables” pane, and include <code class="code-inline tex2jax_ignore">neighbourhood_group</code> as the “Grouping Variable.” You’ll get to select that we won’t assume equal variances. The ANOVA table here is a bit different than what we might normally see, since it doesn’t report the Mean Squares: it just gives us the F-Statistic, the degrees of freedom, and the p-value.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-MoreGroups-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-MoreGroups-4">Here we can see that there is definitely a difference in between the average prices depending on which borough you’re in!<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-MoreGroups-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsubsec-MoreGroups-5">The obvious follow-up question is "what are these differences?" One nice option is to add the “Descriptives plots” under the “Additional Statistics.” This will display the confidence intervals of the means of each group for us to compare. You can also get these confidence intervals by using the Mean and Standard Error for each group in the Descriptives table, and then building it by hand (by just using the almost 2 standard errors for margin of error, like normal).<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-MoreGroups-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsubsec-MoreGroups-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h5 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">3.6.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsubsec-MoreGroups-6-1-1">Build and submit the picture of the confidence intervals for the mean price for each borough.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-MoreGroups-6-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 3.6.7"><a href="#subsubsec-MoreGroups-6" title="Copy heading and permalink for Checkpoint 3.6.7" aria-label="Copy heading and permalink for Checkpoint 3.6.7">🔗</a></div></article></details><div class="para logical" id="subsubsec-MoreGroups-7">
+<div class="para">We can also do a post-hoc test, where we look pair-wise comparisons: we’ll use the Games-Howell test, and see which boroughs are significantly different in price. It looks like, as a summary:</div>
+<ul class="disc" id="subsubsec-MoreGroups-7-1">
+<li id="subsubsec-MoreGroups-7-1-1">
+<div class="para" id="subsubsec-MoreGroups-7-1-1-1">Manhattan’s prices are REALLY high comparatively to every other borough.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-MoreGroups-7-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsubsec-MoreGroups-7-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsubsec-MoreGroups-7-1-2">
+<div class="para" id="subsubsec-MoreGroups-7-1-2-1">Brooklyn’s pricing model is different from every other borough as well.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-MoreGroups-7-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsubsec-MoreGroups-7-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsubsec-MoreGroups-7-1-3">
+<div class="para" id="subsubsec-MoreGroups-7-1-3-1">Staten Island, Queens, and the Bronx may not have any significant differences in the mean price.<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-MoreGroups-7-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsubsec-MoreGroups-7-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-MoreGroups-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsubsection: More Groups"><a href="#subsubsec-MoreGroups" title="Copy heading and permalink for Subsubsection: More Groups" aria-label="Copy heading and permalink for Subsubsection: More Groups">🔗</a></div></section><div class="autopermalink" data-description="Subsection: Tasks"><a href="#lab-inferencemeans-3" title="Copy heading and permalink for Subsection: Tasks" aria-label="Copy heading and permalink for Subsection: Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 3.6: Inference for Means"><a href="#lab-inferencemeans" title="Copy heading and permalink for Section 3.6: Inference for Means" aria-label="Copy heading and permalink for Section 3.6: Inference for Means">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="lab-inferencecategorical-.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-projectdetails.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

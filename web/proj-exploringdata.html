@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: greeley                        *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Exploring Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Statistics Lab Book and Project">
+<meta property="book:author" content="Peter Keep">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.10';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="StatsProject" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="StatsProject.html"><span class="title">Statistics Lab Book and Project</span> <span class="subtitle">Lab assignments and project details for a project-based Statistics for Business class</span></a></h1>
+<p class="byline">Peter Keep</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="proj-datadescription.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-projectdetails.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="proj-associationquestions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-jamovi.html" class="internal"><span class="codenumber">1</span> <span class="title">Software: Jamovi</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-datasets.html" class="internal"><span class="codenumber">2</span> <span class="title">Data Sets</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="data-AirBnB.html" class="internal"><span class="codenumber">2.1</span> <span class="title">AirBnB Data Set (Lab Data Set)</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-AirBnB.html#subsec-DownloadAirBnB" class="internal"><span class="title">Download</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-AirBnB.html#subsec-DictionaryAirBnB" class="internal"><span class="title">Data Dictionary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="data-SteamGames.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Steam Games Data Set</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-SteamGames.html#subsec-DownloadSteamGames" class="internal"><span class="title">Download</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-SteamGames.html#subsec-DictionarySteamGames" class="internal"><span class="title">Data Dictionary</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-labassignments.html" class="internal"><span class="codenumber">3</span> <span class="title">Lab Assignments</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-introduction.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to jamovi</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-introduction.html#lab-introduction-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsubsec-StartingJamovi" class="internal"><span class="title">Starting jamovi</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsubsec-ExploringVariables" class="internal"><span class="title">Exploring Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsubsec-NewVariable" class="internal"><span class="title">New Variable</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsec-AnotherNewVariable" class="internal"><span class="title">Another New Variable</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-summarizingvariables.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Summarizing Variables</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-summarizingvariables.html#lab-summarizingvariables-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-summarizingvariables.html#subsubsec-SummarizingNumericalVariables" class="internal"><span class="title">Summarizing Numerical Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables" class="internal"><span class="title">Summarizing Categorical Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-summarizingvariables.html#subsec-AddingAFilter" class="internal"><span class="title">Adding a Filter</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-moredataviz.html" class="internal"><span class="codenumber">3.3</span> <span class="title">More Data Visualization</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-moredataviz.html#lab-moredataviz-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-moredataviz.html#subsubsec-ListingTypeByBorough" class="internal"><span class="title">Listing Type by Borough</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-moredataviz.html#subsubsec-PriceComparedToNights" class="internal"><span class="title">Price Compared to Minimum Number of Nights</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-moredataviz.html#subsubsec-ListingTypeAvailability" class="internal"><span class="title">Listing Type Availability</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-introtoinference.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Introduction to Inference</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-introtoinference.html#lab-introtoinference-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introtoinference.html#subsubsec-NewVariable2" class="internal"><span class="title">New Variable</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introtoinference.html#subsubsec-ConfidenceIntervalProportion" class="internal"><span class="title">Confidence Interval to Estimate a Proportion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introtoinference.html#subsubsec-HypothesisTestProportion" class="internal"><span class="title">Hypothesis Test for a Proportion</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-inferencecategorical-.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Inference for Categorical Data</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-inferencecategorical-.html#lab-inferencecategorical--3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencecategorical-.html#subsubsec-DistributionRoomTypes" class="internal"><span class="title">Distribution of Room Types</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencecategorical-.html#subsubsec-ListingTypeByBorough2" class="internal"><span class="title">Listing Types by Borough</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="lab-inferencemeans.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Inference for Means</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="lab-inferencemeans.html#lab-inferencemeans-3" class="internal"><span class="title">Tasks</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencemeans.html#subsubsec-SingleMean" class="internal"><span class="title">Single Mean</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencemeans.html#subsubsec-PriceRecently" class="internal"><span class="title">Price More Recently</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencemeans.html#subsubsec-MoreGroups" class="internal"><span class="title">More Groups</span></a></div></li>
+</ul>
+</li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-projectdetails.html" class="internal"><span class="codenumber">4</span> <span class="title">Project Parts and Details</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="proj-datadescription.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Data Description</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#subsec-dataselection" class="internal"><span class="title">Data Selection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#subsec-DataDetails" class="internal"><span class="title">Data Details</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#subsec-ApplicationDecisionMaking" class="internal"><span class="title">Application and Decision Making</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="proj-exploringdata.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Exploring Data</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#subsec-VariableSelection" class="internal"><span class="title">Variable Selection</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#subsec-NumericalVariables" class="internal"><span class="title">Numerical Variables</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#subsec-CategoricalVariables" class="internal"><span class="title">Categorical Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="proj-associationquestions.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Association and Questions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#subsec-ResearchQuestionsHypotheses" class="internal"><span class="title">Research Questions/Hypotheses</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#subsec-Exploration" class="internal"><span class="title">Exploration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#subsec-Summary" class="internal"><span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="proj-analysis.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Analysis</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-analysis.html#subsec-ResearchQuestions" class="internal"><span class="title">Research Questions</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="proj-finalreport.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Final Report</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-IntroductionBackground" class="internal"><span class="title">Introduction &amp; Background</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-Methods" class="internal"><span class="title">Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-Results" class="internal"><span class="title">Results</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-DiscussionConclusions" class="internal"><span class="title">Discussion &amp; Conclusions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-WrittenSubmission" class="internal"><span class="title">Written Submission</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="proj-finalreport.html#subsec-Presentation" class="internal"><span class="title">Presentation</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsubsec-PresentationDetails" class="internal"><span class="title">Presentation Details</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsubsec-HowToRecord" class="internal"><span class="title">How To Record a Presentation</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsubsec-PracticeIsImportant" class="internal"><span class="title">Practice Is Important</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="proj-exploringdata"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exploring Data</span>
+</h2>
+<section class="introduction" id="proj-exploringdata-2"><div class="para" id="proj-exploringdata-2-1">In this second part of the project, you’ll start doing some more exploration and summary of the different variables in your data set. In Part 1 of this project, <a href="proj-datadescription.html" class="internal" title="Section 4.1: Data Description">Data Description</a>, you identified some possible associations between variables as well as some possible applications of this data. I want you to try to think about these overall goals, and think about how we’ll build some research questions to think about. While we’re preparing to do this, we should think about what variables will be important to these questions or applications. From there, we want to explore them and summarize them.<div class="autopermalink" data-description="Paragraph"><a href="#proj-exploringdata-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proj-exploringdata-2-2">You might want/need to do some data cleaning here: make sure your variables are classified correctly in jamovi, and, if you have an ordinal variable, you should confirm the order of the levels. You might need to set up some filters or build a new variable here, so be prepared to do that.<div class="autopermalink" data-description="Paragraph"><a href="#proj-exploringdata-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="subsec-VariableSelection"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Variable Selection</span>
+</h3>
+<div class="para logical" id="subsec-VariableSelection-2">
+<div class="para">Pick 5 variables from your data. These should:</div>
+<ul class="disc" id="subsec-VariableSelection-2-1">
+<li id="subsec-VariableSelection-2-1-1">
+<div class="para" id="subsec-VariableSelection-2-1-1-1">Include a mixture of numerical and categorical variables.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-VariableSelection-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-VariableSelection-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-VariableSelection-2-1-2">
+<div class="para" id="subsec-VariableSelection-2-1-2-1">Be variables that you think are central to some application, decision, or question that you could ask (they don’t need to all be connected with the same application, decision, or question). These don’t need to be the same things you identified in Part 1 of this project. Sometimes we think of these variables as "demographic" variables, but yours don’t all have to be exactly this.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-VariableSelection-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-VariableSelection-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Describe your 5 variables and give a brief explanation of why you picked them.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-VariableSelection-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Variable Selection"><a href="#subsec-VariableSelection" title="Copy heading and permalink for Subsection: Variable Selection" aria-label="Copy heading and permalink for Subsection: Variable Selection">🔗</a></div></section><section class="subsection" id="subsec-NumericalVariables"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Numerical Variables</span>
+</h3>
+<div class="para logical" id="subsec-NumericalVariables-2">
+<div class="para">For each numerical variable:</div>
+<ul class="disc" id="subsec-NumericalVariables-2-1">
+<li id="subsec-NumericalVariables-2-1-1">
+<div class="para" id="subsec-NumericalVariables-2-1-1-1">Build both a histogram and box plot of the variable’s distribution.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-NumericalVariables-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-NumericalVariables-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-NumericalVariables-2-1-2">
+<div class="para" id="subsec-NumericalVariables-2-1-2-1">Describe the general shape of the distribution: Is it symmetric or skewed? Does it look like it is unimodal or not? Explain.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-NumericalVariables-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-NumericalVariables-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-NumericalVariables-2-1-3">
+<div class="para" id="subsec-NumericalVariables-2-1-3-1">Report an appropriate measure of center. Interpret what this value means in the context of your variable.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-NumericalVariables-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-NumericalVariables-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-NumericalVariables-2-1-4">
+<div class="para" id="subsec-NumericalVariables-2-1-4-1">Report an appropriate measure of variability. Interpret what this value means in the context of your variable.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-NumericalVariables-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-NumericalVariables-2-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Spend some time looking more at each one: look at the minimum and maximum values, and generally investigating the values. Does anything look out of place? You’ll have more time to look at your variables, but I want you to be aware of any issues that come up and fix them later. You might need to add a filter or create a new variable to describe the thing that you actually care about. You’ll have more time to do this, but I want you to start thinking about it as we keep moving through this project.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-NumericalVariables-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-NumericalVariables-3">If you do change anything by adding a filter or creating a new variable, make sure you include this information in your write-up so I know what you’re up to!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-NumericalVariables-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Numerical Variables"><a href="#subsec-NumericalVariables" title="Copy heading and permalink for Subsection: Numerical Variables" aria-label="Copy heading and permalink for Subsection: Numerical Variables">🔗</a></div></section><section class="subsection" id="subsec-CategoricalVariables"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Categorical Variables</span>
+</h3>
+<div class="para logical" id="subsec-CategoricalVariables-2">
+<div class="para">For each categorical variable:</div>
+<ul class="disc" id="subsec-CategoricalVariables-2-1">
+<li id="subsec-CategoricalVariables-2-1-1">
+<div class="para" id="subsec-CategoricalVariables-2-1-1-1">Include a frequency table for the distribution of the variable. This should include both the raw counts and the proportional frequency/percentage frequency. You don’t need to include a cumulative frequency if you don’t want to.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-CategoricalVariables-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="subsec-CategoricalVariables-2-1-1-2" class="aside aside-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading"><span class="type">Aside</span></h4></summary><aside class="aside aside-like knowl__content"><div class="para" id="subsec-CategoricalVariables-2-1-1-2-1">You might be able to copy/paste this from jamovi, but sometimes that feature doesn’t work well with specific text editors, so you might need to manually type in this table using the table creator in your text editor.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-CategoricalVariables-2-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></aside></details><div class="autopermalink" data-description="Item"><a href="#subsec-CategoricalVariables-2-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-CategoricalVariables-2-1-2">
+<div class="para" id="subsec-CategoricalVariables-2-1-2-1">Build a bar graph (whatever kind is most relevant) of the variable’s distribution.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-CategoricalVariables-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-CategoricalVariables-2-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="subsec-CategoricalVariables-2-1-3">
+<div class="para" id="subsec-CategoricalVariables-2-1-3-1">Give a general summary of the variable: what is the mode, and describe what levels of your category have high or low frequencies. Interpret these in the context of the actual variable.<div class="autopermalink" data-description="Paragraph"><a href="#subsec-CategoricalVariables-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#subsec-CategoricalVariables-2-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">Again, spend some more time looking at each variable. Does anything look out of place? You’ll have more time to look at your variables, but I want you to be aware of any issues that come up and fix them later. You might need to add a filter or create a new variable to describe the thing that you actually care about. You’ll have more time to do this, but I want you to start thinking about it as we keep moving through this project.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#subsec-CategoricalVariables-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="subsec-CategoricalVariables-3">If you do change anything by adding a filter or creating a new variable, make sure you include this information in your write-up so I know what you’re up to!<div class="autopermalink" data-description="Paragraph"><a href="#subsec-CategoricalVariables-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Subsection: Categorical Variables"><a href="#subsec-CategoricalVariables" title="Copy heading and permalink for Subsection: Categorical Variables" aria-label="Copy heading and permalink for Subsection: Categorical Variables">🔗</a></div></section><section class="conclusion" id="proj-exploringdata-6"><h3 class="heading">Write-Up.<span></span>
+</h3>
+<div class="para" id="proj-exploringdata-6-2">You’ll write up your answers in a short essay-style report again. Make sure to include the relevant plots and tables in the actual document. You might be able to copy/paste your plots, but you might have to save these as images to include in your document. Make sure you give yourself some time to figure this out.<div class="autopermalink" data-description="Paragraph"><a href="#proj-exploringdata-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="proj-exploringdata-6-3">Again, feel free to use the headings (Variable Selection, Numerical Variables, and Categorical Variables) in your document to organize your answers. You should write most of this up using complete sentences and paragraphs, since this is meant to mimic an actual report.<div class="autopermalink" data-description="Paragraph"><a href="#proj-exploringdata-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Section 4.2: Exploring Data"><a href="#proj-exploringdata" title="Copy heading and permalink for Section 4.2: Exploring Data" aria-label="Copy heading and permalink for Section 4.2: Exploring Data">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="proj-datadescription.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="proj-associationquestions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
