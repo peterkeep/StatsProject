@@ -5,9 +5,11 @@
 
   <introduction>
     <p>
-        Each of the lab assignments for this course are listed below.
+        Each of the lab assignments for this course are listed below. These each have detailed instructions to follow, as well as <q>Checkpoint</q> questions to complete and submit. 
     </p>
-    
+    <p>
+      These labs should showcase some of the different statistical tests and techniques that will be useful for developing and exploring research questions in an independent <xref ref="ch-projectdetails" text="custom">project</xref>.
+    </p>
   </introduction>
 
   <!-- include sections -->
