@@ -9,6 +9,7 @@
     deploy-dir="web"/>
     <target name="print" format="pdf" 
     deploy-dir="pdf"
+    xsl="print-style.xsl"
     output-filename="StatsLabsProject.pdf"/>
   </targets>
 </project>
