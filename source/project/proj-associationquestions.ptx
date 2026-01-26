@@ -89,10 +89,19 @@
             For each of your questions, give an explanation of what your different statistics tell you in the context of the variables you're looking at. Describe your plots and tables tell you about your question. In general, discuss your question, your initial thoughts on what you thought might be true, and what this initial exploration has shown you.
         </p>
     </subsection>
-    <conclusion>
+    <subsection>
         <title>Write-Up</title>
         <p>
             In this write-up, the structure will change. Instead of using the headings above, I want you to break up the report into sections dedicated to each individual research question. In each section (for each question), you can then use the headings above (Hypothesis, Exploration, and Summary) in your document. Include all of the relevant tables and plots in the report itself, and, as always, write this up coherently. You should write most of this up using complete sentences and paragraphs, since this is meant to mimic an actual report.
         </p>
-    </conclusion>
+    </subsection>
+    <subsection>
+        <title>Gallery</title>
+        <p>
+            This will be our last gallery for the semester, until the final project presentations. Pick one of the plots or tables you built that you think demonstrates a relationship or lack of relationship. Post it to this discussion with a brief (2-4 sentence) summary of what this graph is actually showing. Describe the variables represented and the general relationship or lack of relationship you're showing. After your summary, give a brief explanation of why this useful to know: how can this be applied or what kind of decision might this help with?
+        </p>
+        <p>
+            Once you've posted, you should try to reflect on your research questions for your data set: how can you use the ideas that others have posted to help you visualize your relationships more clearly? Think about the relationships you're seeing. Do any of these differences in proportions or means or anything else seem like they could be differences in the population, or might they just be differences due to the randomness of building the sample? Which of these relationships seem most important to find, based on what they might mean for some kind of decision-making process?
+        </p>
+    </subsection>
 </section>

@@ -126,10 +126,10 @@
             Similarly, include any relevant confidence intervals. You can include these as plots or report them in a table or something similar. Make sure to explain and interpret what these confidence intervals mean.
         </p>
     </subsection>
-    <conclusion>
+    <subsection>
         <title>Write-Up</title>
         <p>
             Again, I think you should structure this in two sections, one for each research question. Then, in each of these sections/questions, you can include each step of our inferential process. Feel free to use some headings to break these up, but you do not need to. Include all of the relevant tables and plots in the report itself, and, as always, write this up coherently. You should write most of this up using complete sentences and paragraphs, since this is meant to mimic an actual report.
         </p>
-    </conclusion>
+    </subsection>
 </section>

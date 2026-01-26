@@ -120,10 +120,36 @@
             </ul>
         </p>
     </subsection>
-    <conclusion>
+    <subsection>
         <title>Write-Up</title>
         <p>
             You should collect all of your answers to these questions in a short report. It should look like a short essay or paper. You can write this in Word, Google Docs, or any normal word processor. Feel free to use the headings we have on this page in your report (Data Selection, Data Details, Application and Decision Making) to help organize your answers. Make sure you answer everything, and write clearly and coherently. I won't be grading you on grammar or spelling, but in any report like this, clarity is most important.
         </p>
-    </conclusion>
+    </subsection>
+    <subsection>
+        <title>Gallery</title>
+        <p>
+            For your gallery post, you should explain three things:
+            <ol>
+                <li>
+                    <p>
+                        What data set did you choose?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Why did you choose it? Give a short explanation, similar (or the same!) as what you submitted in your write-up.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Why might your data set be useful? Give a short (2-4 sentences) summary of the ways that this data set could be used in some business application or decision making process.
+                    </p>
+                </li>
+            </ol>
+        </p>
+        <p>
+            This will hopefully give people some more ideas as you move forward: maybe something someone says about your data set will spur on a question or connection that you think would be interesting to explore. Once these have been submitted, try to give a brief glance around to other submissions
+        </p>
+    </subsection>
 </section>
