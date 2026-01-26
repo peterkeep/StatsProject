@@ -13,7 +13,6 @@
   <!-- The next three lines are likely for mature projects only: -->
 
   <brandlogo url="https://www.peter-keep.com/teaching/" source="cover.png"/>
-  <covers front="cover.png"/>
   <!-- <document-id>unique-book-id</document-id> -->
 
   <!-- macros for defining latex math shortcuts. It is good practice -->
