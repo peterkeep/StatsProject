@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-jamovi" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Software: Jamovi</title>
+  <title>Software: jamovi</title>
 
   <introduction>
     <p>
@@ -11,6 +11,8 @@
   </introduction>
 
   <!-- include sections -->
-  <!-- <xi:include href="sec-section-name.ptx" /> -->
+  <xi:include href="jam-about.ptx" />
+  <xi:include href="jam-install.ptx" />
+  <xi:include href="jam-help.ptx" />
 
 </chapter>
