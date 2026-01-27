@@ -26,7 +26,7 @@
                 Before we move on, we should make sure we're all on the same page. We have two filters right now.
             </p>
             <figure xml:id="fig-Filters">
-                <caption>Tw two filters.</caption>
+                <caption>Two filters.</caption>
                 <image source="labs/lab4/filters.png" width="90%">
                     <shortdescription>Screenshot of jamovi data set with two filters. One is last_review_year &gt;= 2023. This one is turned off. The other is price &lt; 100000 and minimum_nights &lt;= 365. This one is turned on.</shortdescription>
                 </image>
