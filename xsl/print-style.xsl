@@ -11,19 +11,19 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:text>\cleardoublepage&#xA;&#xA;</xsl:text>
 </xsl:template>
 
-<xsl:template match="checkpoint" mode="tcb-style">
+<xsl:template match="exercise" mode="tcb-style">
     <xsl:text>
         fonttitle=\bfseries,
-        colbacktitle=StatsBlue,
-        coltitle=white, 
+        colbacktitle=StatsLight!10,
+        coltitle=black, 
         leftrule=0.5mm,
-        rightrule=0mm,
+        rightrule=0.5mm,
         titlerule=0mm,
-        toprule=0mm,
+        toprule=0.5mm,
         bottomrule=0.5mm,
         sharpish corners,
-        colframe=StatsBlue, 
-        colback=white,
+        colframe=StatsLight, 
+        colback=StatsLight!10,
         enhanced,
         breakable
     </xsl:text>
@@ -31,17 +31,17 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="assemblage" mode="tcb-style">
     <xsl:text>
-        fonttitle= \bfseries,
-        colbacktitle=StatsBlue, 
-        coltitle=white, 
-        leftrule=0.5mm,
-        rightrule=0.5mm,
-        titlerule=0.5mm,
+        fonttitle= \large \bfseries,
+        colbacktitle=StatsLight!10, 
+        coltitle=black, 
+        leftrule=0mm,
+        rightrule=0mm,
+        titlerule=0mm,
         toprule=0.5mm,
         bottomrule=0.5mm,
         sharpish corners,
-        colframe=StatsBlue, 
-        colback=StatsBlue!10,
+        colframe=StatsLight, 
+        colback=StatsLight!10,
         enhanced,
         breakable
     </xsl:text>
