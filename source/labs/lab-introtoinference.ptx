@@ -120,8 +120,8 @@
             <p>
                 Now take some time to look at some of the other options in the Proportion Test. We can add a Test value, which is just the claim about the population proportion that the null hypothesis makes. We can also change the alternative hypothesis. For now, we'll leave things as the default options:
                 <md>
-                    <mrow>H_0: \amp p = 0.5</mrow>
-                    <mrow>H_A: \amp p\neq 0.5</mrow>
+                    <mrow>H_0: \amp\;p = 0.5</mrow>
+                    <mrow>H_A: \amp \;p\neq 0.5</mrow>
                 </md>
                 So nothing now has changed in our output: we're displaying a table with a p-value and a confidence interval. Notice, now, that the p-value is small enough that jamovi just displays it as being less than 0.001. This is typical in statistical software: with very small p-values, we might just get a display of a kind of <q>order of magnitude</q> or a general benchmark of how small it is.
             </p>
