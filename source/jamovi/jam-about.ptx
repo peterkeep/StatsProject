@@ -1,6 +1,29 @@
 <section xml:id="jam-about">
     <title>About jamovi</title>
     <p>
-        
+        Jamovi is the name of the statistical software that we'll be using and that these labs and project are written for. It's a good choice for a lot of reasons, including:
+        <ul>
+            <li>
+                <p>
+                    <em>Price:</em> Statistical software can get expensive! Software built to be used by large companies can come with a huge cost associated with it, and the software that is often used in education is bundled up with textbooks and online homework systems. Jamovi is free for anyone to use.
+                </p>
+            </li>
+            <li>
+                <p>
+                    <em>Ease of Use:</em> Jamovi isn't the only free statistical software out there. In fact, most statistics majors will end up using at least one of many different programming languages: R, python, julia, stan, etc. These are all, in some way or another, built to be extremely useful tools for doing statistical analysis. Jamovi is what we call <q>point-and-click</q> software: you'll navigate through some menus and click on options to do the work we're going to do. No programming knowledge required!
+                </p>
+                <p>
+                    Jamovi is very intuitive to use, with clear menus and pretty intuitive options. We
+                </p>
+            </li>
+            <li>
+                <p>
+                    <em>Flexibility:</em> I think one of the best aspects of this software is that there is just enough to use for an introductory statistics class, and much more to use if needed. Some of that is hidden in <q>modules</q> that are installed separately, and some of that is in the options we can select when we are setting up our statistical analysis. It's not overwhelming, and it will cover everything we need to cover.
+                </p>
+                <p>
+                    I have also had students in the past decide to extend their projects slightly beyond the content we cover in class. In those cases, jamovi has been able to provide access to some more advanced statistical tools.
+                </p>
+            </li>
+        </ul>
     </p>
 </section>
