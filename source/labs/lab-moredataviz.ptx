@@ -102,7 +102,10 @@
             </p>
             <note>
                 <p>
-                    If you don't have the <q>Scatterplot</q> option by default, that's fine! You can just install and add the <c>scatr</c> module. This is normally included as a default, but if that wasn't in your installation of jamovi, it's no problem! You can just add it yourself.
+                    If you don't have the <q>Scatterplot</q> option in the <kbd>Exploration</kbd> mennu by default, that's fine! You can just install and add the <c>scatr</c> module. This is normally included as a default, but if that wasn't in your installation of jamovi, it's no problem! You can just add it yourself.
+                </p>
+                <p>
+                    Otherwise, an identical scatterplot menu should be found in the <kbd>Plots</kbd> menu up top, in the <kbd>Scatter Plot</kbd> menu.
                 </p>
             </note>
             <p>
@@ -125,6 +128,9 @@
             <p>
                 Now we can look at the scatterplot! How would you explain the association (if any) between these two variables? Do we expect the prices of the listings to behave or be distributed differently for different numbers of minimum nights?
             </p>
+            <p>
+                Again, you can fiddle with some of the settings here! You can change the size of the points, the dimensions of the plot itself, titles, labels, etc. Work on creating a plot that is descriptive and clear, with a good title and clear axes labels.
+            </p>
             <exercise>
                 <statement>
                     <p>
@@ -136,7 +142,7 @@
         <subsubsection xml:id="subsubsec-ListingTypeAvailability">
             <title>Listing Type Availability</title>
             <p>
-                We'll keep the filter that we just created on: this will continue to show us only the listings that are presumably available to reserve. But now we'll look at how available these listings are in the next year. You have some good options for this plot, but, regardless of how you plot this, you'll be looking at <c>availability_365</c> grouped or split by <c>room_type</c>. You can build histograms, boxplots, or density plots (a kind of "smooth" histogram) to compare these. Let's start!
+                We'll keep the filter that we just created on: this will continue to show us only the listings that are presumably available to reserve. But now we'll look at how available these listings are in the next year. You have some good options for this plot, but, regardless of how you plot this, you'll be looking at <c>availability_365</c> grouped or split by <c>room_type</c>. You can build histograms, boxplots, or density plots (a kind of <q>smooth</q> histogram, almost) to compare these. Let's start!
             </p>
             <p>
                 In <kbd>Descriptives</kbd> (in the <kbd>Exploration</kbd> menu), display the following statistics:
@@ -173,10 +179,13 @@
                 Now plot a histogram and box plot. Do these visuals match what you had thought when you looked at the summary statistics? You can also swap out the histogram for a density plot to get a <q>smoother</q> depiction of this histogram.
             </p>
             <p>
+                Try some of the options in the <kbd>Plots</kbd> menu up top, since you can change how these boxplots are displayed. 
+            </p>
+            <p>
                 For a different version of these same plots, open up the <kbd>Survey Plots</kbd> menu under <kbd>Exploration</kbd>. Set up your variables, and look at the different plots. You have options for what to display under <q>Continuous Plots</q>. For instance, I think it might be useful to get rid of the Data plot, which is just a dot plot where the dots aren't stacked. Since there are so many observations here, it's pretty messy and not very enlightening. Notice also that the <q>Violin</q> plot is just the density plot from earlier. Normally violin plots are reflected, to kind of act like a combination of bloxplot and density plot, but these ones aren't.
             </p>
             <p>
-                Play with the different plots and options until you are happy with what they're showing you.
+                Play with the different plots and options until you are happy with what they're showing you. Try out different options, and add whatever detail you think is helpful to titles, labels, etc. This isn't always required, because sometimes the automatic labels are fine!
             </p>
             <exercise>
                 <statement>

@@ -56,6 +56,42 @@
                     </p>
                 </statement>
             </exercise>
+            <p>
+                You'll likely have noticed that the histogram isn't actually that good: we can see that the prices are highly skewed right, but that means that we don't really get much information about what's happening, since most of the prices are grouped into a single <q>bin.</q> Let's look briefly at some more plotting options. Find and open the <kbd>Plots</kbd> menu in the top bar, and select <kbd>Histogram</kbd>. This will bring us a more detailed menu where we can create higher quality plots.
+            </p>
+            <p>
+                Add <c>price</c> to the <q>Variable</q> pane. The histogram you'll find is slightly different: the bins or bars are smaller, and so there are more of them. It still has the general shape, but we can see now that there really isn't much data beyond 25000: there are not many listings that have a cost of $25,000/night or more. This <em>should</em> make sense, except for the fact that there <em>are</em> some listings with high prices like that. We'll investigate this more fully later.
+            </p>
+            <p>
+                For now, let's experiment with some options. Let's first change the range of prices we'll look at, just so we can see some detail. In the <kbd>Axes</kbd> menu, change the option for the Range on the X-Axis to <q>Manual</q>, and view the histogram for just prices between $0 and $1000 per night.
+            </p>
+            <note>
+                <p>
+                    Careful with doing this! We should note that we're just doing this for exploratory reasons: we don't want to remove the other listings from our data set or from our consideration here. Removing <q>outliers</q> is typically only something we'll do for observations that we believe are not actually part of our population. For now, we're just zooming in on one section of the prices to get some more detail.
+                </p>
+            </note>
+            <p>
+                Now, in the <kbd>General Options</kbd>, experiment with the different options: change the Bin Width from <q>Auto</q> to <q>Manual</q> and find a bin width that you think is pretty good for seeing some details in the histogram. Remember, this value is just the size of the intervals of prices that will be grouped together! Play with some of the options with the display to get a feel for what they do. We won't worry about the Density option for now.
+            </p>
+            <p>
+                Using the different options, replicate this plot (without the <q>Example</q> watermark, of course).
+            </p>
+            <figure xml:id="fig-examplehist">
+                <caption>Example plot to replicate.</caption>
+                <image source="labs/lab2/example-hist.png" width="70%">
+                    <shortdescription>A histogram labeled Price Distribution. There are many bars, and the distribution is skewed to the right. There is a caption that says Listings limited to $1000/night or less. There is a watermark that says EXAMPLE.</shortdescription>
+                </image>
+            </figure>
+            <p>
+                You can save your plots in a couple of different ways: if you right click on the picture of it, there is an option to copy the image. In my experience, this is a bit buggy, and the image doesn't always paste (I think it depends on what program you're pasting it into, but I don't know). You can also export the image, where you get different options to save it as a <c>.pdf</c> file or a <c>.png</c> image file. Save your graph as a <c>.png</c> file.
+            </p>
+            <exercise>
+                <statement>
+                    <p>
+                        Upload your histogram in the Lab Submission assignment!
+                    </p>
+                </statement>
+            </exercise>
         </subsubsection>
         <subsubsection xml:id="subsubsec-SummarizingCategoricalVariables">
             <title>Summarizing Categorical Variables</title>
@@ -95,21 +131,18 @@
                 This is where we can manage different add-ons for jamovi to accomplish specific tasks. In the search bar, search for <q>surveymv</q>, a module that "Generates summary plots for your survey data." Click <kbd>Install</kbd>, and then cluck the up arrow in the top right to close the menu. You'll now have a new option to select in the <kbd>Exploration</kbd> menu called <q>Survey Plots</q>. Select it now.
             </p>
             <p>
-                This should look familiar: you can drag your variables into a <q>Variables</q> window, and there are two menus with different plot options (one menu for categorical variables and one for continuous variables). Using the different options, replicate this plot (without the <q>Example</q> watermark, of course).
+                This should look familiar: you can drag your variables into a <q>Variables</q> window, and there are two menus with different plot options (one menu for categorical variables and one for continuous variables). Using the different options, replicate this bar plot (without the <q>Example</q> watermark, of course).
             </p>
             <figure xml:id="fig-exampleplot">
-                <caption>Example plot to replicate.</caption>
+                <caption>Example bar plot to replicate.</caption>
                 <image source="labs/lab2/example-plot.png" width="90%">
-                    <shortdescription>A plot labeled neighbourhood_group. The plot is a bar with 4 different sections: a small red one labeled 3%, a larger green one labeled 37%, a similarly sized yellow one labeled 44%, a smaller grey one labeled 15%, and a tiny blue one labeled 1%. These are, in order, representative of Bronx, Brooklyn, Manhattan, Queens, and Staten Island.</shortdescription>
+                    <shortdescription>A bar plot labeled neighbourhood_group. The plot is a single bar with 4 different sections: a small red one labeled 3%, a larger green one labeled 37%, a similarly sized yellow one labeled 44%, a smaller grey one labeled 15%, and a tiny blue one labeled 1%. These are, in order, representative of Bronx, Brooklyn, Manhattan, Queens, and Staten Island.</shortdescription>
                 </image>
             </figure>
-            <p>
-                You can save your plots in a couple of different ways: if you right click on the picture of it, there is an option to copy the image. In my experience, this is a bit buggy, and the image doesn't always paste (I think it depends on what program you're pasting it into, but I don't know). You can also export the image, where you get different options to save it as a <c>.pdf</c> file or a <c>.png</c> image file. Save your graph as a <c>.png</c> file.
-            </p>
             <exercise>
                 <statement>
                     <p>
-                        Upload your plot in the Lab Submission assignment!
+                        Upload your bar plot in the Lab Submission assignment!
                     </p>
                 </statement>
             </exercise>

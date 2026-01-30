@@ -74,7 +74,7 @@
             <p>
                 To construct a 95% confidence interval estimation of <m>p</m>, we only need a value for <m>\hat{p}</m> (the sample proportion) and <m>n</m> (the sample size). We can use <m>z^*=1.96</m>, which is the critical value that corresponds to a 95% confidence level, and the standard error of the sampling distribution:
                 <me>
-                    SE_{\hat{p}} = \sqrt{\frac{\hat{p}}(1-\hat{p}){n}}
+                    SE_{\hat{p}} = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
                 </me>.
                 Pull up the <kbd>Descriptives</kbd> menu and add <c>recent</c> to the <q>Variables</q> window. From there, we can de-select all of the statistics other than sample size, and tell jamovi to display a Frequency Table. This gives us two bits of information that are valuable, and one of them isn't necessarily the % of Total column in the Frequency Table!
             </p>
