@@ -146,8 +146,11 @@
     <!-- override defaults.  Ex:<css theme="denver"/>          -->
     <!-- See also                                              -->
     <!-- https://pretextbook.org/doc/guide/html/publication-file-online.html#online-style-options -->
-      <css theme="greeley"
-      primary-color="#0a104a"
+      <css theme="denver"
+      color-main="#0a104a"
+      color-do="#8d94c7"
+      color-fact="#8d94c7"
+      color-meta="#8d94c7"
       primary-color-dark="#8d94c7"
       />
 
