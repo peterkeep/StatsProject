@@ -9,12 +9,12 @@
 <!--******************************************-->
 <!--*  Authored with PreTeXt                 *-->
 <!--*  pretextbook.org                       *-->
-<!--*  Theme: denver                         *-->
+<!--*  Theme: default-modern                 *-->
 <!--*  Palette:                              *-->
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Inference for Categorical Data</title>
+<title>Lab 5: Inference for Categorical Data</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -101,25 +101,23 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.11';
+eBookConfig.runestone_version = '7.11.10';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.3dca4b99808f4053.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.80892ed1280c2803.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="StatsProject" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href="https://www.peter-keep.com/teaching/"><img src="external/cover.png" alt="Logo image"></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="StatsProject.html"><span class="title">Statistics Lab Book and Project</span> <span class="subtitle">Lab assignments and project details for a project-based Statistics for Business class</span></a></h1>
 <p class="byline">Peter Keep</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -131,7 +129,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="lab-introtoinference.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-labassignments.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="lab-inferencemeans.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="lab4-introtoinference.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-labassignments.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="lab6-inferencemeans.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -142,19 +140,12 @@ eBookConfig.enable_chatcodes =  false;
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-jamovi.html" class="internal"><span class="codenumber">1</span> <span class="title">Software: jamovi</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="jam-about.html" class="internal"><span class="codenumber">1.1</span> <span class="title">About jamovi</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="jam-install.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Download and Installation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-jam-help.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Help and FAQs</span></a></div></li>
-</ul>
-</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-jamovi.html" class="internal"><span class="codenumber">1</span> <span class="title">Software: Jamovi</span></a></div></li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-datasets.html" class="internal"><span class="codenumber">2</span> <span class="title">Data Sets</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="data-AirBnB.html" class="internal"><span class="codenumber">2.1</span> <span class="title">AirBnB Data Set (Lab Data Set)</span></a></div>
+<div class="toc-title-box"><a href="data-AirBnB.html" class="internal"><span class="codenumber">2.1</span> <span class="title">AirBnB Data Set</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-AirBnB.html#subsec-DownloadAirBnB" class="internal"><span class="title">Download</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-AirBnB.html#subsec-DictionaryAirBnB" class="internal"><span class="title">Data Dictionary</span></a></div></li>
@@ -164,7 +155,7 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="data-SteamGames.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Steam Games Data Set</span></a></div>
 <ul class="structural toc-item-list">
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-SteamGames.html#subsec-DownloadSteamGames" class="internal"><span class="title">Download</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-SteamGames.html#subsec-DictionarySteamGames" class="internal"><span class="title">Data Dictionary</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="data-SteamGames.html#subsec-DictionarySteamGames" class="internal"><span class="title">Data DictionaryData Dictionary</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -173,162 +164,103 @@ eBookConfig.enable_chatcodes =  false;
 <div class="toc-title-box"><a href="ch-labassignments.html" class="internal"><span class="codenumber">3</span> <span class="title">Lab Assignments</span></a></div>
 <ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="lab-introduction.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Introduction to jamovi</span></a></div>
+<div class="toc-title-box"><a href="lab1-introduction.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Lab 1: Introduction to jamovi</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="lab-introduction.html#lab-introduction-3" class="internal"><span class="title">Tasks</span></a></div>
+<div class="toc-title-box"><a href="lab1-introduction.html#lab1-introduction-3" class="internal"><span class="title">Tasks</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsubsec-StartingJamovi" class="internal"><span class="title">Starting jamovi</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsubsec-ExploringVariables" class="internal"><span class="title">Exploring Variables</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsubsec-NewVariable" class="internal"><span class="title">New Variable</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introduction.html#subsec-AnotherNewVariable" class="internal"><span class="title">Another New Variable</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab1-introduction.html#subsubsec-StartingJamovi" class="internal"><span class="title">Starting jamovi</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab1-introduction.html#subsubsec-ExploringVariables" class="internal"><span class="title">Exploring Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab1-introduction.html#subsubsec-NewVariable" class="internal"><span class="title">New Variable</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab1-introduction.html#subsec-AnotherNewVariable" class="internal"><span class="title">Another New Variable</span></a></div></li>
 </ul>
 </li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="lab-summarizingvariables.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Summarizing Variables</span></a></div>
+<div class="toc-title-box"><a href="lab2-summarizingvariables.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Lab 2: Summarizing Variables</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="lab-summarizingvariables.html#lab-summarizingvariables-3" class="internal"><span class="title">Tasks</span></a></div>
+<div class="toc-title-box"><a href="lab2-summarizingvariables.html#lab2-summarizingvariables-3" class="internal"><span class="title">Tasks</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-summarizingvariables.html#subsubsec-SummarizingNumericalVariables" class="internal"><span class="title">Summarizing Numerical Variables</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables" class="internal"><span class="title">Summarizing Categorical Variables</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-summarizingvariables.html#subsec-AddingAFilter" class="internal"><span class="title">Adding a Filter</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab2-summarizingvariables.html#subsubsec-SummarizingNumericalVariables" class="internal"><span class="title">Summarizing Numerical Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab2-summarizingvariables.html#subsubsec-SummarizingCategoricalVariables" class="internal"><span class="title">Summarizing Categorical Variables</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab2-summarizingvariables.html#subsec-AddingAFilter" class="internal"><span class="title">Adding a Filter</span></a></div></li>
 </ul>
 </li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="lab-moredataviz.html" class="internal"><span class="codenumber">3.3</span> <span class="title">More Data Visualization</span></a></div>
+<div class="toc-title-box"><a href="lab3-moredataviz.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Lab 3: More Data Visualization</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="lab-moredataviz.html#lab-moredataviz-3" class="internal"><span class="title">Tasks</span></a></div>
+<div class="toc-title-box"><a href="lab3-moredataviz.html#lab3-moredataviz-3" class="internal"><span class="title">Tasks</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-moredataviz.html#subsubsec-ListingTypeByBorough" class="internal"><span class="title">Listing Type by Borough</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-moredataviz.html#subsubsec-PriceComparedToNights" class="internal"><span class="title">Price Compared to Minimum Number of Nights</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-moredataviz.html#subsubsec-ListingTypeAvailability" class="internal"><span class="title">Listing Type Availability</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab3-moredataviz.html#subsubsec-ListingTypeByBorough" class="internal"><span class="title">Listing Type by Borough</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab3-moredataviz.html#subsubsec-PriceComparedToNights" class="internal"><span class="title">Price Compared to Minimum Number of Nights</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab3-moredataviz.html#subsubsec-ListingTypeAvailability" class="internal"><span class="title">Listing Type Availability</span></a></div></li>
 </ul>
 </li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="lab-introtoinference.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Introduction to Inference</span></a></div>
+<div class="toc-title-box"><a href="lab4-introtoinference.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Lab 4: Introduction to Inference</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="lab-introtoinference.html#lab-introtoinference-3" class="internal"><span class="title">Tasks</span></a></div>
+<div class="toc-title-box"><a href="lab4-introtoinference.html#lab4-introtoinference-3" class="internal"><span class="title">Tasks</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introtoinference.html#subsubsec-NewVariable2" class="internal"><span class="title">New Variable</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introtoinference.html#subsubsec-ConfidenceIntervalProportion" class="internal"><span class="title">Confidence Interval to Estimate a Proportion</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-introtoinference.html#subsubsec-HypothesisTestProportion" class="internal"><span class="title">Hypothesis Test for a Proportion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab4-introtoinference.html#subsubsec-NewVariable2" class="internal"><span class="title">New Variable</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab4-introtoinference.html#subsubsec-ConfidenceIntervalProportion" class="internal"><span class="title">Confidence Interval to Estimate a Proportion</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab4-introtoinference.html#subsubsec-HypothesisTestProportion" class="internal"><span class="title">Hypothesis Test for a Proportion</span></a></div></li>
 </ul>
 </li></ul>
 </li>
 <li class="toc-item toc-section contains-active">
-<div class="toc-title-box"><a href="lab-inferencecategorical-.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Inference for Categorical Data</span></a></div>
+<div class="toc-title-box"><a href="lab5-inferencecategorical-.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Lab 5: Inference for Categorical Data</span></a></div>
 <ul class="structural toc-item-list active"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="lab-inferencecategorical-.html#lab-inferencecategorical--3" class="internal"><span class="title">Tasks</span></a></div>
+<div class="toc-title-box"><a href="lab5-inferencecategorical-.html#lab5-inferencecategorical--3" class="internal"><span class="title">Tasks</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencecategorical-.html#subsubsec-DistributionRoomTypes" class="internal"><span class="title">Distribution of Room Types</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencecategorical-.html#subsubsec-ListingTypeByBorough2" class="internal"><span class="title">Listing Types by Borough</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab5-inferencecategorical-.html#subsubsec-DistributionRoomTypes" class="internal"><span class="title">Distribution of Room Types</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab5-inferencecategorical-.html#subsubsec-ListingTypeByBorough2" class="internal"><span class="title">Listing Types by Borough</span></a></div></li>
 </ul>
 </li></ul>
 </li>
 <li class="toc-item toc-section">
-<div class="toc-title-box"><a href="lab-inferencemeans.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Inference for Means</span></a></div>
+<div class="toc-title-box"><a href="lab6-inferencemeans.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Lab 6: Inference for Means</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="lab-inferencemeans.html#lab-inferencemeans-3" class="internal"><span class="title">Tasks</span></a></div>
+<div class="toc-title-box"><a href="lab6-inferencemeans.html#lab6-inferencemeans-3" class="internal"><span class="title">Tasks</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencemeans.html#subsubsec-SingleMean" class="internal"><span class="title">Single Mean</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencemeans.html#subsubsec-PriceRecently" class="internal"><span class="title">Price More Recently</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab-inferencemeans.html#subsubsec-MoreGroups" class="internal"><span class="title">More Groups</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab6-inferencemeans.html#subsubsec-SingleMean" class="internal"><span class="title">Single Mean</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab6-inferencemeans.html#subsubsec-PriceRecently" class="internal"><span class="title">Price More Recently</span></a></div></li>
+<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="lab6-inferencemeans.html#subsubsec-MoreGroups" class="internal"><span class="title">More Groups</span></a></div></li>
 </ul>
 </li></ul>
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-projectdetails.html" class="internal"><span class="codenumber">4</span> <span class="title">Project Parts and Details</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="proj-datadescription.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Data Description</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#subsec-dataselection" class="internal"><span class="title">Data Selection</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#subsec-DataDetails" class="internal"><span class="title">Data Details</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#subsec-ApplicationDecisionMaking" class="internal"><span class="title">Application and Decision Making</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#proj-datadescription-6" class="internal"><span class="title">Write-Up</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-datadescription.html#proj-datadescription-7" class="internal"><span class="title">Gallery</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="proj-exploringdata.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Exploring Data</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#subsec-VariableSelection" class="internal"><span class="title">Variable Selection</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#subsec-NumericalVariables" class="internal"><span class="title">Numerical Variables</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#subsec-CategoricalVariables" class="internal"><span class="title">Categorical Variables</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#proj-exploringdata-6" class="internal"><span class="title">Write-Up</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-exploringdata.html#proj-exploringdata-7" class="internal"><span class="title">Gallery</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="proj-associationquestions.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Association and Questions</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#subsec-ResearchQuestionsHypotheses" class="internal"><span class="title">Research Questions/Hypotheses</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#subsec-Exploration" class="internal"><span class="title">Exploration</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#subsec-Summary" class="internal"><span class="title">Summary</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#proj-associationquestions-6" class="internal"><span class="title">Write-Up</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-associationquestions.html#proj-associationquestions-7" class="internal"><span class="title">Gallery</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="proj-analysis.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Analysis</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-analysis.html#subsec-ResearchQuestions" class="internal"><span class="title">Research Questions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-analysis.html#proj-analysis-4" class="internal"><span class="title">Write-Up</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="proj-finalreport.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Final Report</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-IntroductionBackground" class="internal"><span class="title">Introduction &amp; Background</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-Methods" class="internal"><span class="title">Methods</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-Results" class="internal"><span class="title">Results</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-DiscussionConclusions" class="internal"><span class="title">Discussion &amp; Conclusions</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsec-WrittenSubmission" class="internal"><span class="title">Written Submission</span></a></div></li>
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="proj-finalreport.html#subsec-Presentation" class="internal"><span class="title">Presentation</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsubsec-PresentationDetails" class="internal"><span class="title">Presentation Details</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsubsec-HowToRecord" class="internal"><span class="title">How To Record a Presentation</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="proj-finalreport.html#subsubsec-PracticeIsImportant" class="internal"><span class="title">Practice Is Important</span></a></div></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-projectdetails.html" class="internal"><span class="codenumber">4</span> <span class="title">Project Parts and Details</span></a></div></li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="lab-inferencecategorical-"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Inference for Categorical Data</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="lab5-inferencecategorical-"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.5</span><span class="space"> </span><span class="title">Lab 5: Inference for Categorical Data</span>
 </h2>
-<section class="introduction" id="lab-inferencecategorical--2"><div class="para" id="lab-inferencecategorical--2-1">In this lab, we’ll apply some different tests and build some different confidence intervals that are concerned with proportions.<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencecategorical--2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="lab5-inferencecategorical--2"><div class="para" id="lab5-inferencecategorical--2-1">In this lab, we’ll apply some different tests and build some different confidence intervals that are concerned with proportions.<div class="autopermalink" data-description="Paragraph"><a href="#lab5-inferencecategorical--2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<article class="assemblage assemblage-like" id="lab-inferencecategorical--2-2"><h3 class="heading"><span class="title">What You’ll Need.</span></h3>
-<div class="para logical" id="lab-inferencecategorical--2-2-2">
-<ol class="decimal" id="lab-inferencecategorical--2-2-2-1">
-<li id="lab-inferencecategorical--2-2-2-1-1">
-<div class="para" id="lab-inferencecategorical--2-2-2-1-1-1">
-<em class="emphasis">Data:</em> make sure you’re working with a copy of the AirBnB data set that has the most recent filters in it!<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencecategorical--2-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="assemblage assemblage-like" id="lab5-inferencecategorical--2-2"><h3 class="heading"><span class="title">What You’ll Need.</span></h3>
+<div class="para logical" id="lab5-inferencecategorical--2-2-2">
+<ol class="decimal" id="lab5-inferencecategorical--2-2-2-1">
+<li id="lab5-inferencecategorical--2-2-2-1-1">
+<div class="para" id="lab5-inferencecategorical--2-2-2-1-1-1">
+<em class="emphasis">Data:</em> make sure you’re working with a copy of the AirBnB data set that has the most recent filters in it!<div class="autopermalink" data-description="Paragraph"><a href="#lab5-inferencecategorical--2-2-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#lab-inferencecategorical--2-2-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#lab5-inferencecategorical--2-2-2-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="lab-inferencecategorical--2-2-2-1-2">
-<div class="para" id="lab-inferencecategorical--2-2-2-1-2-1">
-<em class="emphasis">Notes:</em> it will be helpful to have any notes or resources about hypothesis tests or confidence intervals for categorical data. You’ll likely want to be able to look up conditions easily, to remind yourself of what is happening in each calculation.<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencecategorical--2-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="lab5-inferencecategorical--2-2-2-1-2">
+<div class="para" id="lab5-inferencecategorical--2-2-2-1-2-1">
+<em class="emphasis">Notes:</em> it will be helpful to have any notes or resources about hypothesis tests or confidence intervals for categorical data. You’ll likely want to be able to look up conditions easily, to remind yourself of what is happening in each calculation.<div class="autopermalink" data-description="Paragraph"><a href="#lab5-inferencecategorical--2-2-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#lab-inferencecategorical--2-2-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#lab5-inferencecategorical--2-2-2-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
 </ol>
-<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencecategorical--2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lab5-inferencecategorical--2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Assemblage: What You’ll Need"><a href="#lab-inferencecategorical--2-2" title="Copy heading and permalink for Assemblage: What You’ll Need" aria-label="Copy heading and permalink for Assemblage: What You’ll Need">🔗</a></div></article></section><section class="subsection" id="lab-inferencecategorical--3"><h3 class="heading hide-type">
+<div class="autopermalink" data-description="Assemblage: What You’ll Need"><a href="#lab5-inferencecategorical--2-2" title="Copy heading and permalink for Assemblage: What You’ll Need" aria-label="Copy heading and permalink for Assemblage: What You’ll Need">🔗</a></div></article></section><section class="subsection" id="lab5-inferencecategorical--3"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Tasks</span>
 </h3>
-<section class="introduction" id="lab-inferencecategorical--3-2"><div class="para" id="lab-inferencecategorical--3-2-1">We’ve already looked at a test of a single proportion, so let’s compare proportions a bit more heavily.<div class="autopermalink" data-description="Paragraph"><a href="#lab-inferencecategorical--3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="lab5-inferencecategorical--3-2"><div class="para" id="lab5-inferencecategorical--3-2-1">We’ve already looked at a test of a single proportion, so let’s compare proportions a bit more heavily.<div class="autopermalink" data-description="Paragraph"><a href="#lab5-inferencecategorical--3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><section class="subsubsection" id="subsubsec-DistributionRoomTypes"><h4 class="heading hide-type">
 <span class="type">Subsubsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Distribution of Room Types</span>
 </h4>
@@ -500,9 +432,9 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.5.7</span><span class="period">.</span>
 </h5></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsubsec-ListingTypeByBorough2-7-1-1">Generate and submit your plot comparing the distributions of <code class="code-inline tex2jax_ignore">room_type</code> across different boroughs from the <code class="code-inline tex2jax_ignore">neighbourhood_group</code> variable or vice versa (distributions of boroughs for different listing types).<div class="autopermalink" data-description="Paragraph"><a href="#subsubsec-ListingTypeByBorough2-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Checkpoint 3.5.7"><a href="#subsubsec-ListingTypeByBorough2-7" title="Copy heading and permalink for Checkpoint 3.5.7" aria-label="Copy heading and permalink for Checkpoint 3.5.7">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection: Listing Types by Borough"><a href="#subsubsec-ListingTypeByBorough2" title="Copy heading and permalink for Subsubsection: Listing Types by Borough" aria-label="Copy heading and permalink for Subsubsection: Listing Types by Borough">🔗</a></div></section><div class="autopermalink" data-description="Subsection: Tasks"><a href="#lab-inferencecategorical--3" title="Copy heading and permalink for Subsection: Tasks" aria-label="Copy heading and permalink for Subsection: Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Inference for Categorical Data"><a href="#lab-inferencecategorical-" title="Copy heading and permalink for Section 3.5: Inference for Categorical Data" aria-label="Copy heading and permalink for Section 3.5: Inference for Categorical Data">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Checkpoint 3.5.7"><a href="#subsubsec-ListingTypeByBorough2-7" title="Copy heading and permalink for Checkpoint 3.5.7" aria-label="Copy heading and permalink for Checkpoint 3.5.7">🔗</a></div></article></details><div class="autopermalink" data-description="Subsubsection: Listing Types by Borough"><a href="#subsubsec-ListingTypeByBorough2" title="Copy heading and permalink for Subsubsection: Listing Types by Borough" aria-label="Copy heading and permalink for Subsubsection: Listing Types by Borough">🔗</a></div></section><div class="autopermalink" data-description="Subsection: Tasks"><a href="#lab5-inferencecategorical--3" title="Copy heading and permalink for Subsection: Tasks" aria-label="Copy heading and permalink for Subsection: Tasks">🔗</a></div></section><div class="autopermalink" data-description="Section 3.5: Lab 5: Inference for Categorical Data"><a href="#lab5-inferencecategorical-" title="Copy heading and permalink for Section 3.5: Lab 5: Inference for Categorical Data" aria-label="Copy heading and permalink for Section 3.5: Lab 5: Inference for Categorical Data">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="lab-introtoinference.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="lab-inferencemeans.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="lab4-introtoinference.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="lab6-inferencemeans.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
