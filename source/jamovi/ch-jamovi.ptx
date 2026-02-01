@@ -13,6 +13,6 @@
   <!-- include sections -->
   <xi:include href="jam-about.ptx" />
   <xi:include href="jam-install.ptx" />
-  <xi:include href="jam-help.ptx" />
+  <!-- <xi:include href="jam-help.ptx" /> -->
 
 </chapter>

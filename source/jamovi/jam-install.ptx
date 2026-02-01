@@ -1,6 +1,55 @@
 <section xml:id="jam-install">
     <title>Download and Installation</title>
-    <p>
-        
-    </p>
+    <introduction>
+        <p>
+            There are two main ways to access and use jamovi: installing the software, or using the cloud version. There are a couple of things to note if you're planning on using the cloud version. 
+        </p>
+    </introduction>
+    <subsection xml:id="subsec-Cloud">
+        <title>Cloud Version</title>
+        <p>
+            The cloud version of jamovi can be accessed at <url href="https://cloud.jamovi.org/"/>. You can access the software using a free account, but there are some limitations.
+        </p>
+        <figure xml:id="fig-plans">
+            <caption>jamovi limits access for free users when things are busy.</caption>
+            <image source="about/plans.png" width="90%">
+                <shortdescription>Popup window, encouraging users to purchase a paid plan for jamovi cloud, since there are too many concurrent users right now for new free users.</shortdescription>
+            </image>
+        </figure>
+        <p>
+            Some of the limitations can involve:
+            <ul>
+                <li>
+                    <p>
+                        Limitations on the size of the data sets you can use.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Time limitations on the session, forcing users to save regularly.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Limitations on access during busy sessions.
+                    </p>
+                </li>
+            </ul>
+            Overall, I recommend a local installation, and it is useful to have this software installed in a computer lab on campus for use by the class.
+        </p>
+    </subsection>
+    <subsection xml:id="subsec-Local">
+        <title>Local Installation</title>
+        <p>
+            To find a local installation file, visit <url href="https://www.jamovi.org/download.html"/>. Here, you'll find installation files for Windows, macOS, Linux, and also ChromeOS (for use on Chromebooks).
+        </p>
+        <p>
+            For more instructions on platform-specific installations, visit <url href="https://www.jamovi.org/user-manual.html#installation"/>.
+        </p>
+        <note>
+            <p>
+                For users with Chromebooks, there are some specific instructions for installation that require the user to change a few settings in order to access the linux installation more directly. Visit <url href="https://flatpak.org/setup/Chrome%20OS"/> for setup instructions, and then follow the jamovi installation instructions in the manual.
+            </p>
+        </note>
+    </subsection>
 </section>
