@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "About jamovi",
-  "body": " About jamovi  Jamovi is the name of the statistical software that we'll be using and that these labs and project are written for. It's a good choice for a lot of reasons, including:    Price: Statistical software can get expensive! Software built to be used by large companies can come with a huge cost associated with it, and the software that is often used in education is bundled up with textbooks and online homework systems. Jamovi is free for anyone to use.     Ease of Use: Jamovi isn't the only free statistical software out there. In fact, most statistics majors will end up using at least one of many different programming languages: R, python, julia, stan, etc. These are all, in some way or another, built to be extremely useful tools for doing statistical analysis. Jamovi is what we call point-and-click software: you'll navigate through some menus and click on options to do the work we're going to do. No programming knowledge required!  Jamovi is very intuitive to use, with clear menus and pretty intuitive options. We     Flexibility: I think one of the best aspects of this software is that there is just enough to use for an introductory statistics class, and much more to use if needed. Some of that is hidden in modules that are installed separately, and some of that is in the options we can select when we are setting up our statistical analysis. It's not overwhelming, and it will cover everything we need to cover.  I have also had students in the past decide to extend their projects slightly beyond the content we cover in class. In those cases, jamovi has been able to provide access to some more advanced statistical tools.     "
+  "body": " About jamovi  Jamovi is the name of the statistical software that we'll be using and that these labs and project are written for. It's a good choice for a lot of reasons, including:    Price: Statistical software can get expensive! Software built to be used by large companies can come with a huge cost associated with it, and the software that is often used in education is bundled up with textbooks and online homework systems. Jamovi is free for anyone to use.     Ease of Use: Jamovi isn't the only free statistical software out there. In fact, most statistics majors will end up using at least one of many different programming languages: R, python, julia, stan, etc. These are all, in some way or another, built to be extremely useful tools for doing statistical analysis. Jamovi is what we call point-and-click software: you'll navigate through some menus and click on options to do the work we're going to do. No programming knowledge required!  Jamovi is very intuitive to use, with clear menus and pretty intuitive options. We     Flexibility: I think one of the best aspects of this software is that there is just enough to use for an introductory statistics class, and much more to use if needed. Some of that is hidden in modules that are installed separately, and some of that is in the options we can select when we are setting up our statistical analysis. It's not overwhelming, and it will cover everything we need to cover.  I have also had students in the past decide to extend their projects slightly beyond the content we cover in class. In those cases, jamovi has been able to provide access to some more advanced statistical tools.     The instructions for this lab are written to reflect the jamovi 2.7 release. They likely will not become out of date very quickly, but note that some menu options described could change.  "
 },
 {
   "id": "jam-install",
@@ -25,16 +25,25 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Download and Installation",
-  "body": " Download and Installation    "
+  "body": " Download and Installation   There are two main ways to access and use jamovi: installing the software, or using the cloud version. There are a couple of things to note if you're planning on using the cloud version.    Cloud Version  The cloud version of jamovi can be accessed at . You can access the software using a free account, but there are some limitations.   jamovi limits access for free users when things are busy.   Popup window, encouraging users to purchase a paid plan for jamovi cloud, since there are too many concurrent users right now for new free users.    Some of the limitations can involve:   Limitations on the size of the data sets you can use.    Time limitations on the session, forcing users to save regularly.    Limitations on access during busy sessions.   Overall, I recommend a local installation, and it is useful to have this software installed in a computer lab on campus for use by the class.    Local Installation  To find a local installation file, visit . Here, you'll find installation files for Windows, macOS, Linux, and also ChromeOS (for use on Chromebooks).  For more instructions on platform-specific installations, visit .   For users with Chromebooks, there are some specific instructions for installation that require the user to change a few settings in order to access the linux installation more directly. Visit for setup instructions, and then follow the jamovi installation instructions in the manual.    "
 },
 {
-  "id": "sec-jam-help",
-  "level": "1",
-  "url": "sec-jam-help.html",
-  "type": "Section",
-  "number": "1.3",
-  "title": "Help and FAQs",
-  "body": " Help and FAQs    "
+  "id": "fig-plans",
+  "level": "2",
+  "url": "jam-install.html#fig-plans",
+  "type": "Figure",
+  "number": "1.2.1",
+  "title": "",
+  "body": " jamovi limits access for free users when things are busy.   Popup window, encouraging users to purchase a paid plan for jamovi cloud, since there are too many concurrent users right now for new free users.   "
+},
+{
+  "id": "subsec-Local-4",
+  "level": "2",
+  "url": "jam-install.html#subsec-Local-4",
+  "type": "Note",
+  "number": "1.2.2",
+  "title": "",
+  "body": " For users with Chromebooks, there are some specific instructions for installation that require the user to change a few settings in order to access the linux installation more directly. Visit for setup instructions, and then follow the jamovi installation instructions in the manual.  "
 },
 {
   "id": "data-AirBnB",
