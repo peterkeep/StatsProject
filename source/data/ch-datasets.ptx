@@ -36,7 +36,7 @@
   <!-- include sections -->
   <xi:include href="data-AirBnB.ptx" />
   <xi:include href="data-SteamGames.ptx" />
-  <!-- <xi:include href="data-NCAA.ptx" /> -->
+  <xi:include href="data-NCAA.ptx" />
   <!-- <xi:include href="data-AppStore.ptx" /> -->
 
 </chapter>

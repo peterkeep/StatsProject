@@ -41,5 +41,8 @@
                 </row>
             </tabular>
         </table>
+        <p>
+            For a full list of variables as well as some key explanations, download the <dataurl source="./data/NCAA-DataDictiionary.pdf">NCAA Data Dictionaryv</dataurl>.
+        </p>
     </subsection>
 </section>
